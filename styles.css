@@ -1,0 +1,227 @@
+/* Custom Component Styles for Oasis International Cleaning Services */
+
+/* Button Styles */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+    transform: translateY(-1px);
+}
+
+.btn-primary:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #D4AF37;
+    ring-offset: 2px;
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #FFFFFF;
+    color: #4CAF50;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 2px solid #4CAF50;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ECF7EF;
+}
+
+.btn-tertiary {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: transparent;
+    color: #444444;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: underline;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-tertiary:hover {
+    color: #4CAF50;
+}
+
+/* Card Styles */
+.card-service {
+    padding: 24px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-service:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-testimonial {
+    padding: 24px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon Styles */
+.icon-gold {
+    color: #D4AF37;
+}
+
+/* Form Styles */
+.form-field {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #D9D9D9;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-field:focus {
+    outline: none;
+    border-color: #D4AF37;
+    ring: 2px;
+    ring-color: #D4AF37;
+}
+
+.form-field.error {
+    border-color: #dc2626;
+}
+
+.form-error {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #111111;
+}
+
+/* Focus States for Accessibility */
+*:focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
+}
+
+/* Loading State */
+.btn-primary:disabled,
+.btn-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-primary:disabled:hover,
+.btn-secondary:disabled:hover {
+    transform: none;
+}
+
+/* Gallery Toggle Styles */
+.before-after-toggle {
+    display: inline-flex;
+    gap: 8px;
+    padding: 4px;
+    background-color: #ECF7EF;
+    border-radius: 4px;
+}
+
+.before-after-toggle button {
+    padding: 8px 16px;
+    background-color: transparent;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.before-after-toggle button.active {
+    background-color: #4CAF50;
+    color: #FFFFFF;
+}
+
+.before-after-toggle button:hover:not(.active) {
+    background-color: #FFFFFF;
+}
+
+/* CTA Band */
+.cta-band {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: #FFFFFF;
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background-color: #D9D9D9;
+}
+
+/* Badge */
+.badge-gold {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #D4AF37;
+    color: #111111;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+/* Utility Classes */
+.text-italic {
+    font-style: italic;
+}
+
+/* Responsive Image */
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Skip Link */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.sr-only:not(.focus\:not-sr-only:focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
