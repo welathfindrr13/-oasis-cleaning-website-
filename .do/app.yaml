@@ -46,13 +46,13 @@ services:
         value: production
       - key: PORT
         value: "3000"
-      - key: SENDGRID_API_KEY
+      - key: BREVO_API_KEY
         type: SECRET
-        # Set this in DigitalOcean dashboard
-      - key: SENDGRID_FROM_EMAIL
-        value: noreply@oasisinternationalcleaningservices.com
-      - key: QUOTE_TO_EMAIL
-        value: info@oasisinternationalcleaningservices.com
+        # Set this in DigitalOcean dashboard with your Brevo API key
+      - key: QUOTES_FROM_EMAIL
+        value: tyreeseedwards@gmail.com
+      - key: QUOTES_TO_EMAIL
+        value: tyreeseedwards@gmail.com
       - key: ALLOWED_ORIGIN
         value: ${oasis-cleaning-frontend.PUBLIC_URL}
         type: SECRET

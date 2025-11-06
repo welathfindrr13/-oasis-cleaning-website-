@@ -3,13 +3,15 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-const sgMail = require('@sendgrid/mail');
+const axios = require('axios');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Configure SendGrid
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// Validate Brevo configuration
+if (!process.env.BREVO_API_KEY) {
+  console.warn('WARNING: BREVO_API_KEY not set. Email sending will fail.');
+}
 
 // Security middleware
 app.use(helmet());
@@ -46,7 +48,12 @@ const limiter = rateLimit({
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+  res.json({ 
+    status: 'ok', 
+    timestamp: new Date().toISOString(),
+    emailProvider: 'Brevo',
+    brevoConfigured: !!process.env.BREVO_API_KEY
+  });
 });
 
 // Quote submission endpoint
@@ -152,19 +159,42 @@ Submitted: ${new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })} 
 IP Address: ${req.ip || 'Unknown'}
     `;
 
-    // Send email via SendGrid
-    const msg = {
-      to: process.env.QUOTE_TO_EMAIL || 'info@oasisinternationalcleaningservices.com',
-      from: process.env.SENDGRID_FROM_EMAIL || 'noreply@oasisinternationalcleaningservices.com',
-      replyTo: email,
+    // Send email via Brevo (Sendinblue) API
+    const brevoPayload = {
+      sender: {
+        name: 'Oasis Cleaning Services',
+        email: process.env.QUOTES_FROM_EMAIL || 'tyreeseedwards@gmail.com'
+      },
+      to: [
+        {
+          email: process.env.QUOTES_TO_EMAIL || 'tyreeseedwards@gmail.com',
+          name: 'Oasis Cleaning Admin'
+        }
+      ],
+      replyTo: {
+        email: email,
+        name: full_name
+      },
       subject: `New Quote Request from ${full_name} - ${service_type}`,
-      text: emailText,
-      html: emailHtml,
+      htmlContent: emailHtml,
+      textContent: emailText,
+      tags: ['quote-request', service_type.toLowerCase().replace(/\s+/g, '-')]
     };
 
-    await sgMail.send(msg);
+    const brevoResponse = await axios.post(
+      'https://api.brevo.com/v3/smtp/email',
+      brevoPayload,
+      {
+        headers: {
+          'api-key': process.env.BREVO_API_KEY,
+          'Content-Type': 'application/json',
+          'accept': 'application/json'
+        }
+      }
+    );
 
-    console.log(`Quote request sent successfully for ${email}`);
+    console.log(`Quote request sent successfully via Brevo for ${email}`);
+    console.log(`Brevo Message ID: ${brevoResponse.data.messageId}`);
 
     // Send success response
     res.status(200).json({
@@ -173,16 +203,20 @@ IP Address: ${req.ip || 'Unknown'}
       data: {
         name: full_name,
         email: email,
-        service: service_type
+        service: service_type,
+        messageId: brevoResponse.data.messageId
       }
     });
 
   } catch (error) {
     console.error('Error processing quote request:', error);
     
-    // SendGrid specific error handling
+    // Brevo specific error handling
     if (error.response) {
-      console.error('SendGrid Error:', error.response.body);
+      console.error('Brevo API Error:', {
+        status: error.response.status,
+        data: error.response.data
+      });
     }
 
     res.status(500).json({
@@ -210,5 +244,8 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Quote API server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`Email Provider: Brevo (Sendinblue)`);
   console.log(`CORS allowed origins: ${allowedOrigins.join(', ')}`);
+  console.log(`From Email: ${process.env.QUOTES_FROM_EMAIL || 'Not configured'}`);
+  console.log(`To Email: ${process.env.QUOTES_TO_EMAIL || 'Not configured'}`);
 });
