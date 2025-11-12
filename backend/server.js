@@ -8,6 +8,9 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Trust proxy - required when behind DigitalOcean's load balancer
+app.set('trust proxy', true);
+
 // Validate Brevo configuration
 if (!process.env.BREVO_API_KEY) {
   console.warn('WARNING: BREVO_API_KEY not set. Email sending will fail.');
