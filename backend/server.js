@@ -57,7 +57,7 @@ app.get('/health', (req, res) => {
 });
 
 // Quote submission endpoint
-app.post('/api/quote', limiter, async (req, res) => {
+app.post('/quote', limiter, async (req, res) => {
   try {
     const {
       full_name,
