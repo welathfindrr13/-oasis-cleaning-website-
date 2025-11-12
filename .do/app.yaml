@@ -1,26 +1,7 @@
 name: oasis-cleaning-quote-api
 region: lon
 
-# Static site component (frontend)
-static_sites:
-  - name: oasis-cleaning-frontend
-    github:
-      repo: welathfindrr13/-oasis-cleaning-website-
-      branch: main
-      deploy_on_push: true
-    source_dir: /
-    output_dir: /
-    index_document: index.html
-    error_document: 404.html
-    catchall_document: index.html
-    routes:
-      - path: /
-    envs:
-      - key: QUOTE_API_ENDPOINT
-        value: ${quote-api.PUBLIC_URL}/api/quote
-        type: SECRET
 
-# Backend API component
 services:
   - name: quote-api
     github:
@@ -36,23 +17,33 @@ services:
     http_port: 3000
     health_check:
       http_path: /health
-      initial_delay_seconds: 20
-      period_seconds: 30
-      timeout_seconds: 5
-      success_threshold: 1
-      failure_threshold: 3
     envs:
       - key: NODE_ENV
+        scope: RUN_AND_BUILD_TIME
         value: production
       - key: PORT
+        scope: RUN_AND_BUILD_TIME
         value: "3000"
       - key: BREVO_API_KEY
+        scope: RUN_AND_BUILD_TIME
         type: SECRET
-        # Set this in DigitalOcean dashboard with your Brevo API key
       - key: QUOTES_FROM_EMAIL
-        value: tyreeseedwards@gmail.com
+        scope: RUN_AND_BUILD_TIME
+        value: tyreeseedwards987@gmail.com
       - key: QUOTES_TO_EMAIL
-        value: tyreeseedwards@gmail.com
-      - key: ALLOWED_ORIGIN
-        value: ${oasis-cleaning-frontend.PUBLIC_URL}
-        type: SECRET
+        scope: RUN_AND_BUILD_TIME
+        value: tyreeseedwards987@gmail.com
+    routes:
+      - path: /api
+
+static_sites:
+  - name: oasis-cleaning-frontend
+    github:
+      repo: welathfindrr13/-oasis-cleaning-website-
+      branch: main
+      deploy_on_push: true
+    source_dir: /
+    output_dir: /
+    index_document: index.html
+    routes:
+      - path: /
