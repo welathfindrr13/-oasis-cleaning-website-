@@ -189,7 +189,7 @@ IP Address: ${req.ip || 'Unknown'}
       brevoPayload,
       {
         headers: {
-          'api-key': process.env.BREVO_API_KEY,
+          'api-key': process.env.BREVO_API_KEY?.trim() || '',
           'Content-Type': 'application/json',
           'accept': 'application/json'
         }
