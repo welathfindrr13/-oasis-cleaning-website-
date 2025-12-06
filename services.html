@@ -4,26 +4,27 @@
   <meta charset="UTF-8">
   <title>Our Services | Oasis International Cleaning Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional cleaning services across London - residential, office, deep cleaning, end of tenancy, and specialist cleans. Trained staff, eco-friendly products, flexible scheduling.">
+  <meta name="description" content="Premium cleaning services across Greater London. Regular cleaning, deep cleaning, end of tenancy, carpet & upholstery, and commercial cleaning. Trained, vetted professionals.">
   <link rel="canonical" href="https://www.oasisinternationalcleaningservices.com/services.html">
   <meta property="og:title" content="Our Services | Oasis International Cleaning Services">
-  <meta property="og:description" content="Professional cleaning services across London - residential, office, deep cleaning, end of tenancy, and specialist cleans.">
+  <meta property="og:description" content="Premium cleaning services across Greater London — delivered by trained, vetted, fully equipped professionals.">
   <meta property="og:url" content="https://www.oasisinternationalcleaningservices.com/services.html">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.oasisinternationalcleaningservices.com/assets/logo.jpg">
+  <meta property="og:image" content="https://www.oasisinternationalcleaningservices.com/assets/logo.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Our Services | Oasis International Cleaning Services">
-  <meta name="twitter:description" content="Professional cleaning services across London - residential, office, deep cleaning, end of tenancy, and specialist cleans.">
-  <meta name="twitter:image" content="https://www.oasisinternationalcleaningservices.com/assets/logo.jpg">
+  <meta name="twitter:description" content="Premium cleaning services across Greater London — delivered by trained, vetted, fully equipped professionals.">
+  <meta name="twitter:image" content="https://www.oasisinternationalcleaningservices.com/assets/logo.jpeg">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            green: { 50: '#ECF7EF', 500: '#4CAF50' },
+            green: { 50: '#ECF7EF', 500: '#4CAF50', 600: '#43A047' },
             gold: { 500: '#D4AF37' },
-            grey: { 300: '#D9D9D9', 700: '#444444', 900: '#111111' }
+            grey: { 300: '#D9D9D9', 700: '#444444', 900: '#111111' },
+            blue: { 400: '#5CC8E8', 500: '#3BB8DE' }
           },
           maxWidth: {
             container: '1200px'
@@ -38,10 +39,10 @@
       "@context":"https://schema.org",
       "@type":"CollectionPage",
       "name":"Cleaning Services",
-      "description":"Comprehensive cleaning services for homes and businesses across London",
+      "description":"Premium cleaning services for homes and businesses across Greater London",
       "provider":{
         "@type":"Organization",
-        "name":"Oasis International Cleaning Services Ltd",
+        "name":"Oasis International Cleaning Services",
         "url":"https://www.oasisinternationalcleaningservices.com"
       }
     }
@@ -50,59 +51,208 @@
 <body class="font-sans text-grey-700 bg-slate-50">
 <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-green-500 focus:text-white focus:rounded">Skip to content</a>
 
-<header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-100">
-  <nav class="max-w-container mx-auto px-3 lg:px-6 h-[160px] flex items-center justify-between">
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+  <nav class="max-w-container mx-auto px-4 lg:px-6 h-20 flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-3">
-      <img src="assets/logo.jpg" alt="Oasis International Cleaning Agency" class="h-40 w-auto">
+      <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="h-14 w-auto">
     </a>
     <button id="mobile-menu-btn" class="lg:hidden p-3 -mr-1" aria-label="Toggle menu" aria-expanded="false">
       <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
-    <div class="hidden lg:flex items-center gap-6">
-      <a href="index.html" class="text-body hover:text-green-500">Home</a>
-      <a href="services.html" class="text-body hover:text-green-500">Services</a>
-      <a href="about.html" class="text-body hover:text-green-500">About</a>
-      <a href="contact.html" class="text-body hover:text-green-500">Contact</a>
-      <a href="tel:+442037508878" class="btn-primary">Call us</a>
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="index.html" class="text-sm font-medium hover:text-green-500 transition">Home</a>
+      <a href="services.html" class="text-sm font-medium text-green-500">Services</a>
+      <a href="about.html" class="text-sm font-medium hover:text-green-500 transition">About</a>
+      <a href="gallery.html" class="text-sm font-medium hover:text-green-500 transition">Gallery</a>
+      <a href="contact.html" class="text-sm font-medium hover:text-green-500 transition">Contact</a>
+      <a href="quote.html" class="btn-primary">Get a Quote</a>
     </div>
   </nav>
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-grey-300">
-    <nav class="px-3 py-3 space-y-2">
+    <nav class="px-4 py-4 space-y-2">
       <a href="index.html" class="block py-3 text-base border-b border-grey-300/60">Home</a>
-      <a href="services.html" class="block py-3 text-base border-b border-grey-300/60">Services</a>
+      <a href="services.html" class="block py-3 text-base border-b border-grey-300/60 text-green-500 font-semibold">Services</a>
       <a href="about.html" class="block py-3 text-base border-b border-grey-300/60">About</a>
+      <a href="gallery.html" class="block py-3 text-base border-b border-grey-300/60">Gallery</a>
       <a href="contact.html" class="block py-3 text-base">Contact</a>
-      <a href="tel:+442037508878" class="btn-primary inline-block mt-3 w-full text-center">Call us</a>
+      <a href="quote.html" class="btn-primary inline-block mt-3 w-full text-center">Get a Quote</a>
     </nav>
   </div>
 </header>
 
 <main id="content">
-  <!-- Hero -->
-  <section class="bg-white pt-14 pb-10 border-b border-slate-100">
-    <div class="max-w-container mx-auto px-3 lg:px-6">
-      <div class="lg:flex lg:items-center lg:justify-between gap-6">
-        <div class="max-w-2xl">
-          <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-semibold ring-1 ring-green-100 mb-4">
-            London • Residential & Commercial
-          </p>
-          <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-grey-900 mb-4">Our Cleaning Services</h1>
-          <p class="text-lg text-grey-700 max-w-2xl">
-            Weekly home cleans, office contracts, deep sanitation and inventory-ready end of tenancy — delivered by trained, insured teams across London.
-          </p>
-          <div class="flex flex-wrap gap-4 mt-6">
-            <a href="quote.html" class="inline-flex items-center px-5 py-3 rounded-md bg-green-500 text-white font-semibold shadow-sm hover:bg-green-600">Request a Free Quote</a>
-          </div>
-          <p class="text-xs text-grey-500 mt-3">Response within 24 hours · Key-holding available · Eco products</p>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-green-50 via-white to-blue-50 pt-16 pb-12 border-b border-slate-100">
+    <div class="max-w-container mx-auto px-4 lg:px-6">
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-xs font-semibold mb-6">
+          Greater London Coverage
+        </span>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-grey-900 mb-6">Our Cleaning Services</h1>
+        <p class="text-lg text-grey-700 mb-8">
+          Premium, reliable cleaning services across Greater London — delivered by trained, vetted, fully equipped professionals.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="quote.html" class="btn-primary">Request a Free Quote</a>
+          <a href="tel:+442037508878" class="btn-secondary">Call 020 3750 8878</a>
         </div>
-        <div class="mt-8 lg:mt-0">
-          <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4 w-full lg:w-72">
-            <p class="text-xs font-semibold text-grey-900 mb-3 uppercase tracking-wide">Quick links</p>
-            <ul class="space-y-2 text-sm text-grey-700">
-              <li><a href="#core-services" class="hover:text-green-500">Core services</a></li>
-              <li><a href="#who-we-clean" class="hover:text-green-500">Who we clean for</a></li>
-              <li><a href="#how-to-book" class="hover:text-green-500">How to book</a></li>
-              <li><a href="#why-oasis" class="hover:text-green-500">Why Oasis</a></li>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regular Cleaning -->
+  <section id="regular-cleaning" class="py-16 bg-white">
+    <div class="max-w-container mx-auto px-4 lg:px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-600 text-xs font-semibold mb-4">
+            Most Popular
+          </div>
+          <h2 class="text-3xl font-bold text-grey-900 mb-4">Regular Cleaning</h2>
+          <p class="text-lg text-grey-700 mb-6">
+            A consistent, high-quality clean that keeps your home fresh, organised, and spotless.
+          </p>
+          
+          <div class="bg-green-50 rounded-xl p-6 mb-6">
+            <h3 class="font-semibold text-grey-900 mb-3">What's Included:</h3>
+            <ul class="space-y-2 text-grey-700">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Dusting & wiping all surfaces</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Kitchen counters, hob & exterior appliances</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Bathroom wipe-down & sanitation</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Vacuuming & mopping all floors</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Beds made (with fresh linen if provided)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 rounded-xl p-6">
+            <h3 class="font-semibold text-grey-900 mb-3">Not Included:</h3>
+            <ul class="space-y-2 text-grey-600 text-sm">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-grey-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                <span>Oven deep cleaning</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-grey-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                <span>Carpet shampoo</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-grey-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                <span>Internal windows</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-grey-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                <span>Decluttering</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 text-white shadow-xl">
+          <div class="text-center">
+            <p class="text-green-100 text-sm font-medium mb-2">Starting from</p>
+            <div class="text-5xl font-bold mb-2">£22–£28<span class="text-xl font-normal">/hr</span></div>
+            <p class="text-green-100 text-sm mb-6">Minimum 2 hours</p>
+            
+            <div class="bg-white/20 rounded-lg p-4 mb-6">
+              <p class="text-sm font-medium mb-2">Availability:</p>
+              <div class="flex flex-wrap gap-2 justify-center">
+                <span class="px-3 py-1 bg-white/20 rounded-full text-xs">Weekly</span>
+                <span class="px-3 py-1 bg-white/20 rounded-full text-xs">Fortnightly</span>
+                <span class="px-3 py-1 bg-white/20 rounded-full text-xs">Monthly</span>
+              </div>
+            </div>
+
+            <p class="text-sm text-green-100 mb-6">Ideal for busy households and long-term upkeep.</p>
+            
+            <a href="quote.html" class="inline-flex items-center justify-center w-full px-6 py-3 bg-white text-green-600 font-semibold rounded-lg hover:bg-green-50 transition">
+              Get a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Cleaning -->
+  <section id="deep-cleaning" class="py-16 bg-slate-50">
+    <div class="max-w-container mx-auto px-4 lg:px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="order-2 lg:order-1 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl p-8 text-white shadow-xl">
+          <div class="text-center">
+            <p class="text-blue-100 text-sm font-medium mb-2">Starting from</p>
+            <div class="text-5xl font-bold mb-2">£150–£220</div>
+            <p class="text-blue-100 text-sm mb-6">Price depends on property size</p>
+            
+            <div class="bg-white/20 rounded-lg p-4 mb-6">
+              <p class="text-sm font-medium mb-2">Optional Add-ons:</p>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                  <span>Oven deep clean</span>
+                  <span class="font-semibold">+£40</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Inside cabinets</span>
+                  <span class="font-semibold">+£20–£40</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-sm text-blue-100 mb-6">Perfect for seasonal cleans, moving in, or refreshing your home.</p>
+            
+            <a href="quote.html" class="inline-flex items-center justify-center w-full px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg hover:bg-blue-50 transition">
+              Get a Quote
+            </a>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <h2 class="text-3xl font-bold text-grey-900 mb-4">Deep Cleaning</h2>
+          <p class="text-lg text-grey-700 mb-6">
+            A top-to-bottom, detailed clean for homes that need extra care.
+          </p>
+          
+          <div class="bg-white rounded-xl p-6 shadow-sm mb-6">
+            <h3 class="font-semibold text-grey-900 mb-3">Everything in Regular Cleaning, plus:</h3>
+            <ul class="space-y-2 text-grey-700">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Limescale removal</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Deep bathroom sanitation</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Kitchen degreasing</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Skirting boards, doors & frames</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Inside fridge (if empty)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Inside microwave</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -110,545 +260,331 @@
     </div>
   </section>
 
-  <!-- Core Services -->
-  <section id="core-services" class="py-16 bg-slate-50">
-    <div class="max-w-container mx-auto px-3 lg:px-6">
-      <div class="flex items-center justify-between gap-4 mb-10">
-        <div>
-          <h2 class="text-2xl md:text-3xl font-bold text-grey-900">Core cleaning services</h2>
-          <p class="text-sm text-grey-500 mt-2">Every service has a defined checklist and optional add-ons.</p>
+  <!-- End of Tenancy -->
+  <section id="end-of-tenancy" class="py-16 bg-white">
+    <div class="max-w-container mx-auto px-4 lg:px-6">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/20 text-gold-600 text-xs font-semibold mb-4">
+          Most Requested
         </div>
-        <a href="contact.html" class="hidden md:inline-flex text-sm font-medium text-green-500 hover:underline">Need something custom? →</a>
+        <h2 class="text-3xl font-bold text-grey-900 mb-4">End of Tenancy Cleaning</h2>
+        <p class="text-lg text-grey-700 max-w-2xl mx-auto">
+          Our most requested service — designed to meet inventory clerk standards and maximise deposit return.
+        </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
-        <article class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-          <div class="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-gold-500/10 text-gold-500">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-grey-900 mb-2">Residential Cleaning</h3>
-          <p class="text-sm text-grey-700 mb-4">Weekly or one-off home cleans tailored to your rooms and routines. Kitchens, bathrooms, bedrooms.</p>
-          <ul class="text-xs text-grey-700 space-y-1 mb-4">
-            <li>• Kitchen surfaces, appliances & bathroom sanitisation</li>
-            <li>• Dusting, vacuuming, mopping all rooms</li>
-            <li>• Interior windows & mirrors</li>
-            <li>• Typical 2-bed flat: 2–3 hours</li>
-            <li>• We bring all products & equipment</li>
-            <li>• Excludes: External windows, high-level access</li>
-          </ul>
-          <a href="services/residential-cleaning.html" class="text-sm font-medium text-green-500 inline-flex items-center gap-1 hover:gap-2 transition">Full details <span aria-hidden="true">→</span></a>
-        </article>
-
-        <article class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-          <div class="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-500/10 text-green-500">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-grey-900 mb-2">Office & Commercial</h3>
-          <p class="text-sm text-grey-700 mb-4">Discreet after-hours or daytime cleaning for offices, clinics and reception areas.</p>
-          <ul class="text-xs text-grey-700 space-y-1 mb-4">
-            <li>• Desks, keyboards & touchpoint sanitisation</li>
-            <li>• Washrooms, kitchens & break areas</li>
-            <li>• Floors vacuumed & mopped</li>
-            <li>• Secure access protocols & key-holding</li>
-            <li>• Flexible scheduling (early/evening)</li>
-            <li>• Typical 1000 sq ft office: 1.5–2 hours</li>
-          </ul>
-          <a href="services/office-commercial-cleaning.html" class="text-sm font-medium text-green-500 inline-flex items-center gap-1 hover:gap-2 transition">Full details →</a>
-        </article>
-
-        <article class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-          <div class="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-500/10 text-green-500">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-grey-900 mb-2">Deep Cleaning</h3>
-          <p class="text-sm text-grey-700 mb-4">Limescale, grease, grout, fixtures. Ideal before events or seasonal refreshes.</p>
-          <ul class="text-xs text-grey-700 space-y-1 mb-4">
-            <li>• Intensive kitchen degreasing (oven, hob, extractors)</li>
-            <li>• Bathroom descaling (tiles, grout, fixtures)</li>
-            <li>• Skirtings, doors & internal windows</li>
-            <li>• Behind/under furniture & appliances</li>
-            <li>• Typical 2-bed flat: 4–6 hours</li>
-            <li>• Add carpet shampoo or upholstery cleaning</li>
-          </ul>
-          <a href="services/deep-cleaning.html" class="text-sm font-medium text-green-500 inline-flex items-center gap-1 hover:gap-2 transition">Full details →</a>
-        </article>
-
-        <article class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-          <div class="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-gold-500/10 text-gold-500">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-grey-900 mb-2">End of Tenancy</h3>
-          <p class="text-sm text-grey-700 mb-4">Inventory-friendly cleans to agent/landlord standards, in one visit.</p>
-          <ul class="text-xs text-grey-700 space-y-1 mb-4">
-            <li>• Deep clean all rooms to inventory standards</li>
-            <li>• Inside appliances (oven, fridge, dishwasher)</li>
-            <li>• All windows, frames, skirtings & fixtures</li>
-            <li>• Fixed price per property (not hourly)</li>
-            <li>• Optional carpet shampoo & upholstery</li>
-            <li>• Typical 2-bed flat: £150–£250</li>
-          </ul>
-          <a href="services/end-of-tenancy-cleaning.html" class="text-sm font-medium text-green-500 inline-flex items-center gap-1 hover:gap-2 transition">Full details →</a>
-        </article>
-
-        <article class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-          <div class="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-500/10 text-green-500">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-grey-900 mb-2">Specialist Cleans</h3>
-          <p class="text-sm text-grey-700 mb-4">Treatment rooms, post-build dust, HEPA vacuuming and sanitisation plans.</p>
-          <ul class="text-xs text-grey-700 space-y-1 mb-4">
-            <li>• Clinical/medical facility protocols</li>
-            <li>• Post-construction fine-particle removal</li>
-            <li>• HEPA-filtered vacuuming systems</li>
-            <li>• Manufacturer-safe methods for sensitive surfaces</li>
-            <li>• Custom sanitisation schedules</li>
-            <li>• DBS-checked teams for sensitive environments</li>
-          </ul>
-          <a href="services/specialist-cleans.html" class="text-sm font-medium text-green-500 inline-flex items-center gap-1 hover:gap-2 transition">Full details →</a>
-        </article>
-
-        <article class="bg-white border border-dashed border-slate-200 rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <h3 class="text-lg font-semibold text-grey-900 mb-2">Add-ons & Extras</h3>
-            <p class="text-sm text-grey-700 mb-3">Customize your clean with optional services:</p>
-            <ul class="text-xs text-grey-700 space-y-1 mb-4">
-              <li>• Inside oven deep clean: +£15–£20</li>
-              <li>• Inside fridge: +£10–£15</li>
-              <li>• Carpet shampoo: £35–£60 per room</li>
-              <li>• Upholstery cleaning: £40–£80 per item</li>
-              <li>• Interior windows: +£10–£15</li>
-              <li>• Disinfection spray: +£10</li>
+      <div class="grid lg:grid-cols-3 gap-8 mb-12">
+        <div class="lg:col-span-2 bg-green-50 rounded-2xl p-8">
+          <h3 class="font-bold text-grey-900 text-lg mb-6">What's Included:</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <ul class="space-y-3 text-grey-700">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Full property deep clean</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Oven deep clean</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Internal windows</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Inside & outside cupboards</span>
+              </li>
+            </ul>
+            <ul class="space-y-3 text-grey-700">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Bathroom descaling</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Kitchen degreasing</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Doors, frames, skirting boards</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Vacuum + mop throughout</span>
+              </li>
             </ul>
           </div>
-          <a href="quote.html" class="text-sm font-medium text-green-500 inline-flex items-center gap-1 hover:gap-2 transition">Add to your quote →</a>
-        </article>
+
+          <div class="mt-6 pt-6 border-t border-green-200">
+            <h4 class="font-semibold text-grey-900 mb-3">Optional Add-ons:</h4>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-white rounded-lg text-sm">Carpet shampoo</span>
+              <span class="px-4 py-2 bg-white rounded-lg text-sm">Upholstery cleaning</span>
+              <span class="px-4 py-2 bg-white rounded-lg text-sm">Balcony cleaning</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-grey-900 rounded-2xl p-8 text-white">
+          <h3 class="font-bold text-lg mb-6">Pricing by Property Size</h3>
+          <div class="space-y-4 mb-8">
+            <div class="flex justify-between items-center pb-3 border-b border-white/20">
+              <span>Studio</span>
+              <span class="font-bold text-lg">£170–£210</span>
+            </div>
+            <div class="flex justify-between items-center pb-3 border-b border-white/20">
+              <span>1-Bedroom</span>
+              <span class="font-bold text-lg">£200–£260</span>
+            </div>
+            <div class="flex justify-between items-center pb-3 border-b border-white/20">
+              <span>2-Bedroom</span>
+              <span class="font-bold text-lg">£260–£340</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span>3-Bedroom</span>
+              <span class="font-bold text-lg">£330–£450</span>
+            </div>
+          </div>
+
+          <div class="bg-gold-500 rounded-xl p-4 text-grey-900">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="font-bold">Deposit Guarantee</span>
+            </div>
+            <p class="text-sm">Free 48-hour re-clean if your inventory clerk reports any issues.</p>
+          </div>
+        </div>
       </div>
+
+      <p class="text-center text-grey-600">Trusted by tenants, landlords, and estate agents across Greater London.</p>
     </div>
   </section>
 
-  <!-- Trusted by London Section -->
-  <section class="py-16 bg-white border-t border-slate-100">
-    <div class="max-w-container mx-auto px-3 lg:px-6">
-      <div class="text-center mb-10">
-        <p class="text-xs font-semibold uppercase tracking-wide text-green-500 mb-2">Trusted across London since 2015</p>
-        <h2 class="text-3xl font-bold text-grey-900 mb-3">Why London trusts Oasis</h2>
-        <p class="text-base text-grey-700 max-w-2xl mx-auto">Professional cleaning backed by experience, training, and a commitment to excellence.</p>
-      </div>
-      <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
-        <div class="text-center p-4">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-50 text-green-500 mb-3">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <p class="text-sm font-semibold text-grey-900">Operating Since 2015</p>
-        </div>
-        <div class="text-center p-4">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-50 text-green-500 mb-3">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
-          </div>
-          <p class="text-sm font-semibold text-grey-900">500+ Regular Clients</p>
-        </div>
-        <div class="text-center p-4">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-50 text-green-500 mb-3">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <p class="text-sm font-semibold text-grey-900">DBS-Checked Teams</p>
-        </div>
-        <div class="text-center p-4">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-50 text-green-500 mb-3">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-            </svg>
-          </div>
-          <p class="text-sm font-semibold text-grey-900">Fully Insured</p>
-        </div>
-        <div class="text-center p-4">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-50 text-green-500 mb-3">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <p class="text-sm font-semibold text-grey-900">Re-Clean Guarantee</p>
-        </div>
-        <div class="text-center p-4">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-50 text-green-500 mb-3">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <p class="text-sm font-semibold text-grey-900">Eco-Friendly Products</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="py-16 bg-slate-50">
-    <div class="max-w-container mx-auto px-3 lg:px-6">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold text-grey-900 mb-3">What our clients say</h2>
-        <p class="text-base text-grey-700">Real feedback from London homes and businesses.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white border border-slate-100 rounded-2xl p-6">
-          <div class="mb-4">
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-          </div>
-          <p class="text-sm text-grey-700 mb-4 italic">"Thorough and professional. They transformed our flat before moving in. The end-of-tenancy clean was spotless—got our full deposit back."</p>
-          <p class="text-sm font-semibold text-grey-900">Amira K.</p>
-          <p class="text-xs text-grey-600">Homeowner, Brixton</p>
-        </div>
-        <div class="bg-white border border-slate-100 rounded-2xl p-6">
-          <div class="mb-4">
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-          </div>
-          <p class="text-sm text-grey-700 mb-4 italic">"Reliable after-hours service that never disrupts our clinic. The team understands our hygiene protocols perfectly. Highly recommend for medical facilities."</p>
-          <p class="text-sm font-semibold text-grey-900">Dr. Patel</p>
-          <p class="text-xs text-grey-600">Medical Practice, Harley Street</p>
-        </div>
-        <div class="bg-white border border-slate-100 rounded-2xl p-6">
-          <div class="mb-4">
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <svg class="w-5 h-5 text-gold-500 inline" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-          </div>
-          <p class="text-sm text-grey-700 mb-4 italic">"Weekly clean has been a game changer for our busy household. Same team every time, they know exactly what to do. Worth every penny."</p>
-          <p class="text-sm font-semibold text-grey-900">James T.</p>
-          <p class="text-xs text-grey-600">Property Manager, Camden</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing Section -->
-  <section class="py-16 bg-white">
-  <div class="max-w-container mx-auto px-3 lg:px-6">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">
-      <div>
-        <h2 class="text-3xl font-bold text-grey-900 mb-3">Pricing & service bands</h2>
-        <p class="text-base text-grey-700 max-w-2xl">Transparent rates for London homes and businesses. Final quote depends on property size, condition, access and frequency.</p>
-      </div>
-      <p class="text-xs text-grey-600">All staff DBS-checked · Fully insured · Products supplied</p>
-    </div>
-
-    <!-- What Affects Your Price -->
-    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-10">
-      <h3 class="text-lg font-semibold text-grey-900 mb-3">What affects your final price?</h3>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-grey-700">
+  <!-- Carpet & Upholstery -->
+  <section id="carpet-upholstery" class="py-16 bg-slate-50">
+    <div class="max-w-container mx-auto px-4 lg:px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <p class="font-semibold text-grey-900 mb-1">Property Size</p>
-          <p class="text-xs">Number of rooms, square footage, and layout complexity.</p>
-        </div>
-        <div>
-          <p class="font-semibold text-grey-900 mb-1">Current Condition</p>
-          <p class="text-xs">Level of soiling, previous maintenance, and specific challenges.</p>
-        </div>
-        <div>
-          <p class="font-semibold text-grey-900 mb-1">Frequency</p>
-          <p class="text-xs">Weekly/fortnightly contracts receive discounted rates.</p>
-        </div>
-        <div>
-          <p class="font-semibold text-grey-900 mb-1">Add-ons & Extras</p>
-          <p class="text-xs">Carpet cleaning, oven, fridge, upholstery, and disinfection.</p>
-        </div>
-      </div>
-      <p class="text-xs text-grey-600 mt-4"><strong>Note:</strong> Hourly rates apply to Standard, Deep, Office, and After-builders cleans. End of Tenancy is a fixed price based on property size.</p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-8 mb-12">
-      <div class="border border-slate-200 rounded-2xl p-6 bg-green-50/40">
-        <p class="text-xs font-semibold uppercase tracking-wide text-green-500 mb-2">Residential cleaning</p>
-        <h3 class="text-xl font-semibold text-grey-900 mb-4">Home & flat cleans</h3>
-        <ul class="space-y-4 text-sm text-grey-700">
-          <li class="flex items-start justify-between gap-4"><div><p class="font-medium text-grey-900">Standard clean</p><p class="text-xs text-grey-500">Weekly / fortnightly · bathrooms · kitchen surfaces · floors</p></div><p class="text-sm font-semibold text-grey-900">£18–£22/hr</p></li>
-          <li class="flex items-start justify-between gap-4"><div><p class="font-medium text-grey-900">Deep clean</p><p class="text-xs text-grey-500">Limescale, oven, internal doors, skirtings</p></div><p class="text-sm font-semibold text-grey-900">£25–£30/hr</p></li>
-          <li class="flex items-start justify-between gap-4"><div><p class="font-medium text-grey-900">End of tenancy</p><p class="text-xs text-grey-500">Inventory-ready · appliances · internal windows</p></div><p class="text-sm font-semibold text-grey-900">£150–£250</p></li>
-          <li class="flex items-start justify-between gap-4"><div><p class="font-medium text-grey-900">After-builders clean</p><p class="text-xs text-grey-500">Dust, fine particles, hard floors, frames</p></div><p class="text-sm font-semibold text-grey-900">£28–£35/hr</p></li>
-          <li class="flex items-start justify-between gap-4"><div><p class="font-medium text-grey-900">Carpet & upholstery</p><p class="text-xs text-grey-500">Per room / per item</p></div><p class="text-sm font-semibold text-grey-900">£35–£60</p></li>
-          <li class="flex items-start justify-between gap-4"><div><p class="font-medium text-grey-900">Add-ons</p><p class="text-xs text-grey-500">Inside fridge, oven, cabinets</p></div><p class="text-sm font-semibold text-grey-900">+£10–£20</p></li>
-        </ul>
-        <p class="text-xs text-grey-500 mt-6">Minimum booking: 2 hours. Parking/congestion may apply in some areas.</p>
-      </div>
-
-      <div class="border border-slate-200 rounded-2xl p-6 bg-white">
-        <p class="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">Commercial & contracts</p>
-        <h3 class="text-xl font-semibold text-grey-900 mb-4">Business & specialist</h3>
-        <ul class="space-y-4 text-sm text-grey-700">
-          <li class="flex items-start justify-between gap-4"><div><p class="font-medium text-grey-900">Office / retail</p><p class="text-xs text-grey-500">Evening or early morning cleans</p></div><p class="text-sm font-semibold text-grey-900">£22–£28/hr</p></li>
-          <li class="flex items-start justify-between gap-4"><div><p class="font-medium text-grey-900">Medical / clinical</p><p class="text-xs text-grey-500">Infection-control protocols</p></div><p class="text-sm font-semibold text-grey-900">£25–£32/hr</p></li>
-          <li class="flex items-start justify-between gap-4"><div><p class="font-medium text-grey-900">Schools / community</p><p class="text-xs text-grey-500">DBS-checked teams</p></div><p class="text-sm font-semibold text-grey-900">£23–£27/hr</p></li>
-          <li class="flex items-start justify-between gap-4"><div><p class="font-medium text-grey-900">One-off / specialist clean</p><p class="text-xs text-grey-500">Post-event, remediation, high-touch</p></div><p class="text-sm font-semibold text-grey-900">£200–£600</p></li>
-        </ul>
-        <p class="text-xs text-grey-500 mt-6">Contract clients receive priority slots and site-specific checklists.</p>
-      </div>
-    </div>
-
-    <div class="bg-green-50 border border-green-100 rounded-2xl p-6 flex flex-wrap gap-6 items-center">
-      <div><p class="text-xs font-semibold uppercase tracking-wide text-green-700 mb-2">Optional add-ons</p><h4 class="text-sm font-semibold text-grey-900 mb-1">Eco Clean Upgrade</h4><p class="text-xs text-grey-600 mb-3">+£3/hr · plant-based / low-VOC products.</p></div>
-      <div><h4 class="text-sm font-semibold text-grey-900 mb-1">Out-of-hours service</h4><p class="text-xs text-grey-600 mb-3">+20% · evenings / weekends / emergency slots.</p></div>
-      <div><h4 class="text-sm font-semibold text-grey-900 mb-1">Contract discount</h4><p class="text-xs text-grey-600 mb-3">–10% for weekly / bi-weekly commercial cleans.</p></div>
-      <div class="ml-auto"><a href="contact.html" class="btn-tertiary">Get an exact quote</a></div>
-    </div>
-  </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="py-16 bg-slate-50">
-    <div class="max-w-container mx-auto px-3 lg:px-6">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold text-grey-900 mb-3">Frequently asked questions</h2>
-        <p class="text-base text-grey-700">Quick answers to common questions about our services.</p>
-      </div>
-      <div class="max-w-3xl mx-auto space-y-6">
-        <div class="bg-white border border-slate-200 rounded-2xl p-6">
-          <h3 class="text-lg font-semibold text-grey-900 mb-2">Are products and equipment included?</h3>
-          <p class="text-sm text-grey-700">Yes, we bring all cleaning products and equipment needed for the job. We use professional-grade, eco-friendly products that are safe for your family and pets. If you have specific product preferences or allergies, just let us know when booking.</p>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-2xl p-6">
-          <h3 class="text-lg font-semibold text-grey-900 mb-2">What if I'm not satisfied with the clean?</h3>
-          <p class="text-sm text-grey-700">We offer a 100% satisfaction guarantee. If something isn't right, contact us within 24 hours and we'll return to address any concerns at no extra cost. Your happiness is our priority.</p>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-2xl p-6">
-          <h3 class="text-lg font-semibold text-grey-900 mb-2">Do you serve my area in London?</h3>
-          <p class="text-sm text-grey-700">We cover all London boroughs and surrounding areas. Enter your postcode in our quote form to check availability and get an accurate price. Some outer areas may have a small travel surcharge.</p>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-2xl p-6">
-          <h3 class="text-lg font-semibold text-grey-900 mb-2">How do I pay for the service?</h3>
-          <p class="text-sm text-grey-700">We accept bank transfer, card payment (online or over phone), or cash on completion. For regular contracts, we can set up automatic billing. Payment is due upon completion for one-off cleans, or monthly for ongoing contracts.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Who we clean for -->
-  <section id="who-we-clean" class="py-14 bg-white">
-    <div class="max-w-container mx-auto px-3 lg:px-6">
-      <div class="flex items-center justify-between gap-4 mb-8">
-        <div>
-          <h2 class="text-2xl font-bold text-grey-900">Who we clean for</h2>
-          <p class="text-sm text-grey-500 mt-2">Different properties, different access rules — we work around them.</p>
-        </div>
-      </div>
-      <div class="grid gap-5 md:grid-cols-4">
-        <div class="rounded-2xl bg-green-50 p-5">
-          <p class="text-xs text-green-700 uppercase tracking-wide mb-2">Homes & flats</p>
-          <p class="text-sm text-grey-700">Flats, terraces, HMOs, student lets.</p>
-        </div>
-        <div class="rounded-2xl bg-slate-50 p-5">
-          <p class="text-xs text-slate-600 uppercase tracking-wide mb-2">Landlords & agents</p>
-          <p class="text-sm text-grey-700">Move-out, inventory-ready, key-holding.</p>
-        </div>
-        <div class="rounded-2xl bg-slate-50 p-5">
-          <p class="text-xs text-slate-600 uppercase tracking-wide mb-2">Offices & clinics</p>
-          <p class="text-sm text-grey-700">Secure access, low-disruption cleans.</p>
-        </div>
-        <div class="rounded-2xl bg-slate-50 p-5">
-          <p class="text-xs text-slate-600 uppercase tracking-wide mb-2">Builders & fit-out</p>
-          <p class="text-sm text-grey-700">Post-build dust & fine clean.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How to book -->
-  <section id="how-to-book" class="py-16 bg-green-50">
-    <div class="max-w-container mx-auto px-3 lg:px-6">
-      <h2 class="text-2xl font-bold text-grey-900 mb-10 text-center">How to book</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-7 rounded-2xl text-center shadow-sm">
-          <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center mx-auto mb-4 text-base font-semibold">1</div>
-          <h3 class="text-sm font-semibold text-grey-900 mb-2">Request a quote</h3>
-          <p class="text-sm text-grey-600">Tell us the property size, service type, and timing.</p>
-        </div>
-        <div class="bg-white p-7 rounded-2xl text-center shadow-sm">
-          <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center mx-auto mb-4 text-base font-semibold">2</div>
-          <h3 class="text-sm font-semibold text-grey-900 mb-2">Confirm checklist</h3>
-          <p class="text-sm text-grey-600">We send you a clear scope and price. You approve.</p>
-        </div>
-        <div class="bg-white p-7 rounded-2xl text-center shadow-sm">
-          <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center mx-auto mb-4 text-base font-semibold">3</div>
-          <h3 class="text-sm font-semibold text-grey-900 mb-2">Team attends</h3>
-          <p class="text-sm text-grey-600">Trained, insured staff arrive with products and equipment.</p>
-        </div>
-      </div>
-      <div class="text-center mt-8">
-        <a href="quote.html" class="inline-flex items-center px-6 py-3 rounded-md bg-grey-900 text-white text-sm font-semibold hover:bg-black transition">Get your quote</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Oasis -->
-  <section id="why-oasis" class="py-16 bg-white">
-    <div class="max-w-container mx-auto px-3 lg:px-6">
-      <h2 class="text-2xl font-bold text-grey-900 mb-10 text-center">Why choose Oasis</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="text-center bg-white rounded-2xl p-6 border border-slate-100">
-          <div class="mb-4 flex justify-center text-gold-500">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
+          <h2 class="text-3xl font-bold text-grey-900 mb-4">Carpet & Upholstery Cleaning</h2>
+          <p class="text-lg text-grey-700 mb-6">
+            Professional hot-water extraction for a deeper clean. Removes odours, stains (best effort), and refreshes soft furnishings.
+          </p>
+          
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="font-semibold text-grey-900 mb-4">Pricing:</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center pb-3 border-b border-grey-200">
+                <span class="text-grey-700">Rooms</span>
+                <span class="font-bold text-grey-900">£25–£40 each</span>
+              </div>
+              <div class="flex justify-between items-center pb-3 border-b border-grey-200">
+                <span class="text-grey-700">Stairs</span>
+                <span class="font-bold text-grey-900">£2.50–£3 per step</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-grey-700">Sofas</span>
+                <span class="font-bold text-grey-900">£25 per seat</span>
+              </div>
+            </div>
           </div>
-          <h3 class="text-sm font-semibold text-grey-900 mb-2">Trained & vetted staff</h3>
-          <p class="text-sm text-grey-600">Every team member is background-checked and quality-assessed.</p>
         </div>
-        <div class="text-center bg-white rounded-2xl p-6 border border-slate-100">
-          <div class="mb-4 flex justify-center text-gold-500">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-sm font-semibold text-grey-900 mb-2">Eco-friendly products</h3>
-          <p class="text-sm text-grey-600">Safe, effective solutions for people and surfaces.</p>
-        </div>
-        <div class="text-center bg-white rounded-2xl p-6 border border-slate-100">
-          <div class="mb-4 flex justify-center text-gold-500">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-            </svg>
-          </div>
-          <h3 class="text-sm font-semibold text-grey-900 mb-2">Fully insured</h3>
-          <p class="text-sm text-grey-600">Comprehensive cover for peace of mind on every visit.</p>
-        </div>
-        <div class="text-center bg-white rounded-2xl p-6 border border-slate-100">
-          <div class="mb-4 flex justify-center text-gold-500">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/>
-            </svg>
-          </div>
-          <h3 class="text-sm font-semibold text-grey-900 mb-2">Flexible scheduling</h3>
-          <p class="text-sm text-grey-600">We work around your timetable with minimal disruption.</p>
-        </div>
-        <div class="text-center bg-white rounded-2xl p-6 border border-slate-100">
-          <div class="mb-4 flex justify-center text-gold-500">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-          </div>
-          <h3 class="text-sm font-semibold text-grey-900 mb-2">100% satisfaction</h3>
-          <p class="text-sm text-grey-600">If it's not right, we make it right — promptly.</p>
-        </div>
-        <div class="text-center bg-white rounded-2xl p-6 border border-slate-100">
-          <div class="mb-4 flex justify-center text-gold-500">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-sm font-semibold text-grey-900 mb-2">London-first operation</h3>
-          <p class="text-sm text-grey-600">Designed for London access, keys, and property managers.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Final CTA -->
-  <section class="py-16 bg-green-50">
-    <div class="max-w-container mx-auto px-3 lg:px-6 text-center">
-      <h2 class="text-3xl font-bold text-grey-900 mb-4">Ready to Get a Clear, Transparent Quote?</h2>
-      <p class="text-base text-grey-700 mb-6 max-w-2xl mx-auto">No hidden costs. No surprises. Just honest pricing for quality work. Tell us what you need cleaned and when—we'll confirm availability and price today.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="quote.html" class="inline-flex items-center px-6 py-3 rounded-md bg-green-500 text-white text-base font-semibold hover:bg-green-600 transition shadow-sm">Request a Free Quote</a>
-        <a href="tel:+442037508878" class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-grey-900 hover:text-green-500 transition">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        <div class="bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl p-8 text-center">
+          <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
           </svg>
-          Call 020 3750 8878
-        </a>
+          <h3 class="text-xl font-bold text-grey-900 mb-2">Fresher Home, Healthier Living</h3>
+          <p class="text-grey-700">Professional extraction removes embedded dirt, allergens, and odours that regular vacuuming can't reach.</p>
+          <a href="quote.html" class="btn-primary mt-6 inline-block">Request a Quote</a>
+        </div>
       </div>
-      <p class="text-xs text-grey-600 mt-4">Available Mon–Sat 8am–6pm · Emergency bookings available</p>
+    </div>
+  </section>
+
+  <!-- Commercial Cleaning -->
+  <section id="commercial" class="py-16 bg-white">
+    <div class="max-w-container mx-auto px-4 lg:px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="bg-gradient-to-br from-grey-900 to-grey-800 rounded-2xl p-8 text-white shadow-xl">
+          <h3 class="text-sm font-medium text-grey-400 mb-2">Commercial & Office</h3>
+          <div class="text-4xl font-bold mb-2">£25–£35<span class="text-lg font-normal">/hr</span></div>
+          <p class="text-grey-400 text-sm mb-6">Depending on size & frequency</p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Weekly/daily cleaning plans</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>After-hours service available</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Custom quotes for larger spaces</span>
+            </div>
+          </div>
+
+          <a href="quote.html" class="inline-flex items-center justify-center w-full px-6 py-3 bg-white text-grey-900 font-semibold rounded-lg hover:bg-grey-100 transition">
+            Get a Custom Quote
+          </a>
+        </div>
+
+        <div>
+          <h2 class="text-3xl font-bold text-grey-900 mb-4">Commercial & Office Cleaning</h2>
+          <p class="text-lg text-grey-700 mb-6">
+            Reliable cleaning for businesses of any size. Maintain a professional, hygienic workspace.
+          </p>
+          
+          <div class="bg-slate-50 rounded-xl p-6">
+            <h3 class="font-semibold text-grey-900 mb-4">What's Included:</h3>
+            <ul class="space-y-3 text-grey-700">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Desk & workstation sanitation</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Kitchens & washrooms</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Rubbish removal (non-hazardous)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Floor care (vacuum & mop)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Bring Section -->
+  <section class="py-16 bg-gradient-to-br from-green-500 to-green-600 text-white">
+    <div class="max-w-container mx-auto px-4 lg:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">What We Bring to Every Clean</h2>
+        <p class="text-green-100 max-w-2xl mx-auto">Every booking includes professional equipment and trained staff — no surprises.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div class="bg-white/10 rounded-xl p-6 text-center backdrop-blur-sm">
+          <svg class="w-10 h-10 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          <h3 class="font-semibold mb-1">Fully Trained</h3>
+          <p class="text-sm text-green-100">Vetted cleaners</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6 text-center backdrop-blur-sm">
+          <svg class="w-10 h-10 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <h3 class="font-semibold mb-1">Eco-Friendly</h3>
+          <p class="text-sm text-green-100">Safe products</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6 text-center backdrop-blur-sm">
+          <svg class="w-10 h-10 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+          </svg>
+          <h3 class="font-semibold mb-1">Pro Equipment</h3>
+          <p class="text-sm text-green-100">We bring everything</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6 text-center backdrop-blur-sm">
+          <svg class="w-10 h-10 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+          <h3 class="font-semibold mb-1">Fully Insured</h3>
+          <p class="text-sm text-green-100">Public liability</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6 text-center backdrop-blur-sm">
+          <svg class="w-10 h-10 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <h3 class="font-semibold mb-1">48-Hour Guarantee</h3>
+          <p class="text-sm text-green-100">Satisfaction assured</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-container mx-auto px-4 lg:px-6 text-center">
+      <h2 class="text-3xl font-bold text-grey-900 mb-4">Ready to Book?</h2>
+      <p class="text-lg text-grey-700 mb-8 max-w-2xl mx-auto">Get a free, no-obligation quote tailored to your needs. We'll respond within 24 hours.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="quote.html" class="btn-primary text-lg px-8 py-4">Request a Free Quote</a>
+        <a href="tel:+442037508878" class="btn-secondary text-lg px-8 py-4">Call 020 3750 8878</a>
+      </div>
     </div>
   </section>
 </main>
 
+<!-- Footer -->
 <footer class="bg-grey-900 text-white py-12">
-  <div class="max-w-container mx-auto px-3 lg:px-6 grid md:grid-cols-4 gap-8 mb-8">
-    <div>
-      <img src="assets/logo.jpg" alt="Oasis International Cleaning Agency" class="h-14 mb-4">
-      <p class="text-sm text-white/60">Professional domestic & commercial cleaning across London.</p>
+  <div class="max-w-container mx-auto px-4 lg:px-6">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="h-12 w-auto mb-4 brightness-0 invert">
+        <p class="text-sm text-white/70">Premium cleaning services across Greater London.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-sm">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="index.html" class="hover:text-green-400 transition">Home</a></li>
+          <li><a href="services.html" class="hover:text-green-400 transition">Services</a></li>
+          <li><a href="about.html" class="hover:text-green-400 transition">About</a></li>
+          <li><a href="gallery.html" class="hover:text-green-400 transition">Gallery</a></li>
+          <li><a href="contact.html" class="hover:text-green-400 transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-sm">Services</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="#regular-cleaning" class="hover:text-green-400 transition">Regular Cleaning</a></li>
+          <li><a href="#deep-cleaning" class="hover:text-green-400 transition">Deep Cleaning</a></li>
+          <li><a href="#end-of-tenancy" class="hover:text-green-400 transition">End of Tenancy</a></li>
+          <li><a href="#carpet-upholstery" class="hover:text-green-400 transition">Carpet & Upholstery</a></li>
+          <li><a href="#commercial" class="hover:text-green-400 transition">Commercial</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-sm">Contact</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li>
+            <a href="tel:+442037508878" class="hover:text-green-400 transition flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              020 3750 8878
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@oasisinternationalcleaningservices.com" class="hover:text-green-400 transition flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+        <div class="flex gap-4 mt-4">
+          <a href="https://www.instagram.com/oasiscleaningservices" class="text-white/70 hover:text-green-400 transition" aria-label="Instagram">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/oasiscleaningservices" class="text-white/70 hover:text-green-400 transition" aria-label="Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
-    <div>
-      <h4 class="font-bold mb-4 text-white">Company</h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li><a href="index.html" class="hover:text-green-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-green-400">About</a></li>
-        <li><a href="services.html" class="hover:text-green-400">Services</a></li>
-        <li><a href="contact.html" class="hover:text-green-400">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-bold mb-4 text-white">Services</h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li><a href="services/residential-cleaning.html" class="hover:text-green-400">Residential Cleaning</a></li>
-        <li><a href="services/office-commercial-cleaning.html" class="hover:text-green-400">Office & Commercial</a></li>
-        <li><a href="services/deep-cleaning.html" class="hover:text-green-400">Deep Cleaning</a></li>
-        <li><a href="services/end-of-tenancy-cleaning.html" class="hover:text-green-400">End of Tenancy</a></li>
-        <li><a href="services/specialist-cleans.html" class="hover:text-green-400">Specialist Cleans</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-bold mb-4 text-white">Contact</h4>
-      <p class="text-sm text-white/60 mb-2">Tel: <a href="tel:+442037508878" class="text-green-400 hover:underline">+44 20 3750 8878</a></p>
-      <p class="text-sm text-white/60 mb-4">Email: <a href="mailto:info@oasisinternationalcleaningservices.com" class="text-green-400 hover:underline">info@oasisinternationalcleaningservices.com</a></p>
+    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-white/50">&copy; <span id="current-year">2025</span> Oasis International Cleaning Services. All rights reserved.</p>
+      <div class="flex gap-6 text-xs text-white/50">
+        <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-white transition">Terms & Conditions</a>
+      </div>
     </div>
   </div>
-  <p class="text-center text-xs text-white/30 border-t border-white/10 pt-8">
-    &copy; <span id="current-year">2025</span> Oasis International Cleaning Agency. All rights reserved.
-  </p>
-  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </footer>
 
 <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
