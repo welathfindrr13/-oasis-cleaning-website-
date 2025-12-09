@@ -140,17 +140,26 @@ tailwind.config = {
 </div>
 
 <div>
-<label for="phone" class="form-label">Phone Number <span class="text-red-600">*</span></label>
-<input type="tel" id="phone" name="phone" class="form-field" placeholder="e.g., 020 3750 8878" required>
+<label for="postcode" class="form-label">Postcode <span class="text-red-600">*</span></label>
+<input type="text" id="postcode" name="postcode" class="form-field" placeholder="e.g., SW1A 1AA" required>
 </div>
 
 <div>
-<label for="message" class="form-label">Your Message <span class="text-red-600">*</span></label>
-<textarea id="message" name="message" rows="6" class="form-field" required></textarea>
-<p class="text-small text-grey-700 mt-2">Please include any relevant details about your enquiry. For quote requests, we recommend using our <a href="quote.html" class="text-green-500 hover:underline">dedicated quote form</a> instead.</p>
+<label for="service_type" class="form-label">Service Type <span class="text-red-600">*</span></label>
+<select id="service_type" name="service_type" class="form-field" required>
+<option value="">Please select a service</option>
+<option value="Residential Cleaning">Residential Cleaning</option>
+<option value="Office & Commercial Cleaning">Office & Commercial Cleaning</option>
+<option value="Deep Cleaning">Deep Cleaning</option>
+<option value="End of Tenancy Cleaning">End of Tenancy Cleaning</option>
+<option value="Specialist Cleans">Specialist Cleans</option>
+<option value="General Enquiry">General Enquiry</option>
+</select>
 </div>
 
-<button type="submit" class="btn-primary w-full">Send Message</button>
+<p class="text-small text-grey-600">For detailed quote requests, we recommend using our <a href="quote.html" class="text-green-500 hover:underline">dedicated quote form</a>.</p>
+
+<button type="submit" class="btn-primary w-full">Send Enquiry</button>
 </form>
 </div>
 </div>
@@ -223,7 +232,8 @@ tailwind.config = {
   </div>
   <div class="text-center text-xs text-white/30 border-t border-white/10 pt-8">
     <p class="mb-2">&copy; <span id="current-year">2025</span> Oasis International Cleaning Services Ltd. All rights reserved.</p>
-    <p>Company No. 16660274 | 15 A Unimix House, Abbey Road, London, NW10 7TR</p>
+    <p class="mb-2">Company No. 16660274 | 15 A Unimix House, Abbey Road, London, NW10 7TR</p>
+    <p class="text-white/20">Oasis International Cleaning Services Ltd is a UK-registered company (Co. No. 16660274) wholly owned by Marcus Edwards. It is structurally and financially separate from Oasis International Care Services Ltd.</p>
   </div>
 </footer>
 
