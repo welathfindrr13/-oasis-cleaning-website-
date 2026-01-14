@@ -22,7 +22,8 @@ function ensureDataDir() {
 }
 
 // Trust proxy - required when behind DigitalOcean's load balancer
-app.set('trust proxy', true);
+// Set to 1 to trust only the first proxy (DigitalOcean's load balancer)
+app.set('trust proxy', 1);
 
 // Validate Brevo configuration
 if (!process.env.BREVO_API_KEY) {
