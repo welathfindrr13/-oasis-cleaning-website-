@@ -254,7 +254,7 @@ IP Address: ${req.ip || 'Unknown'}
 // ============================================
 // NEW: Quote Lead Endpoint (Smart Estimator)
 // ============================================
-app.post('/api/quote-lead', quoteleadLimiter, async (req, res) => {
+app.post('/quote-lead', quoteleadLimiter, async (req, res) => {
   try {
     const payload = req.body;
 
