@@ -49,36 +49,34 @@ tailwind.config = {
 <body class="font-sans text-grey-700 bg-white">
 <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-green-500 focus:text-white focus:rounded">Skip to content</a>
 
-<header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-100">
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
   <nav class="max-w-container mx-auto px-3 lg:px-6 h-[160px] flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-3">
-      <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services Ltd" class="h-40 w-auto">
+      <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="h-40 w-auto">
     </a>
-    <button id="mobile-menu-btn" class="lg:hidden p-2" aria-label="Toggle menu" aria-expanded="false">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
+    <button id="mobile-menu-btn" class="lg:hidden p-3 -mr-1" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
-    <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
-      <a href="index.html" class="hover:text-green-500">Home</a>
-      <a href="about.html" class="hover:text-green-500">About</a>
-      <a href="services.html" class="hover:text-green-500">Services</a>
-      <a href="gallery.html" class="hover:text-green-500">Gallery</a>
-      <a href="contact.html" class="hover:text-green-500">Contact</a>
-      <a href="join-us.html" class="hover:text-green-500">Careers</a>
-      <a href="quote.html" class="inline-flex items-center px-4 py-2 rounded-md bg-green-500 text-white shadow-sm hover:bg-green-600 transition">Request a Quote</a>
+    <div class="hidden lg:flex items-center gap-6">
+      <a href="index.html" class="text-sm font-medium hover:text-green-500 transition">Home</a>
+      <a href="domestic-cleaning-london.html" class="text-sm font-medium hover:text-green-500 transition">Domestic</a>
+      <a href="end-of-tenancy-cleaning-london.html" class="text-sm font-medium hover:text-green-500 transition">End of Tenancy</a>
+      <a href="office-cleaning-london.html" class="text-sm font-medium hover:text-green-500 transition">Office</a>
+      <a href="about-us.html" class="text-sm font-medium hover:text-green-500 transition">About</a>
+      <a href="contact.html" class="text-sm font-medium hover:text-green-500 transition">Contact</a>
+      <a href="quote.html" class="btn-primary">Get a Quote</a>
     </div>
   </nav>
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-grey-300">
-    <div class="px-3 py-4 space-y-3 text-sm">
-      <a href="index.html" class="block py-2">Home</a>
-      <a href="about.html" class="block py-2">About</a>
-      <a href="services.html" class="block py-2">Services</a>
-      <a href="gallery.html" class="block py-2">Gallery</a>
-      <a href="contact.html" class="block py-2">Contact</a>
-      <a href="join-us.html" class="block py-2">Careers</a>
-      <a href="quote.html" class="inline-block mt-2 px-4 py-2 rounded-md bg-green-500 text-white">Request a Quote</a>
-    </div>
+    <nav class="px-4 py-4 space-y-2">
+      <a href="index.html" class="block py-3 text-base border-b border-grey-300/60">Home</a>
+      <a href="domestic-cleaning-london.html" class="block py-3 text-base border-b border-grey-300/60">Domestic Cleaning</a>
+      <a href="end-of-tenancy-cleaning-london.html" class="block py-3 text-base border-b border-grey-300/60">End of Tenancy</a>
+      <a href="office-cleaning-london.html" class="block py-3 text-base border-b border-grey-300/60">Office Cleaning</a>
+      <a href="about-us.html" class="block py-3 text-base border-b border-grey-300/60">About</a>
+      <a href="contact.html" class="block py-3 text-base">Contact</a>
+      <a href="quote.html" class="btn-primary inline-block mt-3 w-full text-center">Get a Quote</a>
+    </nav>
   </div>
 </header>
 
@@ -270,47 +268,49 @@ tailwind.config = {
 </main>
 
 <!-- Footer -->
-<footer class="bg-grey-900 text-white py-12 mt-16">
-  <div class="max-w-container mx-auto px-3 lg:px-6">
+<footer class="bg-grey-900 text-white py-12">
+  <div class="max-w-container mx-auto px-4 lg:px-6">
     <div class="grid md:grid-cols-4 gap-8 mb-8">
       <div>
-        <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services Ltd" class="h-20 w-auto mb-4 rounded-lg bg-white p-2">
-        <p class="text-sm text-white/70">Proper Planning Prevents Poor Performance.</p>
-      </div>
-            
-      <div>
-        <h4 class="font-bold mb-4 text-sm">Quick Links</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="index.html" class="hover:text-green-500">Home</a></li>
-          <li><a href="about.html" class="hover:text-green-500">About</a></li>
-          <li><a href="services.html" class="hover:text-green-500">Services</a></li>
-          <li><a href="gallery.html" class="hover:text-green-500">Gallery</a></li>
-          <li><a href="contact.html" class="hover:text-green-500">Contact</a></li>
-          <li><a href="join-us.html" class="hover:text-green-500">Careers</a></li>
-        </ul>
+        <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="h-20 w-auto mb-4 rounded-lg bg-white p-2">
+        <p class="text-sm text-white/70">Structured cleaning services across Greater London.</p>
       </div>
       <div>
         <h4 class="font-bold mb-4 text-sm">Services</h4>
         <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="services/residential-cleaning.html" class="hover:text-green-500">Residential Cleaning</a></li>
-          <li><a href="services/office-commercial-cleaning.html" class="hover:text-green-500">Office & Commercial</a></li>
-          <li><a href="services/deep-cleaning.html" class="hover:text-green-500">Deep Cleaning</a></li>
-          <li><a href="services/end-of-tenancy-cleaning.html" class="hover:text-green-500">End of Tenancy</a></li>
-          <li><a href="services/specialist-cleans.html" class="hover:text-green-500">Specialist Cleans</a></li>
+          <li><a href="domestic-cleaning-london.html" class="hover:text-green-400 transition">Domestic Cleaning</a></li>
+          <li><a href="end-of-tenancy-cleaning-london.html" class="hover:text-green-400 transition">End of Tenancy</a></li>
+          <li><a href="office-cleaning-london.html" class="hover:text-green-400 transition">Office Cleaning</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="font-bold mb-4 text-sm">Legal</h4>
-        <ul class="space-y-2 text-sm text-white/50">
-          <li><a href="privacy-policy.html" class="hover:text-green-500">Privacy Policy</a></li>
-          <li><a href="terms.html" class="hover:text-green-500">Terms</a></li>
+        <h4 class="font-bold mb-4 text-sm">Company</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="index.html" class="hover:text-green-400 transition">Home</a></li>
+          <li><a href="about-us.html" class="hover:text-green-400 transition">About</a></li>
+          <li><a href="contact.html" class="hover:text-green-400 transition">Contact</a></li>
+          <li><a href="join-us.html" class="hover:text-green-400 transition">Join Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-sm">Contact</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="tel:+442037508878" class="hover:text-green-400 transition">020 3750 8878</a></li>
+          <li><a href="https://wa.me/447947716355" class="hover:text-green-400 transition">WhatsApp</a></li>
+          <li><a href="mailto:info@oasisinternationalcleaningservices.com" class="hover:text-green-400 transition">Email Us</a></li>
         </ul>
       </div>
     </div>
-    <div class="border-t border-white/10 pt-6 text-center text-xs text-white/40">
-      <p class="mb-2">&copy; <span id="current-year">2025</span> Oasis International Cleaning Services Ltd. All rights reserved.</p>
-      <p class="mb-2">Company No. 16660274 | 15 A Unimix House, Abbey Road, London, NW10 7TR</p>
-      <p class="text-white/20">Oasis International Cleaning Services Ltd is a UK-registered company (Co. No. 16660274) wholly owned by Marcus Edwards. It is structurally and financially separate from Oasis International Care Services Ltd.</p>
+    <div class="border-t border-white/10 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+        <p class="text-xs text-white/50">&copy; <span id="current-year">2025</span> Oasis International Cleaning Services Ltd. All rights reserved.</p>
+        <div class="flex gap-6 text-xs text-white/50">
+          <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+        </div>
+      </div>
+      <p class="text-xs text-white/40 text-center mb-2">Oasis International Cleaning Services Ltd | Company No. 16660274 | 15 A Unimix House, Abbey Road, London, NW10 7TR</p>
+      <p class="text-xs text-white/30 text-center">Oasis International Cleaning Services Ltd is a UK-registered company (Co. No. 16660274) wholly owned by Marcus Edwards. It is structurally and financially separate from Oasis International Care Services Ltd.</p>
     </div>
   </div>
 </footer>
