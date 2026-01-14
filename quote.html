@@ -6,8 +6,8 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<title>Get a Quote | Oasis International Cleaning Services</title>
-<meta name="description" content="Request a quote for domestic cleaning, end of tenancy cleaning, or office cleaning across London.">
+<title>Instant Quote | Oasis International Cleaning Services</title>
+<meta name="description" content="Get an instant quote for domestic cleaning, end of tenancy cleaning, or office cleaning across London. No guesswork—clear pricing confirmed before booking.">
 <link rel="canonical" href="https://www.oasisinternationalcleaningservices.com/quote.html">
 
 <!-- Fonts -->
@@ -25,6 +25,72 @@
   gtag('js', new Date());
   gtag('config', 'AW-17779427647');
 </script>
+
+<style>
+/* Quote Estimator Specific Styles */
+.quote-section { margin-bottom: var(--space-lg); }
+.quote-section-title {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+.quote-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+.quote-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-md); }
+@media (max-width: 640px) {
+  .quote-grid-2, .quote-grid-3 { grid-template-columns: 1fr; }
+}
+.checkbox-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent-green);
+}
+.form-hint {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+#output {
+  padding: var(--space-lg);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-muted);
+  border-radius: 2px;
+}
+#output h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-md);
+}
+#output h3 {
+  font-size: 1rem;
+  margin: var(--space-md) 0 var(--space-sm);
+  color: var(--text-primary);
+}
+#output ul, #output ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+#output li {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+#output strong {
+  color: var(--text-primary);
+}
+#output a {
+  color: var(--accent-green);
+}
+.eot-fields { display: none; }
+.eot-fields.visible { display: block; }
+</style>
 </head>
 <body>
 <a href="#main" class="sr-only">Skip to main content</a>
@@ -65,169 +131,370 @@
 <main id="main">
   
   <!-- Hero -->
-  <section style="padding: var(--space-3xl) 0; background-color: var(--bg-primary);">
+  <section style="padding: var(--space-xl) 0 var(--space-lg); background-color: var(--bg-primary);">
     <div class="container">
       <div style="max-width: 700px;">
-        <p style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-green); margin-bottom: 1rem;">Quote</p>
-        <h1 style="margin-bottom: 1.5rem;">Request a Quote</h1>
-        <p style="font-size: 1.125rem;">
-          Tell us about your cleaning requirements and we'll provide a clear, no-obligation quote.
+        <p style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-green); margin-bottom: 1rem;">Instant Quote</p>
+        <h1 style="margin-bottom: 1rem;">Get Your Quote</h1>
+        <p style="font-size: 1.125rem; margin-bottom: 0;">
+          We never guess—if key information is missing, we'll ask before quoting.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Quote Form -->
+  <!-- Quote Estimator -->
   <section class="section-lg" style="background-color: var(--bg-secondary);">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-2xl); max-width: 900px;">
+      <div style="max-width: 800px;">
         
-        <div style="max-width: 600px;">
-          <form action="https://formspree.io/f/xanqzpja" method="POST">
-            <input type="hidden" name="_subject" value="Quote Request - Oasis Cleaning">
-            
-            <!-- Contact Details -->
-            <h2 style="font-size: 1.25rem; margin-bottom: var(--space-md);">Contact Details</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-lg);">
+        <form id="quoteForm">
+          
+          <!-- Service Selection -->
+          <div class="quote-section">
+            <div class="quote-grid-2">
               <div>
-                <label class="form-label" for="name">Full Name *</label>
-                <input type="text" id="name" name="name" class="form-field" required>
+                <label class="form-label" for="postcode">Postcode / Area</label>
+                <input id="postcode" name="postcode" type="text" placeholder="e.g. NW10" class="form-field">
               </div>
-              
               <div>
-                <label class="form-label" for="email">Email *</label>
-                <input type="email" id="email" name="email" class="form-field" required>
-              </div>
-              
-              <div>
-                <label class="form-label" for="phone">Phone *</label>
-                <input type="tel" id="phone" name="phone" class="form-field" required>
-              </div>
-              
-              <div>
-                <label class="form-label" for="postcode">Postcode *</label>
-                <input type="text" id="postcode" name="postcode" class="form-field" required>
-              </div>
-            </div>
-            
-            <hr class="divider" style="margin: var(--space-lg) 0;">
-            
-            <!-- Service Details -->
-            <h2 style="font-size: 1.25rem; margin-bottom: var(--space-md);">Service Details</h2>
-            
-            <div style="margin-bottom: var(--space-md);">
-              <label class="form-label" for="service">Service Type *</label>
-              <select id="service" name="service" class="form-field" required>
-                <option value="">Select a service</option>
-                <option value="domestic">Domestic Cleaning</option>
-                <option value="end-of-tenancy">End of Tenancy Cleaning</option>
-                <option value="office">Office Cleaning</option>
-              </select>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-md);">
-              <div>
-                <label class="form-label" for="property-type">Property Type</label>
-                <select id="property-type" name="property_type" class="form-field">
-                  <option value="">Select</option>
-                  <option value="flat">Flat / Apartment</option>
-                  <option value="house">House</option>
-                  <option value="studio">Studio</option>
-                  <option value="office">Office</option>
-                  <option value="commercial">Commercial Space</option>
-                </select>
-              </div>
-              
-              <div>
-                <label class="form-label" for="bedrooms">Bedrooms</label>
-                <select id="bedrooms" name="bedrooms" class="form-field">
-                  <option value="">Select</option>
-                  <option value="studio">Studio</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5+">5+</option>
-                  <option value="na">N/A</option>
-                </select>
-              </div>
-              
-              <div>
-                <label class="form-label" for="bathrooms">Bathrooms</label>
-                <select id="bathrooms" name="bathrooms" class="form-field">
-                  <option value="">Select</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4+">4+</option>
-                  <option value="na">N/A</option>
+                <label class="form-label" for="serviceType">Service Type</label>
+                <select id="serviceType" name="serviceType" class="form-field">
+                  <option value="">Select…</option>
+                  <option value="EOT">End of Tenancy / Deep Clean</option>
+                  <option value="DOMESTIC">Standard Domestic Cleaning</option>
+                  <option value="OFFICE">Office Cleaning</option>
                 </select>
               </div>
             </div>
-            
-            <div style="margin-bottom: var(--space-md);">
-              <label class="form-label" for="frequency">Frequency (for regular cleaning)</label>
-              <select id="frequency" name="frequency" class="form-field">
-                <option value="">Select</option>
-                <option value="one-off">One-off</option>
-                <option value="weekly">Weekly</option>
-                <option value="fortnightly">Fortnightly</option>
-                <option value="monthly">Monthly</option>
-              </select>
-            </div>
-            
-            <div style="margin-bottom: var(--space-md);">
-              <label class="form-label" for="preferred-contact">Preferred Contact Method</label>
-              <select id="preferred-contact" name="preferred_contact" class="form-field">
-                <option value="email">Email</option>
-                <option value="phone">Phone</option>
-                <option value="whatsapp">WhatsApp</option>
-              </select>
-            </div>
-            
-            <div style="margin-bottom: var(--space-lg);">
-              <label class="form-label" for="details">Additional Details</label>
-              <textarea id="details" name="details" class="form-field" rows="4" placeholder="Tell us anything else relevant to your quote request..."></textarea>
-            </div>
-            
-            <button type="submit" class="btn-primary">Submit Quote Request</button>
-          </form>
-        </div>
-        
-      </div>
-    </div>
-  </section>
+          </div>
 
-  <!-- What Happens Next -->
-  <section class="section" style="background-color: var(--bg-primary);">
-    <div class="container">
-      <div style="max-width: 600px;">
-        <h2 style="margin-bottom: var(--space-lg);">What Happens Next</h2>
-        <ol style="list-style: none; padding: 0; margin: 0;">
-          <li style="display: flex; gap: 1.5rem; padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted);">
-            <span style="font-size: 1.25rem; font-weight: 500; color: var(--accent-green); min-width: 2rem;">1</span>
-            <span style="color: var(--text-secondary);">We review your request within 24 hours</span>
-          </li>
-          <li style="display: flex; gap: 1.5rem; padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted);">
-            <span style="font-size: 1.25rem; font-weight: 500; color: var(--accent-green); min-width: 2rem;">2</span>
-            <span style="color: var(--text-secondary);">We contact you to clarify any details if needed</span>
-          </li>
-          <li style="display: flex; gap: 1.5rem; padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted);">
-            <span style="font-size: 1.25rem; font-weight: 500; color: var(--accent-green); min-width: 2rem;">3</span>
-            <span style="color: var(--text-secondary);">You receive a written quote with clear scope and pricing</span>
-          </li>
-          <li style="display: flex; gap: 1.5rem; padding: var(--space-sm) 0;">
-            <span style="font-size: 1.25rem; font-weight: 500; color: var(--accent-green); min-width: 2rem;">4</span>
-            <span style="color: var(--text-secondary);">If you approve, we schedule your cleaning</span>
-          </li>
-        </ol>
+          <hr class="divider-gold">
+
+          <!-- DOMESTIC / EOT BLOCK -->
+          <div id="domesticBlock" style="display: none;">
+            
+            <div class="quote-section">
+              <h3 class="quote-section-title">Property Details</h3>
+              <div class="quote-grid-3">
+                <div>
+                  <label class="form-label" for="propertyType">Property Type</label>
+                  <select id="propertyType" name="propertyType" class="form-field">
+                    <option value="">Select…</option>
+                    <option value="Flat">Flat</option>
+                    <option value="House">House</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="form-label" for="bedrooms">Bedrooms</label>
+                  <input id="bedrooms" name="bedrooms" type="number" min="0" placeholder="e.g. 3" class="form-field">
+                </div>
+                <div>
+                  <label class="form-label" for="bathrooms">Bathrooms</label>
+                  <input id="bathrooms" name="bathrooms" type="number" min="0" placeholder="e.g. 2" class="form-field">
+                </div>
+              </div>
+            </div>
+
+            <div class="quote-section">
+              <div class="quote-grid-2">
+                <div>
+                  <label class="form-label" for="condition">Condition</label>
+                  <select id="condition" name="condition" class="form-field">
+                    <option value="">Select…</option>
+                    <option value="Standard">Standard maintenance</option>
+                    <option value="Heavy">Heavy build-up</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="form-label" for="frequency">Frequency</label>
+                  <select id="frequency" name="frequency" class="form-field">
+                    <option value="">Select…</option>
+                    <option value="One-off">One-off</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Fortnightly">Fortnightly</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="quote-section">
+              <h3 class="quote-section-title">Add-ons (optional)</h3>
+              <div class="quote-grid-3">
+                <div class="checkbox-group">
+                  <label class="checkbox-label"><input type="checkbox" id="addonFridge"> Fridge (internal)</label>
+                  <label class="checkbox-label"><input type="checkbox" id="addonOven"> Oven (internal)</label>
+                  <label class="checkbox-label"><input type="checkbox" id="addonWindows"> Internal windows</label>
+                </div>
+                <div>
+                  <label class="checkbox-label"><input type="checkbox" id="addonIroning"> Ironing included</label>
+                  <p class="form-hint">If large volume, we will confirm time before final quote.</p>
+                </div>
+                <div>
+                  <label class="form-label" for="parking">Access / Parking</label>
+                  <select id="parking" name="parking" class="form-field">
+                    <option value="">Select…</option>
+                    <option value="None">No parking / street only</option>
+                    <option value="Permit">Resident permit available</option>
+                    <option value="Paid">Paid parking required</option>
+                    <option value="On-site">On-site parking</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="quote-section">
+              <label class="form-label" for="congestion">Congestion Charge Zone</label>
+              <select id="congestion" name="congestion" class="form-field" style="max-width: 300px;">
+                <option value="">Select…</option>
+                <option value="No">Outside congestion zone</option>
+                <option value="Yes">Inside congestion zone</option>
+                <option value="Unsure">Not sure</option>
+              </select>
+              <p class="form-hint">If inside the zone, any charge is confirmed and passed through at cost where applicable.</p>
+            </div>
+
+            <!-- EOT-specific fields -->
+            <div class="eot-fields" id="eotFields">
+              <hr class="divider-gold">
+              <div class="quote-section">
+                <h3 class="quote-section-title">End of Tenancy Details</h3>
+                
+                <div class="quote-grid-2" style="margin-bottom: var(--space-md);">
+                  <div>
+                    <label class="form-label" for="preferredDate">Preferred Date</label>
+                    <input id="preferredDate" name="preferredDate" type="date" class="form-field">
+                  </div>
+                  <div>
+                    <label class="form-label" for="arrivalWindow">Arrival Window</label>
+                    <select id="arrivalWindow" name="arrivalWindow" class="form-field">
+                      <option value="">Select…</option>
+                      <option value="Morning (8–12)">Morning (8–12)</option>
+                      <option value="Midday (12–3)">Midday (12–3)</option>
+                      <option value="Afternoon (3–6)">Afternoon (3–6)</option>
+                      <option value="Evening (6–9)">Evening (6–9)</option>
+                      <option value="Flexible">Flexible</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div style="margin-bottom: var(--space-md);">
+                  <label class="form-label" for="deadline">Any Deadline? (e.g. check-out / inventory time)</label>
+                  <input id="deadline" name="deadline" type="text" placeholder="e.g. Must finish by 3pm" class="form-field">
+                </div>
+
+                <div class="quote-grid-2" style="margin-bottom: var(--space-md);">
+                  <div>
+                    <label class="form-label" for="floorLevel">Floor Level</label>
+                    <select id="floorLevel" name="floorLevel" class="form-field">
+                      <option value="">Select…</option>
+                      <option value="Ground">Ground</option>
+                      <option value="1st">1st</option>
+                      <option value="2nd">2nd</option>
+                      <option value="3rd">3rd</option>
+                      <option value="4th+">4th+</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="form-label" for="liftAvailable">Lift Available?</label>
+                    <select id="liftAvailable" name="liftAvailable" class="form-field">
+                      <option value="">Select…</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="quote-grid-2" style="margin-bottom: var(--space-md);">
+                  <div>
+                    <label class="form-label" for="occupancy">Property Occupancy</label>
+                    <select id="occupancy" name="occupancy" class="form-field">
+                      <option value="">Select…</option>
+                      <option value="Vacant">Vacant (true EOT)</option>
+                      <option value="Occupied">Occupied (still living there)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="form-label" for="carpetSteam">Carpets/Steam Cleaning Needed?</label>
+                    <select id="carpetSteam" name="carpetSteam" class="form-field">
+                      <option value="">Select…</option>
+                      <option value="No">No</option>
+                      <option value="Yes">Yes (requires confirmation)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div style="margin-bottom: var(--space-md);">
+                  <label class="form-label">Appliances to Include</label>
+                  <div class="quote-grid-2">
+                    <div class="checkbox-group">
+                      <label class="checkbox-label"><input type="checkbox" id="applianceOven"> Oven</label>
+                      <label class="checkbox-label"><input type="checkbox" id="applianceFridge"> Fridge / Freezer</label>
+                    </div>
+                    <div class="checkbox-group">
+                      <label class="checkbox-label"><input type="checkbox" id="applianceWasher"> Washing machine</label>
+                      <label class="checkbox-label"><input type="checkbox" id="applianceDishwasher"> Dishwasher</label>
+                    </div>
+                  </div>
+                  <p class="form-hint">If appliances are not selected, they are treated as not included.</p>
+                </div>
+
+                <div style="margin-bottom: var(--space-md);">
+                  <label class="form-label" for="wasteRemoval">Waste / Rubbish Removal Expected?</label>
+                  <select id="wasteRemoval" name="wasteRemoval" class="form-field" style="max-width: 300px;">
+                    <option value="">Select…</option>
+                    <option value="No">No (standard cleaning only)</option>
+                    <option value="Yes">Yes (requires confirmation)</option>
+                  </select>
+                  <p class="form-hint">If yes, we will confirm scope and price before booking.</p>
+                </div>
+
+                <div class="quote-grid-2">
+                  <div>
+                    <label class="form-label" for="teamSize">Team Size</label>
+                    <select id="teamSize" name="teamSize" class="form-field">
+                      <option value="1">1 cleaner</option>
+                      <option value="2" selected>2 cleaners (recommended for EOT)</option>
+                    </select>
+                    <p class="form-hint">Affects estimated on-site duration, not the hourly rate.</p>
+                  </div>
+                  <div>
+                    <label class="form-label" for="ironVolume">Ironing Volume (if included)</label>
+                    <select id="ironVolume" name="ironVolume" class="form-field">
+                      <option value="none" selected>Not included</option>
+                      <option value="light">Light (up to 1 basket)</option>
+                      <option value="medium">Medium (1–2 baskets)</option>
+                      <option value="heavy">Heavy (3+ baskets — requires confirmation)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- OFFICE BLOCK -->
+          <div id="officeBlock" style="display: none;">
+            
+            <div class="quote-section">
+              <h3 class="quote-section-title">Office Details</h3>
+              <div class="quote-grid-2">
+                <div>
+                  <label class="form-label" for="officeSize">Office Size (m² or sq ft)</label>
+                  <input id="officeSize" name="officeSize" type="text" placeholder="e.g. 150 m² or 1,600 sq ft" class="form-field">
+                  <p class="form-hint">If unknown, provide desks + rooms instead.</p>
+                </div>
+                <div>
+                  <label class="form-label" for="desksRooms">OR: Desks + Rooms</label>
+                  <input id="desksRooms" name="desksRooms" type="text" placeholder="e.g. 24 desks, 3 meeting rooms" class="form-field">
+                </div>
+              </div>
+            </div>
+
+            <div class="quote-section">
+              <div class="quote-grid-3">
+                <div>
+                  <label class="form-label" for="officeToilets">Toilets</label>
+                  <input id="officeToilets" type="number" min="0" placeholder="e.g. 2" class="form-field">
+                </div>
+                <div>
+                  <label class="form-label" for="officeKitchens">Kitchen / Break Areas</label>
+                  <input id="officeKitchens" type="number" min="0" placeholder="e.g. 1" class="form-field">
+                </div>
+                <div>
+                  <label class="form-label" for="officeFrequency">Frequency</label>
+                  <select id="officeFrequency" class="form-field">
+                    <option value="">Select…</option>
+                    <option value="Adhoc">Ad hoc / irregular</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="2x">2× per week</option>
+                    <option value="Daily">Daily</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="quote-section">
+              <div class="quote-grid-2">
+                <div>
+                  <label class="form-label" for="outOfHours">Out-of-Hours Required?</label>
+                  <select id="outOfHours" class="form-field">
+                    <option value="">Select…</option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="form-label" for="consumables">Consumables Included?</label>
+                  <select id="consumables" class="form-field">
+                    <option value="">Select…</option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="quote-section">
+              <label class="form-label" for="congestionOffice">Congestion Charge Zone</label>
+              <select id="congestionOffice" name="congestionOffice" class="form-field" style="max-width: 300px;">
+                <option value="">Select…</option>
+                <option value="No">Outside congestion zone</option>
+                <option value="Yes">Inside congestion zone</option>
+                <option value="Unsure">Not sure</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- CONTACT DETAILS -->
+          <div id="contactBlock" style="display: none;">
+            <hr class="divider-gold">
+            <div class="quote-section">
+              <h3 class="quote-section-title">Your Details</h3>
+              <p class="form-hint" style="margin-bottom: var(--space-md);">We'll only use this to confirm your quote and booking.</p>
+              
+              <div class="quote-grid-2" style="margin-bottom: var(--space-md);">
+                <div>
+                  <label class="form-label" for="contactName">Full Name</label>
+                  <input id="contactName" name="contactName" type="text" placeholder="e.g. Alex Johnson" class="form-field">
+                </div>
+                <div>
+                  <label class="form-label" for="contactPhone">Mobile Number</label>
+                  <input id="contactPhone" name="contactPhone" type="tel" placeholder="e.g. 07…" class="form-field">
+                </div>
+              </div>
+              
+              <div>
+                <label class="form-label" for="contactEmail">Email Address</label>
+                <input id="contactEmail" name="contactEmail" type="email" placeholder="e.g. name@email.com" class="form-field" style="max-width: 400px;">
+              </div>
+            </div>
+            
+            <!-- Honeypot -->
+            <input type="text" id="botField" name="company" style="display: none;" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div style="margin-top: var(--space-lg);">
+            <button type="submit" class="btn-primary" style="width: 100%; max-width: 300px;">Generate Quote</button>
+            <p class="form-hint" style="margin-top: var(--space-sm);">
+              Note: If key information is missing or scope requires confirmation, we'll request it before issuing a final price.
+            </p>
+          </div>
+        </form>
+
+        <div id="output" style="margin-top: var(--space-xl); display: none;"></div>
+
+        <div style="margin-top: var(--space-lg);">
+          <a href="https://calendly.com/khaleledwards-oasisinternationalcleaningservices/cleaning-consultation" class="btn-secondary">
+            Book a Cleaning Consultation
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Alternative Contact -->
-  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-muted);">
+  <section class="section" style="background-color: var(--bg-primary); border-top: 1px solid var(--border-muted);">
     <div class="container text-center">
       <div style="max-width: 560px; margin: 0 auto;">
         <h2 style="margin-bottom: var(--space-sm);">Prefer to Speak Directly?</h2>
@@ -294,8 +561,493 @@
 </footer>
 
 <script>
+// Mobile menu toggle
 document.getElementById('mobile-menu-btn').addEventListener('click', function() {
   document.getElementById('mobile-menu').classList.toggle('open');
+});
+
+// =============================
+// QUOTE ESTIMATOR LOGIC
+// =============================
+const RATE_EOT = 50; // fixed EOT rate
+
+function gbp(n) { return "£" + Number(n).toFixed(2); }
+
+function renderOutput(html) {
+  const out = document.getElementById("output");
+  out.style.display = "block";
+  out.innerHTML = html;
+  out.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Choose ONE exact domestic/office hourly rate (no ranges)
+function pickHourlyRate({ serviceType, condition, frequency, hasPets, difficultAccess, premiumExpectations, firstTime }) {
+  if (serviceType === "OFFICE") {
+    if (condition === "Heavy" || difficultAccess || premiumExpectations) return 40;
+    if (firstTime) return 35;
+    return 32;
+  }
+  // DOMESTIC
+  if (condition === "Heavy" || difficultAccess || premiumExpectations) return 40;
+  if (hasPets) return 35;
+  if (firstTime || frequency === "One-off") return 32;
+  if (frequency === "Weekly" || frequency === "Fortnightly") return 28;
+  return 32;
+}
+
+// CAPPED Domestic/EOT estimator
+function estimateDomesticHoursCapped({
+  bedrooms, bathrooms, serviceType, condition,
+  addonFridge, addonOven, addonWindows,
+  ironingIncluded, ironVolume
+}) {
+  if (ironingIncluded && ironVolume === "heavy") return null;
+
+  let base;
+  if (serviceType === "EOT") {
+    base = 3.0 + (bedrooms * 0.7) + (bathrooms * 0.7);
+  } else {
+    base = 2.0 + (bedrooms * 0.5) + (bathrooms * 0.5);
+  }
+
+  if (condition === "Heavy") base += 1.5;
+
+  let addons = 0;
+  if (addonFridge) addons += 0.5;
+  if (addonOven) addons += 0.75;
+  if (addonWindows) addons += 0.75;
+
+  if (ironingIncluded) {
+    if (ironVolume === "light") addons += 0.5;
+    if (ironVolume === "medium") addons += 0.75;
+  }
+
+  if (serviceType === "EOT") {
+    const addonCap = (condition === "Heavy") ? 1.5 : 1.0;
+    addons = Math.min(addons, addonCap);
+  }
+
+  let total = base + addons;
+
+  if (serviceType === "EOT") {
+    let ceiling;
+    if (bedrooms <= 1) ceiling = 5.0;
+    else if (bedrooms === 2) ceiling = 6.0;
+    else if (bedrooms === 3) ceiling = 7.0;
+    else if (bedrooms === 4) ceiling = 8.0;
+    else ceiling = 9.0;
+
+    if (condition === "Heavy") ceiling += 1.0;
+    total = Math.min(total, ceiling);
+  }
+
+  total = Math.max(2, total);
+  return Math.round(total * 2) / 2;
+}
+
+// Toggle blocks by service type
+const serviceTypeEl = document.getElementById("serviceType");
+const domesticBlock = document.getElementById("domesticBlock");
+const officeBlock = document.getElementById("officeBlock");
+const contactBlock = document.getElementById("contactBlock");
+const eotFields = document.getElementById("eotFields");
+
+serviceTypeEl.addEventListener("change", () => {
+  const v = serviceTypeEl.value;
+  domesticBlock.style.display = (v === "EOT" || v === "DOMESTIC") ? "block" : "none";
+  officeBlock.style.display = (v === "OFFICE") ? "block" : "none";
+  contactBlock.style.display = v ? "block" : "none";
+  
+  // Show EOT-specific fields
+  if (v === "EOT") {
+    eotFields.classList.add("visible");
+  } else {
+    eotFields.classList.remove("visible");
+  }
+});
+
+// Send lead to backend
+async function sendLeadToServer(payload) {
+  try {
+    const res = await fetch("/api/quote-lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      console.error("Lead capture failed:", await res.text());
+      return false;
+    }
+    const data = await res.json();
+    console.log("Lead saved:", data);
+    return true;
+  } catch (e) {
+    console.error("Lead capture error:", e);
+    return false;
+  }
+}
+
+document.getElementById("quoteForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const serviceType = serviceTypeEl.value;
+  const postcode = (document.getElementById("postcode").value || "").trim();
+
+  // Contact fields
+  const contactName = document.getElementById("contactName")?.value.trim() || "";
+  const contactPhone = document.getElementById("contactPhone")?.value.trim() || "";
+  const contactEmail = document.getElementById("contactEmail")?.value.trim() || "";
+  const botField = document.getElementById("botField")?.value || "";
+
+  if (!serviceType) {
+    renderOutput(`<p style="margin:0;"><strong>Missing:</strong> Please select a service type.</p>`);
+    return;
+  }
+
+  // DOMESTIC / EOT
+  if (serviceType === "EOT" || serviceType === "DOMESTIC") {
+    const propertyType = document.getElementById("propertyType").value;
+    const bedroomsRaw = document.getElementById("bedrooms").value;
+    const bathroomsRaw = document.getElementById("bathrooms").value;
+    const bedrooms = Number(bedroomsRaw);
+    const bathrooms = Number(bathroomsRaw);
+    const condition = document.getElementById("condition").value;
+    const frequency = document.getElementById("frequency").value;
+    const parking = document.getElementById("parking").value;
+    const congestion = document.getElementById("congestion").value;
+
+    const addonFridgeCheckbox = document.getElementById("addonFridge").checked;
+    const addonOvenCheckbox = document.getElementById("addonOven").checked;
+    const addonWindows = document.getElementById("addonWindows").checked;
+    const ironingIncluded = document.getElementById("addonIroning").checked;
+
+    const preferredDate = document.getElementById("preferredDate")?.value || "";
+    const arrivalWindow = document.getElementById("arrivalWindow")?.value || "";
+    const deadline = (document.getElementById("deadline")?.value || "").trim();
+    const floorLevel = document.getElementById("floorLevel")?.value || "";
+    const liftAvailable = document.getElementById("liftAvailable")?.value || "";
+    const occupancy = document.getElementById("occupancy")?.value || "";
+    const carpetSteam = document.getElementById("carpetSteam")?.value || "";
+    const wasteRemoval = document.getElementById("wasteRemoval")?.value || "";
+
+    const applianceOven = document.getElementById("applianceOven")?.checked || false;
+    const applianceFridge = document.getElementById("applianceFridge")?.checked || false;
+    const applianceWasher = document.getElementById("applianceWasher")?.checked || false;
+    const applianceDishwasher = document.getElementById("applianceDishwasher")?.checked || false;
+
+    const teamSize = Number(document.getElementById("teamSize")?.value || "1");
+    const ironVolume = document.getElementById("ironVolume")?.value || "none";
+
+    // No-guess missing checklist
+    const missing = [];
+    if (!postcode) missing.push("Postcode/area");
+    if (!propertyType) missing.push("Property type (flat/house)");
+    if (bedroomsRaw === "") missing.push("Bedrooms");
+    if (bathroomsRaw === "") missing.push("Bathrooms");
+    if (!condition) missing.push("Condition (standard maintenance vs heavy build-up)");
+    if (!frequency) missing.push("Frequency (one-off/weekly/fortnightly)");
+    if (!parking) missing.push("Access/parking");
+
+    if (serviceType === "EOT") {
+      if (!preferredDate) missing.push("Preferred date");
+      if (!arrivalWindow) missing.push("Arrival window");
+      if (!floorLevel) missing.push("Floor level");
+      if (!liftAvailable) missing.push("Lift available (yes/no)");
+      if (!occupancy) missing.push("Property occupancy (vacant/occupied)");
+      if (!carpetSteam) missing.push("Carpets/steam cleaning needed? (yes/no)");
+      if (!wasteRemoval) missing.push("Waste/rubbish removal expected? (yes/no)");
+      if (!congestion || congestion === "Unsure") missing.push("Congestion charge zone (inside/outside)");
+    }
+
+    if (missing.length) {
+      renderOutput(`
+        <h2>We need a few details before we can quote</h2>
+        <ul>${missing.map(m => `<li>${m}</li>`).join("")}</ul>
+        <p style="margin:10px 0 0; color:var(--text-secondary);">
+          We never guess. Once confirmed, we'll generate an exact price with full calculations.
+        </p>
+      `);
+      return;
+    }
+
+    // Scope gates
+    if (serviceType === "EOT" && carpetSteam === "Yes") {
+      renderOutput(`
+        <h2>Carpet/steam cleaning needs a quick confirmation</h2>
+        <p>You selected <strong>carpets/steam cleaning required</strong>. To avoid guessing, we need the number of carpeted rooms and carpet type before issuing a final price.</p>
+        <p style="margin-top: var(--space-md);">
+          <a href="https://calendly.com/khaleledwards-oasisinternationalcleaningservices/cleaning-consultation" class="btn-primary">Book a Consultation</a>
+        </p>
+      `);
+      return;
+    }
+
+    if (serviceType === "EOT" && wasteRemoval === "Yes") {
+      renderOutput(`
+        <h2>Waste removal needs a quick confirmation</h2>
+        <p>You selected <strong>waste/rubbish removal expected</strong>. Please confirm approximate volume so we can price it correctly.</p>
+        <p style="margin-top: var(--space-md);">
+          <a href="https://calendly.com/khaleledwards-oasisinternationalcleaningservices/cleaning-consultation" class="btn-primary">Book a Consultation</a>
+        </p>
+      `);
+      return;
+    }
+
+    const addonFridge = addonFridgeCheckbox || applianceFridge;
+    const addonOven = addonOvenCheckbox || applianceOven;
+
+    const difficultAccess = (parking === "None" || parking === "Paid");
+    let rate;
+    if (serviceType === "EOT") {
+      rate = RATE_EOT;
+    } else {
+      rate = pickHourlyRate({
+        serviceType: "DOMESTIC",
+        condition,
+        frequency,
+        hasPets: false,
+        difficultAccess,
+        premiumExpectations: false,
+        firstTime: (frequency === "One-off")
+      });
+    }
+
+    const hours = estimateDomesticHoursCapped({
+      bedrooms, bathrooms, serviceType, condition,
+      addonFridge, addonOven, addonWindows,
+      ironingIncluded, ironVolume
+    });
+
+    if (hours === null) {
+      renderOutput(`
+        <h2>We need one quick confirmation</h2>
+        <p>You selected <strong>heavy ironing (3+ baskets)</strong>. To avoid guessing, please confirm approximate quantity.</p>
+        <p style="margin-top: var(--space-md);">
+          <a href="https://calendly.com/khaleledwards-oasisinternationalcleaningservices/cleaning-consultation" class="btn-primary">Book a Consultation</a>
+        </p>
+      `);
+      return;
+    }
+
+    const clientTotal = hours * rate;
+    const onsiteDuration = hours / Math.max(1, teamSize);
+    const serviceLabel = (serviceType === "EOT") ? "End of Tenancy / Deep Clean" : "Standard Domestic Cleaning";
+
+    // Contact validation
+    const contactMissing = [];
+    if (!contactName) contactMissing.push("Full name");
+    if (!contactPhone && !contactEmail) contactMissing.push("Mobile number or email");
+
+    if (contactMissing.length) {
+      renderOutput(`
+        <h2>We just need your contact details</h2>
+        <ul>${contactMissing.map(m => `<li>${m}</li>`).join("")}</ul>
+        <p style="margin:10px 0 0; color:var(--text-secondary);">
+          This allows us to confirm availability and secure your booking.
+        </p>
+        <h3>Your Quote Preview</h3>
+        <p><strong>${serviceLabel}</strong> | ${hours} hours | <strong>${gbp(clientTotal)}</strong></p>
+      `);
+      return;
+    }
+
+    // Appliances list
+    const appliancesIncluded = [
+      applianceOven && "Oven",
+      applianceFridge && "Fridge/Freezer",
+      applianceWasher && "Washing machine",
+      applianceDishwasher && "Dishwasher"
+    ].filter(Boolean);
+
+    const addOnsDisplay = [
+      addonFridge && "Fridge (internal)",
+      addonOven && "Oven (internal)",
+      addonWindows && "Internal windows",
+      ironingIncluded && (ironVolume !== "none" ? `Ironing (${ironVolume})` : "Ironing")
+    ].filter(Boolean);
+
+    // Build payload and send to server
+    const payload = {
+      serviceType,
+      postcode,
+      contact: {
+        name: contactName,
+        phone: contactPhone,
+        email: contactEmail
+      },
+      botField,
+      property: {
+        type: propertyType,
+        bedrooms,
+        bathrooms,
+        condition,
+        frequency
+      },
+      quote: {
+        hours,
+        teamSize,
+        onsiteDuration,
+        rate,
+        clientTotal
+      },
+      addOns: addOnsDisplay,
+      eotDetails: serviceType === "EOT" ? {
+        preferredDate,
+        arrivalWindow,
+        deadline,
+        floorLevel,
+        liftAvailable,
+        occupancy,
+        carpetSteam,
+        wasteRemoval,
+        appliances: appliancesIncluded
+      } : null
+    };
+
+    // Send to backend (non-blocking)
+    sendLeadToServer(payload);
+
+    renderOutput(`
+      <h2>Your Quote</h2>
+      <p style="margin-bottom: var(--space-md);">
+        <strong>${serviceLabel}</strong> in <strong>${postcode}</strong>, ${propertyType.toLowerCase()},
+        ${bedrooms} bed / ${bathrooms} bath, ${frequency.toLowerCase()},
+        condition: ${condition === "Heavy" ? "heavy build-up" : "standard maintenance"}.
+      </p>
+
+      <h3>Quote Summary</h3>
+      <ul>
+        <li>Total job-hours: <strong>${hours}</strong></li>
+        <li>Team size: <strong>${teamSize}</strong> cleaner(s)</li>
+        <li>Estimated on-site duration: <strong>${onsiteDuration.toFixed(1)} hours</strong></li>
+        <li>Rate: <strong>${gbp(rate)}/hour</strong></li>
+        <li style="font-size: 1.125rem; margin-top: 0.5rem;"><strong>Total: ${gbp(clientTotal)}</strong></li>
+      </ul>
+
+      ${serviceType === "EOT" ? `
+      <h3>Booking Details</h3>
+      <ul>
+        <li>Date: ${preferredDate} (${arrivalWindow})</li>
+        <li>Floor: ${floorLevel} | Lift: ${liftAvailable}</li>
+        <li>Add-ons: ${addOnsDisplay.length ? addOnsDisplay.join(", ") : "None"}</li>
+        <li>Appliances: ${appliancesIncluded.length ? appliancesIncluded.join(", ") : "None selected"}</li>
+      </ul>
+      ` : `
+      <h3>Details</h3>
+      <ul>
+        <li>Add-ons: ${addOnsDisplay.length ? addOnsDisplay.join(", ") : "None"}</li>
+        <li>Parking/access: ${parking}</li>
+      </ul>
+      `}
+
+      <h3>Next Step</h3>
+      <p>We've received your details (<strong>${contactName}</strong>). We'll be in touch within 24 hours to confirm your booking.</p>
+      <p style="margin-top: var(--space-md);">
+        <a href="https://calendly.com/khaleledwards-oasisinternationalcleaningservices/cleaning-consultation" class="btn-primary">Book a Consultation Now</a>
+      </p>
+
+      <p style="margin-top: var(--space-md); font-size: 0.875rem; color: var(--text-secondary);">
+        Important: If build-up is heavier than described or access restrictions apply, time may be adjusted prior to confirmation.
+      </p>
+    `);
+    return;
+  }
+
+  // OFFICE
+  if (serviceType === "OFFICE") {
+    const officeSize = (document.getElementById("officeSize").value || "").trim();
+    const desksRooms = (document.getElementById("desksRooms").value || "").trim();
+    const officeToilets = document.getElementById("officeToilets").value;
+    const officeKitchens = document.getElementById("officeKitchens").value;
+    const officeFrequency = document.getElementById("officeFrequency").value;
+    const outOfHours = document.getElementById("outOfHours").value;
+    const consumables = document.getElementById("consumables").value;
+    const congestionOffice = document.getElementById("congestionOffice").value;
+
+    const missing = [];
+    if (!postcode) missing.push("Postcode/area");
+    if (!officeSize && !desksRooms) missing.push("Approx size (m²/sq ft) OR desks + rooms");
+    if (officeToilets === "" || officeToilets === null) missing.push("Toilets count");
+    if (officeKitchens === "" || officeKitchens === null) missing.push("Kitchen/break areas count");
+    if (!officeFrequency) missing.push("Frequency");
+    if (!outOfHours) missing.push("Out-of-hours requirement (yes/no)");
+    if (!congestionOffice || congestionOffice === "Unsure") missing.push("Congestion charge zone (inside/outside)");
+
+    if (missing.length) {
+      renderOutput(`
+        <h2>We need a few details before we can quote</h2>
+        <ul>${missing.map(m => `<li>${m}</li>`).join("")}</ul>
+        <p style="margin:10px 0 0; color:var(--text-secondary);">
+          If sizing is unknown, we recommend a site visit or video walkthrough so we can provide an exact price.
+        </p>
+      `);
+      return;
+    }
+
+    // Contact validation
+    const contactMissing = [];
+    if (!contactName) contactMissing.push("Full name");
+    if (!contactPhone && !contactEmail) contactMissing.push("Mobile number or email");
+
+    if (contactMissing.length) {
+      renderOutput(`
+        <h2>We just need your contact details</h2>
+        <ul>${contactMissing.map(m => `<li>${m}</li>`).join("")}</ul>
+        <p style="margin:10px 0 0; color:var(--text-secondary);">
+          This allows us to arrange a site survey and provide an accurate quote.
+        </p>
+      `);
+      return;
+    }
+
+    // Build payload
+    const payload = {
+      serviceType,
+      postcode,
+      contact: {
+        name: contactName,
+        phone: contactPhone,
+        email: contactEmail
+      },
+      botField,
+      office: {
+        size: officeSize,
+        desksRooms,
+        toilets: officeToilets,
+        kitchens: officeKitchens,
+        frequency: officeFrequency,
+        outOfHours,
+        consumables,
+        congestionZone: congestionOffice
+      }
+    };
+
+    sendLeadToServer(payload);
+
+    renderOutput(`
+      <h2>Next Step: Site Survey</h2>
+      <p>Office cleaning hours must be confirmed to avoid guessing. We'll provide an exact hourly rate or fixed monthly price after a brief walkthrough.</p>
+
+      <h3>Details Captured</h3>
+      <ul>
+        <li>Location: ${postcode}</li>
+        <li>Size: ${officeSize || "—"}</li>
+        <li>Desks/rooms: ${desksRooms || "—"}</li>
+        <li>Toilets: ${officeToilets}</li>
+        <li>Kitchens/break areas: ${officeKitchens}</li>
+        <li>Frequency: ${officeFrequency}</li>
+        <li>Out-of-hours: ${outOfHours}</li>
+        <li>Consumables: ${consumables || "Not specified"}</li>
+      </ul>
+
+      <p style="margin-top: var(--space-md);">We've received your details (<strong>${contactName}</strong>). We'll be in touch within 24 hours to arrange a site survey.</p>
+      
+      <p style="margin-top: var(--space-md);">
+        <a href="https://calendly.com/khaleledwards-oasisinternationalcleaningservices/cleaning-consultation" class="btn-primary">Book a Consultation Now</a>
+      </p>
+    `);
+    return;
+  }
 });
 </script>
 </body>
