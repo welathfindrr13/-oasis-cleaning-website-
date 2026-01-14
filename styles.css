@@ -316,16 +316,6 @@ select.form-field {
   color: var(--text-primary);
 }
 
-@media (min-width: 1024px) {
-  .header-nav {
-    display: flex;
-  }
-  
-  .mobile-menu-btn {
-    display: none;
-  }
-}
-
 /* Mobile menu button */
 .mobile-menu-btn {
   display: flex;
@@ -337,6 +327,16 @@ select.form-field {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .header-nav {
+    display: flex;
+  }
+  
+  .mobile-menu-btn {
+    display: none;
+  }
 }
 
 .mobile-menu-btn svg {
