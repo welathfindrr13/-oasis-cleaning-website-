@@ -6,33 +6,17 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<title>Careers - Join Our Team | Oasis International Cleaning Services</title>
-<meta name="description" content="Join the Oasis International Cleaning Services team. We're looking for dedicated, professional cleaners across London.">
+<title>Careers | Oasis International Cleaning Services</title>
+<meta name="description" content="Join our team of professional cleaners in London. DBS-checked, reliable work with competitive pay.">
 <link rel="canonical" href="https://www.oasisinternationalcleaningservices.com/join-us.html">
-<meta property="og:title" content="Careers - Join Our Team | Oasis International Cleaning Services">
-<meta property="og:description" content="Join our team. We're looking for dedicated, professional cleaners across London.">
-<meta property="og:url" content="https://www.oasisinternationalcleaningservices.com/join-us.html">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://www.oasisinternationalcleaningservices.com/assets/logo.jpeg">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        green: { 50: '#ECF7EF', 100: '#D4EDDA', 500: '#4CAF50', 600: '#43A047' },
-        gold: { 500: '#D4AF37' },
-        grey: { 300: '#D9D9D9', 700: '#444444', 900: '#111111' },
-        blue: { 50: '#EBF8FF', 400: '#5CC8E8', 500: '#3BB8DE' }
-      },
-      maxWidth: {
-        container: '1200px'
-      }
-    }
-  }
-}
-</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="styles.css">
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17779427647"></script>
 <script>
@@ -42,240 +26,241 @@ tailwind.config = {
   gtag('config', 'AW-17779427647');
 </script>
 </head>
-<body class="font-sans text-grey-700 bg-white">
-<a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-green-500 focus:text-white focus:rounded">Skip to content</a>
+<body>
+<a href="#main" class="sr-only">Skip to main content</a>
 
 <!-- Header -->
-<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
-  <nav class="max-w-container mx-auto px-3 lg:px-6 h-[160px] flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="h-40 w-auto">
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html">
+      <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="header-logo">
     </a>
-    <button id="mobile-menu-btn" class="lg:hidden p-3 -mr-1" aria-label="Toggle menu" aria-expanded="false">
-      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-    </button>
-    <div class="hidden lg:flex items-center gap-6">
-      <a href="index.html" class="text-sm font-medium hover:text-green-500 transition">Home</a>
-      <a href="domestic-cleaning-london.html" class="text-sm font-medium hover:text-green-500 transition">Domestic</a>
-      <a href="end-of-tenancy-cleaning-london.html" class="text-sm font-medium hover:text-green-500 transition">End of Tenancy</a>
-      <a href="office-cleaning-london.html" class="text-sm font-medium hover:text-green-500 transition">Office</a>
-      <a href="about-us.html" class="text-sm font-medium hover:text-green-500 transition">About</a>
-      <a href="contact.html" class="text-sm font-medium hover:text-green-500 transition">Contact</a>
+    
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="domestic-cleaning-london.html">Domestic</a>
+      <a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a>
+      <a href="office-cleaning-london.html">Office</a>
+      <a href="about-us.html">About</a>
+      <a href="contact.html">Contact</a>
       <a href="quote.html" class="btn-primary">Get a Quote</a>
-    </div>
-  </nav>
-  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-grey-300">
-    <nav class="px-4 py-4 space-y-2">
-      <a href="index.html" class="block py-3 text-base border-b border-grey-300/60">Home</a>
-      <a href="domestic-cleaning-london.html" class="block py-3 text-base border-b border-grey-300/60">Domestic Cleaning</a>
-      <a href="end-of-tenancy-cleaning-london.html" class="block py-3 text-base border-b border-grey-300/60">End of Tenancy</a>
-      <a href="office-cleaning-london.html" class="block py-3 text-base border-b border-grey-300/60">Office Cleaning</a>
-      <a href="about-us.html" class="block py-3 text-base border-b border-grey-300/60">About</a>
-      <a href="contact.html" class="block py-3 text-base">Contact</a>
-      <a href="quote.html" class="btn-primary inline-block mt-3 w-full text-center">Get a Quote</a>
     </nav>
+    
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="domestic-cleaning-london.html">Domestic Cleaning</a>
+    <a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a>
+    <a href="office-cleaning-london.html">Office Cleaning</a>
+    <a href="about-us.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="quote.html" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Get a Quote</a>
   </div>
 </header>
 
-<main id="content">
+<main id="main">
+  
   <!-- Hero -->
-  <section class="py-16 bg-green-50">
-    <div class="max-w-container mx-auto px-4 lg:px-6 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-grey-900 mb-6">Join Our Team</h1>
-      <p class="text-xl text-grey-700 max-w-2xl mx-auto">We're looking for dedicated, professional individuals to join our growing team across London.</p>
-    </div>
-  </section>
-
-  <!-- Why Work With Us -->
-  <section class="py-16 bg-white">
-    <div class="max-w-container mx-auto px-4 lg:px-6">
-      <h2 class="text-2xl md:text-3xl font-bold text-grey-900 text-center mb-12">Why Work With Oasis?</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          </div>
-          <h3 class="text-lg font-bold text-grey-900 mb-3">Competitive Pay</h3>
-          <p class="text-grey-600">Fair wages paid on time, every time.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          </div>
-          <h3 class="text-lg font-bold text-grey-900 mb-3">Flexible Hours</h3>
-          <p class="text-grey-600">Part-time and full-time positions available.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          </div>
-          <h3 class="text-lg font-bold text-grey-900 mb-3">Full Training</h3>
-          <p class="text-grey-600">Comprehensive training and ongoing support.</p>
-        </div>
+  <section style="padding: var(--space-3xl) 0; background-color: var(--bg-primary);">
+    <div class="container">
+      <div style="max-width: 700px;">
+        <p style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-green); margin-bottom: 1rem;">Careers</p>
+        <h1 style="margin-bottom: 1.5rem;">Join Our Team</h1>
+        <p style="font-size: 1.125rem;">
+          We're looking for reliable, detail-oriented cleaners to join our growing team across London.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Current Openings -->
-  <section class="py-16 bg-slate-50">
-    <div class="max-w-container mx-auto px-4 lg:px-6">
-      <h2 class="text-2xl md:text-3xl font-bold text-grey-900 text-center mb-12">Current Openings</h2>
-      <div class="max-w-3xl mx-auto space-y-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <div class="flex items-start justify-between mb-4">
-            <div>
-              <h3 class="text-lg font-bold text-grey-900 mb-2">Domestic Cleaner</h3>
-              <div class="flex flex-wrap gap-3 text-sm text-grey-600">
-                <span>London-wide</span>
-                <span>Part-time / Full-time</span>
-              </div>
-            </div>
-            <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Open</span>
-          </div>
-          <p class="text-grey-700 mb-4">Join our domestic cleaning team serving homes across London. You'll follow our quality checklists to deliver consistent, thorough cleans.</p>
-          <p class="text-sm text-grey-600"><strong>Requirements:</strong> Right to work in UK, reliable, attention to detail. Full training provided.</p>
-        </div>
+  <!-- What We Offer -->
+  <section class="section-lg" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div style="max-width: 700px;">
+        <h2 style="margin-bottom: var(--space-lg);">What We Offer</h2>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
+            Competitive hourly rates
+          </li>
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
+            Flexible scheduling options
+          </li>
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
+            Work across Greater London
+          </li>
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
+            Clear expectations and support
+          </li>
+          <li style="padding: var(--space-sm) 0; color: var(--text-secondary);">
+            Opportunity for regular, consistent work
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <div class="flex items-start justify-between mb-4">
-            <div>
-              <h3 class="text-lg font-bold text-grey-900 mb-2">Office Cleaner</h3>
-              <div class="flex flex-wrap gap-3 text-sm text-grey-600">
-                <span>Central & West London</span>
-                <span>Evening shifts</span>
-              </div>
-            </div>
-            <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Open</span>
-          </div>
-          <p class="text-grey-700 mb-4">Reliable commercial cleaners needed for office and business premises. Evening shifts with regular locations.</p>
-          <p class="text-sm text-grey-600"><strong>Requirements:</strong> Right to work in UK, DBS check (we can arrange), punctuality.</p>
-        </div>
+  <!-- Requirements -->
+  <section class="section-lg" style="background-color: var(--bg-primary);">
+    <div class="container">
+      <div style="max-width: 700px;">
+        <h2 style="margin-bottom: var(--space-lg);">Requirements</h2>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
+            Eligible to work in the UK
+          </li>
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
+            Willing to undergo DBS check
+          </li>
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
+            Professional cleaning experience preferred
+          </li>
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
+            Reliable and punctual
+          </li>
+          <li style="padding: var(--space-sm) 0; color: var(--text-secondary);">
+            Able to travel to job locations across London
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- Application Form -->
-  <section class="py-16 bg-white">
-    <div class="max-w-container mx-auto px-4 lg:px-6">
-      <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl md:text-3xl font-bold text-grey-900 mb-8 text-center">Apply Now</h2>
-        <form id="career-form" class="space-y-5">
-          <div class="grid md:grid-cols-2 gap-5">
-            <div>
-              <label for="full_name" class="block text-sm font-medium text-grey-900 mb-1">Full Name <span class="text-red-500">*</span></label>
-              <input type="text" id="full_name" name="full_name" class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" required>
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-grey-900 mb-1">Email Address <span class="text-red-500">*</span></label>
-              <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" required>
-            </div>
+  <section class="section-lg" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div style="max-width: 600px;">
+        <h2 style="margin-bottom: var(--space-lg);">Apply Now</h2>
+        
+        <form action="https://formspree.io/f/xanqzpja" method="POST">
+          <input type="hidden" name="_subject" value="Job Application - Oasis Cleaning">
+          
+          <div style="margin-bottom: var(--space-md);">
+            <label class="form-label" for="name">Full Name *</label>
+            <input type="text" id="name" name="name" class="form-field" required>
           </div>
-
-          <div class="grid md:grid-cols-2 gap-5">
-            <div>
-              <label for="phone" class="block text-sm font-medium text-grey-900 mb-1">Phone Number <span class="text-red-500">*</span></label>
-              <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" required>
-            </div>
-            <div>
-              <label for="position" class="block text-sm font-medium text-grey-900 mb-1">Position <span class="text-red-500">*</span></label>
-              <select id="position" name="position" class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" required>
-                <option value="">Select position</option>
-                <option value="Domestic Cleaner">Domestic Cleaner</option>
-                <option value="Office Cleaner">Office Cleaner</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
+          
+          <div style="margin-bottom: var(--space-md);">
+            <label class="form-label" for="email">Email *</label>
+            <input type="email" id="email" name="email" class="form-field" required>
           </div>
-
-          <div>
-            <label for="experience" class="block text-sm font-medium text-grey-900 mb-1">Previous Experience</label>
-            <textarea id="experience" name="experience" rows="3" class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" placeholder="Tell us about any relevant experience..."></textarea>
+          
+          <div style="margin-bottom: var(--space-md);">
+            <label class="form-label" for="phone">Phone *</label>
+            <input type="tel" id="phone" name="phone" class="form-field" required>
           </div>
-
-          <div>
-            <label for="availability" class="block text-sm font-medium text-grey-900 mb-1">Availability</label>
-            <textarea id="availability" name="availability" rows="2" class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" placeholder="When are you available to work?"></textarea>
+          
+          <div style="margin-bottom: var(--space-md);">
+            <label class="form-label" for="postcode">Postcode *</label>
+            <input type="text" id="postcode" name="postcode" class="form-field" required>
           </div>
-
-          <div class="bg-green-50 p-4 rounded-lg">
-            <label class="flex items-start gap-3 cursor-pointer">
-              <input type="checkbox" id="right_to_work" name="right_to_work" class="mt-1" required>
-              <span class="text-sm text-grey-700">I confirm I have the legal right to work in the United Kingdom <span class="text-red-500">*</span></span>
-            </label>
+          
+          <div style="margin-bottom: var(--space-md);">
+            <label class="form-label" for="experience">Cleaning Experience</label>
+            <select id="experience" name="experience" class="form-field">
+              <option value="">Select</option>
+              <option value="none">No professional experience</option>
+              <option value="1-2">1-2 years</option>
+              <option value="3-5">3-5 years</option>
+              <option value="5+">5+ years</option>
+            </select>
           </div>
-
-          <button type="submit" class="w-full btn-primary py-4 text-lg">Submit Application</button>
-          <p class="text-sm text-grey-600 text-center">By submitting, you agree to our <a href="privacy-policy.html" class="text-green-500 hover:underline">privacy policy</a>.</p>
+          
+          <div style="margin-bottom: var(--space-md);">
+            <label class="form-label" for="availability">Availability</label>
+            <select id="availability" name="availability" class="form-field">
+              <option value="">Select</option>
+              <option value="full-time">Full-time</option>
+              <option value="part-time">Part-time</option>
+              <option value="flexible">Flexible</option>
+            </select>
+          </div>
+          
+          <div style="margin-bottom: var(--space-lg);">
+            <label class="form-label" for="message">Tell Us About Yourself</label>
+            <textarea id="message" name="message" class="form-field" rows="4" placeholder="Brief summary of your experience and why you'd like to work with us..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn-primary">Submit Application</button>
         </form>
       </div>
     </div>
   </section>
+
+  <!-- Alternative Contact -->
+  <section class="section" style="background-color: var(--bg-primary); border-top: 1px solid var(--border-muted);">
+    <div class="container text-center">
+      <div style="max-width: 560px; margin: 0 auto;">
+        <h2 style="margin-bottom: var(--space-sm);">Questions?</h2>
+        <p style="margin-bottom: var(--space-lg); margin-left: auto; margin-right: auto;">
+          Get in touch if you have any questions about working with us.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+          <a href="mailto:info@oasisinternationalcleaningservices.com" class="btn-primary">Email Us</a>
+          <a href="https://wa.me/447947716355" class="btn-secondary">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <!-- Footer -->
-<footer class="bg-grey-900 text-white py-12">
-  <div class="max-w-container mx-auto px-4 lg:px-6">
-    <div class="grid md:grid-cols-4 gap-8 mb-8">
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
       <div>
-        <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="h-20 w-auto mb-4 rounded-lg bg-white p-2">
-        <p class="text-sm text-white/70">Structured cleaning services across Greater London.</p>
+        <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="footer-logo">
+        <p style="font-size: 0.9375rem; margin-top: 1rem; max-width: 280px;">
+          Premium cleaning services across Greater London.
+        </p>
       </div>
+      
       <div>
-        <h4 class="font-bold mb-4 text-sm">Services</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="domestic-cleaning-london.html" class="hover:text-green-400 transition">Domestic Cleaning</a></li>
-          <li><a href="end-of-tenancy-cleaning-london.html" class="hover:text-green-400 transition">End of Tenancy</a></li>
-          <li><a href="office-cleaning-london.html" class="hover:text-green-400 transition">Office Cleaning</a></li>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="domestic-cleaning-london.html">Domestic Cleaning</a></li>
+          <li><a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a></li>
+          <li><a href="office-cleaning-london.html">Office Cleaning</a></li>
         </ul>
       </div>
+      
       <div>
-        <h4 class="font-bold mb-4 text-sm">Company</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="index.html" class="hover:text-green-400 transition">Home</a></li>
-          <li><a href="about-us.html" class="hover:text-green-400 transition">About</a></li>
-          <li><a href="contact.html" class="hover:text-green-400 transition">Contact</a></li>
-          <li><a href="join-us.html" class="hover:text-green-400 transition">Join Us</a></li>
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="join-us.html">Careers</a></li>
         </ul>
       </div>
+      
       <div>
-        <h4 class="font-bold mb-4 text-sm">Contact</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li>
-            <a href="tel:+442037508878" class="hover:text-green-400 transition flex items-center gap-2">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-              020 3750 8878
-            </a>
-          </li>
-          <li>
-            <a href="https://wa.me/447947716355" class="hover:text-green-400 transition flex items-center gap-2">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-          </li>
-          <li>
-            <a href="mailto:info@oasisinternationalcleaningservices.com" class="hover:text-green-400 transition flex items-center gap-2">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              Email Us
-            </a>
-          </li>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+442037508878">020 3750 8878</a></li>
+          <li><a href="https://wa.me/447947716355">WhatsApp</a></li>
+          <li><a href="mailto:info@oasisinternationalcleaningservices.com">Email</a></li>
         </ul>
       </div>
     </div>
-    <div class="border-t border-white/10 pt-8">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
-        <p class="text-xs text-white/50">&copy; <span id="current-year">2025</span> Oasis International Cleaning Services Ltd. All rights reserved.</p>
-        <div class="flex gap-6 text-xs text-white/50">
-          <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
-          <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
-        </div>
-      </div>
-      <p class="text-xs text-white/40 text-center mb-2">Oasis International Cleaning Services Ltd | Company No. 16660274 | 15 A Unimix House, Abbey Road, London, NW10 7TR</p>
-      <p class="text-xs text-white/30 text-center">Oasis International Cleaning Services Ltd is a UK-registered company (Co. No. 16660274) wholly owned by Marcus Edwards. It is structurally and financially separate from Oasis International Care Services Ltd.</p>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Oasis International Cleaning Services Ltd. All rights reserved.</p>
+      <p>Company No. 16660274 | 15 A Unimix House, Abbey Road, London, NW10 7TR</p>
+      <p style="margin-top: 1rem;">
+        <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
+      </p>
     </div>
   </div>
 </footer>
 
-<script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
-<script src="scripts.js"></script>
+<script>
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+});
+</script>
 </body>
 </html>
