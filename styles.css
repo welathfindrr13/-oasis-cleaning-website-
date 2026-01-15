@@ -222,7 +222,6 @@ p {
 .header-logo {
   height: 44px;
   width: auto;
-  filter: brightness(0) invert(1);
 }
 
 .brand .brand-text {
@@ -735,6 +734,49 @@ select.form-field {
   background-repeat: no-repeat;
   background-position: right 16px center;
   padding-right: 48px;
+  cursor: pointer;
+}
+
+/* Fix for native select dropdown options */
+select.form-field option {
+  background-color: #2A2A2A;
+  color: #FFFFFF;
+  padding: 12px 16px;
+}
+
+select.form-field option:hover,
+select.form-field option:focus,
+select.form-field option:checked {
+  background-color: #C4A77D;
+  color: #0B0B0B;
+}
+
+/* Styled select dropdowns in quote form */
+.quote-select,
+.styled-select {
+  position: relative;
+  width: 100%;
+}
+
+.quote-select select,
+.styled-select select {
+  width: 100%;
+  padding: 14px 48px 14px 16px;
+  font-family: var(--font);
+  font-size: 1rem;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.quote-select select:focus,
+.styled-select select:focus {
+  outline: none;
+  border-color: var(--accent-green);
 }
 
 /* ---- Footer ---- */
@@ -769,8 +811,6 @@ select.form-field {
 .footer-logo {
   height: 38px;
   width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
 }
 
 .footer-title {
@@ -865,6 +905,60 @@ select.form-field {
   margin-top: var(--s4);
   color: rgba(184, 184, 184, 0.75);
   font-size: 0.9rem;
+}
+
+/* ---- Contact Links ---- */
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-green);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-link:hover {
+  color: var(--accent-green-hover);
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.contact-link-lg {
+  font-size: 1.25rem;
+}
+
+.contact-card-link {
+  display: block;
+  color: var(--accent-green);
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: color var(--transition-fast);
+}
+
+.contact-card-link:hover {
+  color: var(--accent-green-hover);
+  text-decoration: underline;
+  opacity: 1;
+}
+
+/* Contact card styling */
+.contact-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--s4);
+}
+
+.contact-card h3 {
+  font-size: var(--h3);
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.contact-card p {
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
 }
 
 /* ---- Utility Classes ---- */
