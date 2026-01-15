@@ -6,14 +6,14 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<title>Office Cleaning in London | Oasis International Cleaning Services</title>
-<meta name="description" content="Professional office and commercial cleaning across London. Consistent, accountable service on contract or scheduled basis.">
+<title>Office Cleaning Services in London | Oasis International Cleaning Services</title>
+<meta name="description" content="Professional office cleaning across London with consistent standards and defined checklists. Fixed monthly contracts after scope discussion.">
 <link rel="canonical" href="https://www.oasisinternationalcleaningservices.com/office-cleaning-london.html">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
 
@@ -32,18 +32,26 @@
 <!-- Header -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html">
-      <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="header-logo">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services">
     </a>
     
     <nav class="header-nav">
       <a href="index.html">Home</a>
-      <a href="domestic-cleaning-london.html">Domestic</a>
-      <a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a>
-      <a href="office-cleaning-london.html" class="active">Office</a>
-      <a href="about-us.html">About</a>
+      
+      <div class="dropdown">
+        <button type="button" aria-haspopup="true" aria-expanded="false">
+          Services <span aria-hidden="true">▾</span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <a role="menuitem" href="domestic-cleaning-london.html">Residential Cleaning</a>
+          <a role="menuitem" href="end-of-tenancy-cleaning-london.html">End of Tenancy Cleaning</a>
+          <a role="menuitem" href="office-cleaning-london.html" class="active">Office Cleaning</a>
+        </div>
+      </div>
+      
+      <a href="quote.html">Get a Quote</a>
       <a href="contact.html">Contact</a>
-      <a href="quote.html" class="btn-primary">Get a Quote</a>
     </nav>
     
     <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
@@ -53,217 +61,72 @@
   
   <div class="mobile-menu" id="mobile-menu">
     <a href="index.html">Home</a>
-    <a href="domestic-cleaning-london.html">Domestic Cleaning</a>
-    <a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a>
+    <a href="domestic-cleaning-london.html">Residential Cleaning</a>
+    <a href="end-of-tenancy-cleaning-london.html">End of Tenancy Cleaning</a>
     <a href="office-cleaning-london.html">Office Cleaning</a>
-    <a href="about-us.html">About</a>
+    <a href="quote.html">Get a Quote</a>
     <a href="contact.html">Contact</a>
-    <a href="quote.html" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Get a Quote</a>
   </div>
 </header>
 
 <main id="main">
   
-  <!-- Hero -->
-  <section style="padding: var(--space-3xl) 0; background-color: var(--bg-primary);">
+  <!-- PAGE HERO -->
+  <section class="page-hero has-image" style="--page-hero-image: url('assets/hero office.jpeg');">
     <div class="container">
-      <div style="max-width: 700px;">
-        <p style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-green); margin-bottom: 1rem;">Office Cleaning</p>
-        <h1 style="margin-bottom: 1.5rem;">Professional workspace cleaning for London businesses</h1>
-        <p style="font-size: 1.125rem; margin-bottom: 2rem;">
-          For businesses, property managers, and office administrators who need consistent, accountable cleaning.
-        </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-          <a href="quote.html" class="btn-primary">Request a Quote</a>
-          <a href="tel:+442037508878" class="btn-secondary">020 3750 8878</a>
-        </div>
+      <h1>Office Cleaning Services in London</h1>
+      <p class="sub">
+        We provide professional office cleaning for businesses that require a reliable, discreet, and structured service. Our approach prioritises cleanliness, consistency, and minimal disruption to daily operations.
+      </p>
+      <div style="margin-top: var(--s3);">
+        <a class="btn-primary" href="quote.html">Request an Office Cleaning Quote</a>
       </div>
     </div>
   </section>
 
-  <!-- Who This Is For -->
-  <section class="section-lg" style="background-color: var(--bg-secondary);">
+  <!-- WHAT'S INCLUDED -->
+  <section class="section">
     <div class="container">
       <div style="max-width: 700px;">
-        <h2 style="margin-bottom: var(--space-lg);">Who This Service Is For</h2>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            Small to medium businesses needing regular office cleaning
-          </li>
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            Property managers responsible for commercial spaces
-          </li>
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            Office administrators looking for reliable, scheduled cleaning
-          </li>
-          <li style="padding: var(--space-sm) 0; color: var(--text-secondary);">
-            Co-working spaces and serviced offices requiring consistent standards
-          </li>
+        <h2 style="margin-bottom: var(--s4);">What's Included</h2>
+        <ul class="clean-list">
+          <li>Workstation and surface cleaning</li>
+          <li>Kitchen and break-area cleaning</li>
+          <li>Washroom cleaning and restocking (client supplies)</li>
+          <li>Floor vacuuming and mopping</li>
+          <li>Bin emptying</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- What's Included -->
-  <section class="section-lg" style="background-color: var(--bg-primary);">
+  <!-- PRICING -->
+  <section class="section section--dark">
     <div class="container">
       <div style="max-width: 700px;">
-        <h2 style="margin-bottom: var(--space-xl);">What's Included</h2>
-        
-        <div style="margin-bottom: var(--space-xl);">
-          <h3 style="margin-bottom: var(--space-sm); color: var(--text-primary);">General Office Areas</h3>
-          <ul class="list-check">
-            <li>Desks, workstations and surfaces wiped</li>
-            <li>Reception and common areas cleaned</li>
-            <li>Floors vacuumed and mopped</li>
-            <li>Bins emptied and liners replaced</li>
-            <li>Door handles and light switches sanitised</li>
-          </ul>
+        <h2 style="margin-bottom: var(--s4);">Pricing</h2>
+        <div class="pricing">
+          <p style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 0 0 10px;">
+            Fixed monthly contract
+          </p>
+          <p style="margin: 0;">
+            Pricing is confirmed after a short scope discussion to ensure accuracy. We confirm frequency, checklist and pricing before starting.
+          </p>
         </div>
-        
-        <hr class="divider-gold">
-        
-        <div style="margin-bottom: var(--space-xl);">
-          <h3 style="margin-bottom: var(--space-sm); color: var(--text-primary);">Kitchen & Break Areas</h3>
-          <ul class="list-check">
-            <li>Worktops and surfaces cleaned</li>
-            <li>Sink and taps cleaned</li>
-            <li>Appliance exteriors wiped</li>
-            <li>Tables and chairs wiped down</li>
-            <li>Floor cleaned</li>
-          </ul>
-        </div>
-        
-        <hr class="divider-gold">
-        
-        <div style="margin-bottom: var(--space-xl);">
-          <h3 style="margin-bottom: var(--space-sm); color: var(--text-primary);">Washrooms</h3>
-          <ul class="list-check">
-            <li>Toilets, urinals and sinks sanitised</li>
-            <li>Mirrors cleaned</li>
-            <li>Dispensers refilled (supplies provided by client)</li>
-            <li>Floors mopped</li>
-            <li>Bins emptied</li>
-          </ul>
-        </div>
-        
-        <hr class="divider-gold">
-        
-        <div>
-          <h3 style="margin-bottom: var(--space-sm); color: var(--text-primary);">Meeting Rooms</h3>
-          <ul class="list-check">
-            <li>Tables and chairs wiped</li>
-            <li>Surfaces dusted</li>
-            <li>Floors vacuumed</li>
-            <li>Bins emptied</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- What's Not Included -->
-  <section class="section" style="background-color: var(--bg-secondary);">
-    <div class="container">
-      <div style="max-width: 700px;">
-        <h2 style="margin-bottom: var(--space-lg);">What's Not Included</h2>
-        <ul style="list-style: none; padding: 0; margin: 0; color: var(--text-secondary);">
-          <li style="padding: var(--space-xs) 0;">External or high-level window cleaning</li>
-          <li style="padding: var(--space-xs) 0;">IT equipment internal cleaning</li>
-          <li style="padding: var(--space-xs) 0;">Specialist floor treatments (polishing, stripping)</li>
-          <li style="padding: var(--space-xs) 0;">Washroom consumables (paper, soap) unless agreed</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing -->
-  <section class="section-lg" style="background-color: var(--bg-primary);">
-    <div class="container">
-      <div style="max-width: 700px;">
-        <h2 style="margin-bottom: var(--space-lg);">Pricing</h2>
-        <p style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: var(--space-md);">
-          Pricing is based on square footage, frequency, and specific requirements.
-        </p>
-        <p style="margin-bottom: var(--space-md);">
-          We offer contract-based and ad-hoc cleaning. All pricing is confirmed in writing before work begins.
-        </p>
-        
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            Daily, weekly, or fortnightly schedules available
-          </li>
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            Out-of-hours cleaning available
-          </li>
-          <li style="padding: var(--space-sm) 0; color: var(--text-secondary);">
-            Contract or pay-as-you-go options
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Standards -->
-  <section class="section" style="background-color: var(--bg-secondary);">
-    <div class="container">
-      <div style="max-width: 700px;">
-        <h2 style="margin-bottom: var(--space-lg);">Service Standards</h2>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            Dedicated cleaning staff where possible for consistency
-          </li>
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            All staff DBS-checked and vetted
-          </li>
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            Defined cleaning checklist per visit
-          </li>
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            Regular quality checks and reporting
-          </li>
-          <li style="padding: var(--space-sm) 0; color: var(--text-secondary);">
-            Single point of contact for account management
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- No Surprises -->
-  <section class="section" style="background-color: var(--bg-primary);">
-    <div class="container">
-      <div style="max-width: 700px;">
-        <h2 style="margin-bottom: var(--space-lg);">No Surprises</h2>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            Scope confirmed in writing before work begins
-          </li>
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            Fixed or agreed pricing with no hidden fees
-          </li>
-          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-muted); color: var(--text-secondary);">
-            Clear communication and accountability
-          </li>
-          <li style="padding: var(--space-sm) 0; color: var(--text-secondary);">
-            Issues addressed promptly and professionally
-          </li>
-        </ul>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="section-lg" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-muted);">
+  <section class="section">
     <div class="container text-center">
       <div style="max-width: 560px; margin: 0 auto;">
-        <h2 style="margin-bottom: var(--space-sm);">Request a Quote</h2>
+        <h2 style="margin-bottom: var(--space-sm);">Ready to discuss your requirements?</h2>
         <p style="margin-bottom: var(--space-lg); margin-left: auto; margin-right: auto;">
-          Get pricing for your office cleaning requirements.
+          Request a quote and we'll arrange a scope discussion.
         </p>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-          <a href="quote.html" class="btn-primary">Get a Quote</a>
-          <a href="https://wa.me/447947716355" class="btn-secondary">WhatsApp</a>
+          <a href="quote.html" class="btn-primary">Request an Office Cleaning Quote</a>
         </div>
       </div>
     </div>
@@ -278,14 +141,14 @@
       <div>
         <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="footer-logo">
         <p style="font-size: 0.9375rem; margin-top: 1rem; max-width: 280px;">
-          Premium cleaning services across Greater London.
+          Professional Cleaning Services Across London
         </p>
       </div>
       
       <div>
         <h4>Services</h4>
         <ul class="footer-links">
-          <li><a href="domestic-cleaning-london.html">Domestic Cleaning</a></li>
+          <li><a href="domestic-cleaning-london.html">Residential Cleaning</a></li>
           <li><a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a></li>
           <li><a href="office-cleaning-london.html">Office Cleaning</a></li>
         </ul>
@@ -294,9 +157,9 @@
       <div>
         <h4>Company</h4>
         <ul class="footer-links">
-          <li><a href="about-us.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="join-us.html">Careers</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
         </ul>
       </div>
       
@@ -304,7 +167,7 @@
         <h4>Contact</h4>
         <ul class="footer-links">
           <li><a href="tel:+442037508878">020 3750 8878</a></li>
-          <li><a href="https://wa.me/447947716355">WhatsApp</a></li>
+          <li><a href="https://wa.me/447947716355">WhatsApp: 07947 716355</a></li>
           <li><a href="mailto:info@oasisinternationalcleaningservices.com">Email</a></li>
         </ul>
       </div>
@@ -313,9 +176,6 @@
     <div class="footer-bottom">
       <p>&copy; 2025 Oasis International Cleaning Services Ltd. All rights reserved.</p>
       <p>Company No. 16660274 | 15 A Unimix House, Abbey Road, London, NW10 7TR</p>
-      <p style="margin-top: 1rem;">
-        <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
-      </p>
     </div>
   </div>
 </footer>

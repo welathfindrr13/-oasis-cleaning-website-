@@ -6,14 +6,14 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<title>Contact Us | Oasis International Cleaning Services</title>
-<meta name="description" content="Get in touch with Oasis International Cleaning Services. Call, WhatsApp, or send us a message.">
+<title>Contact | Oasis International Cleaning Services</title>
+<meta name="description" content="Contact Oasis International Cleaning Services. Email, landline, WhatsApp. Serving Greater London.">
 <link rel="canonical" href="https://www.oasisinternationalcleaningservices.com/contact.html">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
 
@@ -32,18 +32,26 @@
 <!-- Header -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html">
-      <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="header-logo">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services">
     </a>
     
     <nav class="header-nav">
       <a href="index.html">Home</a>
-      <a href="domestic-cleaning-london.html">Domestic</a>
-      <a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a>
-      <a href="office-cleaning-london.html">Office</a>
-      <a href="about-us.html">About</a>
+      
+      <div class="dropdown">
+        <button type="button" aria-haspopup="true" aria-expanded="false">
+          Services <span aria-hidden="true">▾</span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <a role="menuitem" href="domestic-cleaning-london.html">Residential Cleaning</a>
+          <a role="menuitem" href="end-of-tenancy-cleaning-london.html">End of Tenancy Cleaning</a>
+          <a role="menuitem" href="office-cleaning-london.html">Office Cleaning</a>
+        </div>
+      </div>
+      
+      <a href="quote.html">Get a Quote</a>
       <a href="contact.html" class="active">Contact</a>
-      <a href="quote.html" class="btn-primary">Get a Quote</a>
     </nav>
     
     <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
@@ -53,128 +61,104 @@
   
   <div class="mobile-menu" id="mobile-menu">
     <a href="index.html">Home</a>
-    <a href="domestic-cleaning-london.html">Domestic Cleaning</a>
-    <a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a>
+    <a href="domestic-cleaning-london.html">Residential Cleaning</a>
+    <a href="end-of-tenancy-cleaning-london.html">End of Tenancy Cleaning</a>
     <a href="office-cleaning-london.html">Office Cleaning</a>
-    <a href="about-us.html">About</a>
+    <a href="quote.html">Get a Quote</a>
     <a href="contact.html">Contact</a>
-    <a href="quote.html" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Get a Quote</a>
   </div>
 </header>
 
 <main id="main">
   
-  <!-- Hero -->
-  <section style="padding: var(--space-3xl) 0; background-color: var(--bg-primary);">
+  <!-- PAGE HERO -->
+  <section class="page-hero">
     <div class="container">
-      <div style="max-width: 700px;">
-        <p style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-green); margin-bottom: 1rem;">Contact</p>
-        <h1 style="margin-bottom: 1.5rem;">Get in Touch</h1>
-        <p style="font-size: 1.125rem;">
-          For quotes, questions, or general enquiries.
-        </p>
+      <h1>Contact</h1>
+      <p class="sub">
+        Tell us what you need and we'll respond with clear options. We confirm scope, access requirements, and pricing before booking.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT OPTIONS -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        <div class="card">
+          <h3>Phone</h3>
+          <p style="margin-bottom: var(--space-sm);">Speak to us directly during business hours.</p>
+          <p style="margin: 0;"><a href="tel:02037508878" style="font-size: 1.25rem; font-weight: 600;">020 3750 8878</a></p>
+        </div>
+        
+        <div class="card">
+          <h3>WhatsApp</h3>
+          <p style="margin-bottom: var(--space-sm);">Quick questions or booking enquiries.</p>
+          <p style="margin: 0;"><a href="https://wa.me/447947716355" style="font-size: 1.25rem; font-weight: 600;">07947 716355</a></p>
+        </div>
+        
+        <div class="card">
+          <h3>Email</h3>
+          <p style="margin-bottom: var(--space-sm);">For detailed enquiries or documents.</p>
+          <p style="margin: 0;"><a href="mailto:info@oasisinternationalcleaningservices.com" style="font-weight: 600;">info@oasis...</a></p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Methods -->
-  <section class="section-lg" style="background-color: var(--bg-secondary);">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl); max-width: 900px;">
-        
-        <!-- Phone -->
-        <div>
-          <h2 style="font-size: 1.125rem; margin-bottom: var(--space-sm);">Phone</h2>
-          <p style="margin-bottom: var(--space-xs);">
-            <a href="tel:+442037508878" style="font-size: 1.25rem; color: var(--text-primary); font-weight: 500;">020 3750 8878</a>
-          </p>
-          <p style="color: var(--text-secondary); font-size: 0.875rem;">Monday – Friday, 8am – 6pm</p>
-        </div>
-        
-        <!-- WhatsApp -->
-        <div>
-          <h2 style="font-size: 1.125rem; margin-bottom: var(--space-sm);">WhatsApp</h2>
-          <p style="margin-bottom: var(--space-xs);">
-            <a href="https://wa.me/447947716355" style="font-size: 1.25rem; color: var(--text-primary); font-weight: 500;">07947 716355</a>
-          </p>
-          <p style="color: var(--text-secondary); font-size: 0.875rem;">Quick response during business hours</p>
-        </div>
-        
-        <!-- Email -->
-        <div>
-          <h2 style="font-size: 1.125rem; margin-bottom: var(--space-sm);">Email</h2>
-          <p style="margin-bottom: var(--space-xs);">
-            <a href="mailto:info@oasisinternationalcleaningservices.com" style="font-size: 1rem; color: var(--text-primary); font-weight: 500; word-break: break-word;">info@oasisinternationalcleaningservices.com</a>
-          </p>
-          <p style="color: var(--text-secondary); font-size: 0.875rem;">We respond within 24 hours</p>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="section-lg" style="background-color: var(--bg-primary);">
+  <!-- CONTACT FORM -->
+  <section class="section section--dark">
     <div class="container">
       <div style="max-width: 600px;">
-        <h2 style="margin-bottom: var(--space-lg);">Send a Message</h2>
+        <h2 style="margin-bottom: var(--space-md);">Send a Message</h2>
+        <p style="margin-bottom: var(--space-lg);">
+          For quotes, please use our <a href="quote.html" style="color: var(--accent-green);">quote page</a> for faster, more accurate pricing.
+        </p>
         
-        <form action="https://formspree.io/f/xanqzpja" method="POST">
+        <form id="contactForm">
           <div style="margin-bottom: var(--space-md);">
-            <label class="form-label" for="name">Name</label>
-            <input type="text" id="name" name="name" class="form-field" required>
+            <label class="form-label" for="name">Full Name</label>
+            <input type="text" id="name" name="name" required class="form-field" placeholder="e.g. Alex Johnson">
           </div>
           
           <div style="margin-bottom: var(--space-md);">
-            <label class="form-label" for="email">Email</label>
-            <input type="email" id="email" name="email" class="form-field" required>
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email" id="email" name="email" required class="form-field" placeholder="e.g. name@email.com">
           </div>
           
           <div style="margin-bottom: var(--space-md);">
-            <label class="form-label" for="phone">Phone (optional)</label>
-            <input type="tel" id="phone" name="phone" class="form-field">
-          </div>
-          
-          <div style="margin-bottom: var(--space-md);">
-            <label class="form-label" for="postcode">Postcode</label>
-            <input type="text" id="postcode" name="postcode" class="form-field" required>
-          </div>
-          
-          <div style="margin-bottom: var(--space-md);">
-            <label class="form-label" for="service">Service Type</label>
-            <select id="service" name="service" class="form-field" required>
-              <option value="">Select a service</option>
-              <option value="domestic">Domestic Cleaning</option>
-              <option value="end-of-tenancy">End of Tenancy Cleaning</option>
-              <option value="office">Office Cleaning</option>
-              <option value="other">Other / General Enquiry</option>
-            </select>
+            <label class="form-label" for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone" class="form-field" placeholder="e.g. 07...">
           </div>
           
           <div style="margin-bottom: var(--space-md);">
             <label class="form-label" for="message">Message</label>
-            <textarea id="message" name="message" class="form-field" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="5" required class="form-field" placeholder="Tell us what you need..."></textarea>
           </div>
           
-          <button type="submit" class="btn-primary">Send Message</button>
+          <!-- Honeypot -->
+          <input type="text" name="company" id="honeypot" style="display: none;" tabindex="-1" autocomplete="off">
+          
+          <button type="submit" class="btn-primary" id="submitBtn">Send Message</button>
+          
+          <div id="formStatus" style="margin-top: var(--space-md); display: none;"></div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Office Address -->
-  <section class="section" style="background-color: var(--bg-secondary);">
+  <!-- ADDRESS -->
+  <section class="section">
     <div class="container">
       <div style="max-width: 600px;">
-        <h2 style="margin-bottom: var(--space-lg);">Office Address</h2>
-        <p style="color: var(--text-secondary);">
+        <h2 style="margin-bottom: var(--space-md);">Business Address</h2>
+        <p>
           Oasis International Cleaning Services Ltd<br>
-          15 A Unimix House<br>
-          Abbey Road<br>
+          15 A Unimix House, Abbey Road<br>
           London NW10 7TR
         </p>
-        <p style="margin-top: var(--space-md); color: var(--text-secondary); font-size: 0.875rem;">
-          This is our registered office address. Cleaning services are provided across Greater London.
+        <p style="margin-top: var(--space-sm); color: var(--text-secondary);">
+          Company No. 16660274
         </p>
       </div>
     </div>
@@ -189,14 +173,14 @@
       <div>
         <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="footer-logo">
         <p style="font-size: 0.9375rem; margin-top: 1rem; max-width: 280px;">
-          Premium cleaning services across Greater London.
+          Professional Cleaning Services Across London
         </p>
       </div>
       
       <div>
         <h4>Services</h4>
         <ul class="footer-links">
-          <li><a href="domestic-cleaning-london.html">Domestic Cleaning</a></li>
+          <li><a href="domestic-cleaning-london.html">Residential Cleaning</a></li>
           <li><a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a></li>
           <li><a href="office-cleaning-london.html">Office Cleaning</a></li>
         </ul>
@@ -205,9 +189,9 @@
       <div>
         <h4>Company</h4>
         <ul class="footer-links">
-          <li><a href="about-us.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="join-us.html">Careers</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
         </ul>
       </div>
       
@@ -215,7 +199,7 @@
         <h4>Contact</h4>
         <ul class="footer-links">
           <li><a href="tel:+442037508878">020 3750 8878</a></li>
-          <li><a href="https://wa.me/447947716355">WhatsApp</a></li>
+          <li><a href="https://wa.me/447947716355">WhatsApp: 07947 716355</a></li>
           <li><a href="mailto:info@oasisinternationalcleaningservices.com">Email</a></li>
         </ul>
       </div>
@@ -224,16 +208,63 @@
     <div class="footer-bottom">
       <p>&copy; 2025 Oasis International Cleaning Services Ltd. All rights reserved.</p>
       <p>Company No. 16660274 | 15 A Unimix House, Abbey Road, London, NW10 7TR</p>
-      <p style="margin-top: 1rem;">
-        <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
-      </p>
     </div>
   </div>
 </footer>
 
 <script>
+// Mobile menu toggle
 document.getElementById('mobile-menu-btn').addEventListener('click', function() {
   document.getElementById('mobile-menu').classList.toggle('open');
+});
+
+// Contact form submission
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const submitBtn = document.getElementById('submitBtn');
+  const formStatus = document.getElementById('formStatus');
+  const honeypot = document.getElementById('honeypot').value;
+  
+  // Honeypot check
+  if (honeypot) {
+    formStatus.style.display = 'block';
+    formStatus.innerHTML = '<p style="color: var(--accent-green);">Message sent successfully.</p>';
+    return;
+  }
+  
+  // Disable button
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  
+  const payload = {
+    name: document.getElementById('name').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    phone: document.getElementById('phone').value.trim() || null,
+    message: document.getElementById('message').value.trim()
+  };
+  
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    
+    if (res.ok) {
+      formStatus.style.display = 'block';
+      formStatus.innerHTML = '<p style="color: var(--accent-green);">Message sent successfully. We\'ll be in touch soon.</p>';
+      document.getElementById('contactForm').reset();
+    } else {
+      throw new Error('Failed to send');
+    }
+  } catch (err) {
+    formStatus.style.display = 'block';
+    formStatus.innerHTML = '<p style="color: #E53935;">Something went wrong. Please try calling or WhatsApp instead.</p>';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
+  }
 });
 </script>
 </body>

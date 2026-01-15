@@ -488,6 +488,161 @@ Lead ID: ${id}
   }
 });
 
+// ============================================
+// Contact Form Endpoint
+// ============================================
+const CONTACTS_FILE = path.join(DATA_DIR, 'contact-submissions.jsonl');
+
+const contactLimiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 10,
+  message: { error: 'Too many requests, please try again shortly.' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.post('/contact', contactLimiter, async (req, res) => {
+  try {
+    const { name, email, phone, message, company } = req.body;
+
+    // Honeypot spam protection (company field should be empty)
+    if (company && String(company).trim() !== '') {
+      console.log('Spam detected via honeypot on contact form');
+      return res.status(200).json({ ok: true }); // Fake success to fool bots
+    }
+
+    // Validation
+    if (!name || !name.trim()) {
+      return res.status(400).json({ error: 'Name is required' });
+    }
+    if (!email || !email.trim()) {
+      return res.status(400).json({ error: 'Email is required' });
+    }
+    if (!message || !message.trim()) {
+      return res.status(400).json({ error: 'Message is required' });
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ error: 'Invalid email format' });
+    }
+
+    // Ensure data directory exists
+    ensureDataDir();
+
+    // Generate unique ID and create record
+    const id = crypto.randomUUID();
+    const record = {
+      id,
+      receivedAt: new Date().toISOString(),
+      ip: req.ip || 'Unknown',
+      name: name.trim(),
+      email: email.trim(),
+      phone: phone ? phone.trim() : null,
+      message: message.trim()
+    };
+
+    // Save to JSONL file (append)
+    fs.appendFileSync(CONTACTS_FILE, JSON.stringify(record) + '\n', 'utf8');
+    console.log(`Contact submission saved: ${id}`);
+
+    // Send email notification via Brevo
+    const subject = `New Contact Form Message from ${record.name}`;
+
+    const emailText = `
+NEW CONTACT FORM SUBMISSION
+
+From: ${record.name}
+Email: ${record.email}
+Phone: ${record.phone || 'Not provided'}
+
+Message:
+${record.message}
+
+---
+Submitted: ${new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })} GMT
+IP: ${req.ip || 'Unknown'}
+ID: ${id}
+    `;
+
+    const emailHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #C4A77D; border-bottom: 3px solid #C4A77D; padding-bottom: 10px;">
+          New Contact Form Message
+        </h2>
+        
+        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; margin: 20px 0;">
+          <h3 style="color: #444; margin-top: 0;">Contact Details</h3>
+          <p><strong>Name:</strong> ${record.name}</p>
+          <p><strong>Email:</strong> <a href="mailto:${record.email}">${record.email}</a></p>
+          <p><strong>Phone:</strong> ${record.phone ? `<a href="tel:${record.phone}">${record.phone}</a>` : 'Not provided'}</p>
+        </div>
+
+        <div style="background-color: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 5px; margin: 20px 0;">
+          <h3 style="color: #444; margin-top: 0;">Message</h3>
+          <p style="white-space: pre-wrap;">${record.message}</p>
+        </div>
+
+        <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin-top: 20px; font-size: 12px; color: #666;">
+          <p><strong>Submitted:</strong> ${new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })} GMT</p>
+          <p><strong>IP:</strong> ${req.ip || 'Unknown'}</p>
+          <p><strong>ID:</strong> ${id}</p>
+        </div>
+      </div>
+    `;
+
+    // Send email via Brevo (best-effort, don't fail if email fails)
+    try {
+      if (process.env.BREVO_API_KEY && process.env.QUOTES_TO_EMAIL) {
+        const brevoPayload = {
+          sender: {
+            name: 'Oasis Contact Form',
+            email: process.env.QUOTES_FROM_EMAIL || 'contact@oasisinternationalcleaningservices.com'
+          },
+          to: [
+            {
+              email: process.env.QUOTES_TO_EMAIL,
+              name: 'Oasis Cleaning Admin'
+            }
+          ],
+          replyTo: {
+            email: record.email,
+            name: record.name
+          },
+          subject: subject,
+          htmlContent: emailHtml,
+          textContent: emailText,
+          tags: ['contact-form']
+        };
+
+        const brevoResponse = await axios.post(
+          'https://api.brevo.com/v3/smtp/email',
+          brevoPayload,
+          {
+            headers: {
+              'api-key': process.env.BREVO_API_KEY.trim(),
+              'Content-Type': 'application/json',
+              'accept': 'application/json'
+            }
+          }
+        );
+        console.log(`Contact form email sent via Brevo: ${brevoResponse.data.messageId}`);
+      } else {
+        console.log('Brevo not configured, skipping contact form email');
+      }
+    } catch (emailError) {
+      console.error('Contact form email failed (submission still saved):', emailError.message);
+    }
+
+    return res.json({ ok: true, id });
+
+  } catch (error) {
+    console.error('Error processing contact form:', error);
+    return res.status(500).json({ error: 'Server error' });
+  }
+});
+
 // 404 handler
 app.use((req, res) => {
   res.status(404).json({ error: 'Endpoint not found' });

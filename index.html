@@ -7,10 +7,10 @@
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <title>Oasis International Cleaning Services | Premium Cleaning Across London</title>
-<meta name="description" content="Premium cleaning services across London. Structured, reliable cleaning for homes, tenancies, and workplaces. Fully insured, DBS-checked cleaners.">
+<meta name="description" content="Professional cleaning services you can rely on. High standards, transparent pricing, and professional systems across London.">
 <link rel="canonical" href="https://www.oasisinternationalcleaningservices.com/">
 <meta property="og:title" content="Oasis International Cleaning Services | Premium Cleaning Across London">
-<meta property="og:description" content="Structured, reliable cleaning for homes, tenancies, and workplaces.">
+<meta property="og:description" content="Professional cleaning services you can rely on. High standards, transparent pricing, and professional systems across London.">
 <meta property="og:url" content="https://www.oasisinternationalcleaningservices.com/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.oasisinternationalcleaningservices.com/assets/logo.jpeg">
@@ -18,7 +18,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
 
@@ -39,18 +39,26 @@
 <!-- Header -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html">
-      <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="header-logo">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services">
     </a>
     
     <nav class="header-nav">
       <a href="index.html" class="active">Home</a>
-      <a href="domestic-cleaning-london.html">Domestic</a>
-      <a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a>
-      <a href="office-cleaning-london.html">Office</a>
-      <a href="about-us.html">About</a>
+      
+      <div class="dropdown">
+        <button type="button" aria-haspopup="true" aria-expanded="false">
+          Services <span aria-hidden="true">▾</span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <a role="menuitem" href="domestic-cleaning-london.html">Residential Cleaning</a>
+          <a role="menuitem" href="end-of-tenancy-cleaning-london.html">End of Tenancy Cleaning</a>
+          <a role="menuitem" href="office-cleaning-london.html">Office Cleaning</a>
+        </div>
+      </div>
+      
+      <a href="quote.html">Get a Quote</a>
       <a href="contact.html">Contact</a>
-      <a href="quote.html" class="btn-primary">Get a Quote</a>
     </nav>
     
     <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
@@ -60,199 +68,104 @@
   
   <div class="mobile-menu" id="mobile-menu">
     <a href="index.html">Home</a>
-    <a href="domestic-cleaning-london.html">Domestic Cleaning</a>
-    <a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a>
+    <a href="domestic-cleaning-london.html">Residential Cleaning</a>
+    <a href="end-of-tenancy-cleaning-london.html">End of Tenancy Cleaning</a>
     <a href="office-cleaning-london.html">Office Cleaning</a>
-    <a href="about-us.html">About</a>
+    <a href="quote.html">Get a Quote</a>
     <a href="contact.html">Contact</a>
-    <a href="quote.html" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Get a Quote</a>
   </div>
 </header>
 
 <main id="main">
   
-  <!-- SECTION 1: Hero -->
-  <section style="position: relative; min-height: 85vh; display: flex; align-items: center; background-color: var(--bg-primary);">
-    <div style="position: absolute; inset: 0; overflow: hidden;">
-      <img 
-        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80" 
-        alt="" 
-        style="width: 100%; height: 100%; object-fit: cover; opacity: 0.15;"
-      >
-    </div>
-    <div class="container" style="position: relative; z-index: 1; padding-top: 4rem; padding-bottom: 4rem;">
-      <div style="max-width: 700px;">
-        <h1 style="margin-bottom: 1.5rem;">Premium Cleaning Services Across London</h1>
-        <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2.5rem; max-width: 560px;">
-          Structured, reliable cleaning for homes, tenancies, and workplaces.
-        </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>Professional Cleaning Services You Can Rely On</h1>
+        <p class="sub">High standards, transparent pricing, and professional systems across London.</p>
+        <div class="hero-actions">
           <a href="quote.html" class="btn-primary">Get a Quote</a>
-          <a href="tel:+442037508878" class="btn-secondary">020 3750 8878</a>
-          <a href="https://wa.me/447947716355" class="btn-secondary">WhatsApp</a>
         </div>
       </div>
+
+      <aside class="hero-card" aria-label="Contact details">
+        <p style="color: var(--text-primary); font-weight: 600; margin: 0 0 10px;">Fast, professional response.</p>
+        <p style="margin: 0; color: var(--text-secondary);">Tell us what you need and we'll confirm scope and pricing before booking.</p>
+        <div class="contact-lines">
+          <div>Landline: <a href="tel:02037508878">020 3750 8878</a></div>
+          <div>WhatsApp: <a href="https://wa.me/447947716355" target="_blank" rel="noopener">07947 716355</a></div>
+          <div>Email: <a href="mailto:info@oasisinternationalcleaningservices.com">info@oasis...</a></div>
+        </div>
+      </aside>
     </div>
   </section>
 
-  <!-- SECTION 2: Services Overview -->
-  <section class="section-lg" style="background-color: var(--bg-secondary);">
-    <div class="container">
-      <div style="max-width: 800px;">
-        <h2 style="margin-bottom: var(--space-xl);">Services</h2>
-        
-        <article style="margin-bottom: var(--space-xl);">
-          <h3 style="margin-bottom: 0.75rem;">
-            <a href="domestic-cleaning-london.html" style="color: var(--text-primary);">Domestic Cleaning</a>
-          </h3>
-          <p style="margin-bottom: 0.5rem;">Regular, structured cleaning for homes and flats across London.</p>
-          <a href="domestic-cleaning-london.html" class="btn-text">
-            Learn more
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </article>
-        
-        <hr class="divider-gold">
-        
-        <article style="margin-bottom: var(--space-xl);">
-          <h3 style="margin-bottom: 0.75rem;">
-            <a href="end-of-tenancy-cleaning-london.html" style="color: var(--text-primary);">End of Tenancy Cleaning</a>
-          </h3>
-          <p style="margin-bottom: 0.5rem;">Detailed move-out cleaning designed to meet landlord and agent standards.</p>
-          <a href="end-of-tenancy-cleaning-london.html" class="btn-text">
-            Learn more
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </article>
-        
-        <hr class="divider-gold">
-        
-        <article>
-          <h3 style="margin-bottom: 0.75rem;">
-            <a href="office-cleaning-london.html" style="color: var(--text-primary);">Office Cleaning</a>
-          </h3>
-          <p style="margin-bottom: 0.5rem;">Consistent, professional cleaning for offices and workspaces.</p>
-          <a href="office-cleaning-london.html" class="btn-text">
-            Learn more
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 3: Why Oasis (Trust Builder) -->
-  <section class="section-lg" style="background-color: var(--bg-primary);">
+  <!-- INTRODUCTION -->
+  <section class="section">
     <div class="container">
       <div style="max-width: 700px;">
-        <h2 style="margin-bottom: var(--space-xl);">Why Oasis</h2>
-        
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="padding: var(--space-md) 0; border-bottom: 1px solid var(--border-muted);">
-            <span style="color: var(--text-primary); font-weight: 500;">Fully insured cleaning service</span>
-          </li>
-          <li style="padding: var(--space-md) 0; border-bottom: 1px solid var(--border-muted);">
-            <span style="color: var(--text-primary); font-weight: 500;">DBS-checked, vetted cleaners</span>
-          </li>
-          <li style="padding: var(--space-md) 0; border-bottom: 1px solid var(--border-muted);">
-            <span style="color: var(--text-primary); font-weight: 500;">Defined cleaning checklists per service</span>
-          </li>
-          <li style="padding: var(--space-md) 0; border-bottom: 1px solid var(--border-muted);">
-            <span style="color: var(--text-primary); font-weight: 500;">Internal quality review for consistency</span>
-          </li>
-          <li style="padding: var(--space-md) 0;">
-            <span style="color: var(--text-primary); font-weight: 500;">London-based operations</span>
-          </li>
-        </ul>
+        <p style="font-size: 1.125rem; color: var(--text-secondary);">
+          Oasis International Cleaning Services provides reliable, high-standard cleaning for homes, rental properties, and offices. We focus on consistency, clear pricing, and professional delivery—without shortcuts or guesswork.
+        </p>
+        <p style="color: var(--text-secondary);">
+          Every service is structured, fairly priced, and tailored to the scope of work required.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 4: How It Works -->
-  <section class="section-lg" style="background-color: var(--bg-secondary);">
+  <!-- SERVICES OVERVIEW -->
+  <section class="section section--dark">
     <div class="container">
-      <div style="max-width: 700px;">
-        <h2 style="margin-bottom: var(--space-xl);">How It Works</h2>
-        
-        <ol style="list-style: none; padding: 0; margin: 0; counter-reset: steps;">
-          <li style="display: flex; gap: 1.5rem; padding: var(--space-md) 0; border-bottom: 1px solid var(--border-muted);">
-            <span style="font-size: 1.5rem; font-weight: 500; color: var(--accent-green); min-width: 2rem;">1</span>
-            <span style="color: var(--text-primary);">Request a quote</span>
-          </li>
-          <li style="display: flex; gap: 1.5rem; padding: var(--space-md) 0; border-bottom: 1px solid var(--border-muted);">
-            <span style="font-size: 1.5rem; font-weight: 500; color: var(--accent-green); min-width: 2rem;">2</span>
-            <span style="color: var(--text-primary);">Scope and price confirmed</span>
-          </li>
-          <li style="display: flex; gap: 1.5rem; padding: var(--space-md) 0; border-bottom: 1px solid var(--border-muted);">
-            <span style="font-size: 1.5rem; font-weight: 500; color: var(--accent-green); min-width: 2rem;">3</span>
-            <span style="color: var(--text-primary);">Cleaner attends as scheduled</span>
-          </li>
-          <li style="display: flex; gap: 1.5rem; padding: var(--space-md) 0;">
-            <span style="font-size: 1.5rem; font-weight: 500; color: var(--accent-green); min-width: 2rem;">4</span>
-            <span style="color: var(--text-primary);">Internal quality check</span>
-          </li>
-        </ol>
+      <h2 style="margin-bottom: var(--s4);">Our Services</h2>
+      
+      <div class="grid-3">
+        <article class="card">
+          <h3>Residential Cleaning</h3>
+          <p>Regular or one-off home cleaning delivered to a consistently high standard.</p>
+          <p style="margin-top: 14px;"><a class="btn-ghost" href="domestic-cleaning-london.html">View Residential</a></p>
+        </article>
+
+        <article class="card">
+          <h3>End of Tenancy Cleaning</h3>
+          <p>Thorough, professional cleaning designed to meet landlord and letting agent expectations.</p>
+          <p style="margin-top: 14px;"><a class="btn-ghost" href="end-of-tenancy-cleaning-london.html">View End of Tenancy</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Office Cleaning</h3>
+          <p>Reliable cleaning solutions for professional working environments.</p>
+          <p style="margin-top: 14px;"><a class="btn-ghost" href="office-cleaning-london.html">View Office Cleaning</a></p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 5: Service Entry Points -->
-  <section class="section-lg" style="background-color: var(--bg-primary);">
+  <!-- WHY CHOOSE US -->
+  <section class="section">
     <div class="container">
-      <div style="display: grid; gap: var(--space-3xl);">
-        
-        <!-- Domestic -->
-        <article style="display: grid; grid-template-columns: 1fr; gap: var(--space-lg); align-items: center;">
-          <div style="max-width: 560px;">
-            <h2 style="margin-bottom: var(--space-sm);">Domestic Cleaning</h2>
-            <p style="margin-bottom: var(--space-md);">
-              Regular home cleaning with defined scopes and quality checks. Pricing from £28 per hour with a minimum visit time.
-            </p>
-            <a href="domestic-cleaning-london.html" class="btn-primary">View Service</a>
-          </div>
-        </article>
-        
-        <hr class="divider">
-        
-        <!-- End of Tenancy -->
-        <article style="display: grid; grid-template-columns: 1fr; gap: var(--space-lg); align-items: center;">
-          <div style="max-width: 560px;">
-            <h2 style="margin-bottom: var(--space-sm);">End of Tenancy Cleaning</h2>
-            <p style="margin-bottom: var(--space-md);">
-              Comprehensive move-out cleaning for tenants and landlords. Fixed pricing from £300, confirmed before booking.
-            </p>
-            <a href="end-of-tenancy-cleaning-london.html" class="btn-primary">View Service</a>
-          </div>
-        </article>
-        
-        <hr class="divider">
-        
-        <!-- Office -->
-        <article style="display: grid; grid-template-columns: 1fr; gap: var(--space-lg); align-items: center;">
-          <div style="max-width: 560px;">
-            <h2 style="margin-bottom: var(--space-sm);">Office Cleaning</h2>
-            <p style="margin-bottom: var(--space-md);">
-              Professional workspace cleaning on contract or hourly basis. All pricing confirmed before work begins.
-            </p>
-            <a href="office-cleaning-london.html" class="btn-primary">View Service</a>
-          </div>
-        </article>
-        
-      </div>
+      <h2 style="margin-bottom: var(--s4);">Why Choose Us</h2>
+      <ul class="bullets">
+        <li>Transparent pricing with no hidden fees</li>
+        <li>Professional systems and structured workflows</li>
+        <li>London-based service</li>
+        <li>Reliable, vetted cleaners</li>
+        <li>Clear communication from booking to completion</li>
+      </ul>
     </div>
   </section>
 
-  <!-- SECTION 6: Final CTA -->
-  <section class="section-lg" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-muted);">
+  <!-- FOOTER CTA -->
+  <section class="section section--dark">
     <div class="container text-center">
       <div style="max-width: 560px; margin: 0 auto;">
         <h2 style="margin-bottom: var(--space-sm);">Ready to get started?</h2>
         <p style="margin-bottom: var(--space-lg); margin-left: auto; margin-right: auto;">
-          Request a quote and we'll confirm everything before booking.
+          Get an accurate quote in minutes.
         </p>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
           <a href="quote.html" class="btn-primary">Get a Quote</a>
-          <a href="contact.html" class="btn-secondary">Contact Us</a>
         </div>
       </div>
     </div>
@@ -267,14 +180,14 @@
       <div>
         <img src="assets/logo.jpeg" alt="Oasis International Cleaning Services" class="footer-logo">
         <p style="font-size: 0.9375rem; margin-top: 1rem; max-width: 280px;">
-          Premium cleaning services across Greater London.
+          Professional Cleaning Services Across London
         </p>
       </div>
       
       <div>
         <h4>Services</h4>
         <ul class="footer-links">
-          <li><a href="domestic-cleaning-london.html">Domestic Cleaning</a></li>
+          <li><a href="domestic-cleaning-london.html">Residential Cleaning</a></li>
           <li><a href="end-of-tenancy-cleaning-london.html">End of Tenancy</a></li>
           <li><a href="office-cleaning-london.html">Office Cleaning</a></li>
         </ul>
@@ -283,9 +196,9 @@
       <div>
         <h4>Company</h4>
         <ul class="footer-links">
-          <li><a href="about-us.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="join-us.html">Careers</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
         </ul>
       </div>
       
@@ -293,7 +206,7 @@
         <h4>Contact</h4>
         <ul class="footer-links">
           <li><a href="tel:+442037508878">020 3750 8878</a></li>
-          <li><a href="https://wa.me/447947716355">WhatsApp</a></li>
+          <li><a href="https://wa.me/447947716355">WhatsApp: 07947 716355</a></li>
           <li><a href="mailto:info@oasisinternationalcleaningservices.com">Email</a></li>
         </ul>
       </div>
@@ -302,12 +215,6 @@
     <div class="footer-bottom">
       <p>&copy; 2025 Oasis International Cleaning Services Ltd. All rights reserved.</p>
       <p>Company No. 16660274 | 15 A Unimix House, Abbey Road, London, NW10 7TR</p>
-      <p style="margin-top: 1rem;">
-        <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
-      </p>
-      <p style="margin-top: 1rem; font-size: 0.75rem; opacity: 0.6;">
-        Oasis International Cleaning Services Ltd is wholly owned by Marcus Edwards and is structurally separate from Oasis International Care Services Ltd.
-      </p>
     </div>
   </div>
 </footer>
