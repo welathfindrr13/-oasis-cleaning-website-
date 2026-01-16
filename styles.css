@@ -235,7 +235,7 @@ li {
 
 .brand img,
 .header-logo {
-  height: 48px;
+  height: 70px;
   width: auto;
 }
 
@@ -834,7 +834,7 @@ select.form-field option:checked {
 
 .footer-brand img,
 .footer-logo {
-  height: 42px;
+  height: 56px;
   width: auto;
 }
 
