@@ -6,8 +6,8 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<title>Request a Quote | Oasis International Cleaning Services</title>
-<meta name="description" content="Request a quote for domestic cleaning, end of tenancy cleaning, or office cleaning across London. We'll respond within 24 hours with a fixed price.">
+<title>Get a Quote | Oasis International Cleaning Services</title>
+<meta name="description" content="Request a cleaning quote for domestic cleaning, end of tenancy cleaning, or office cleaning across London. We'll respond within 24 hours with a fixed price.">
 <link rel="canonical" href="https://www.oasisinternationalcleaningservices.com/quote.html">
 
 <!-- Fonts -->
@@ -64,13 +64,7 @@
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-muted);
   border-radius: 2px;
-}
-#output h2 {
-  font-size: 1.5rem;
-  margin-bottom: var(--space-md);
-}
-#output p {
-  color: var(--text-secondary);
+  margin-top: var(--space-lg);
 }
 #output.success {
   background-color: rgba(196, 167, 125, 0.1);
@@ -80,8 +74,20 @@
   background-color: rgba(220, 53, 69, 0.1);
   border-color: #dc3545;
 }
+#output h2 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+}
+#output p {
+  color: var(--text-secondary);
+  margin: 0;
+}
 .eot-fields { display: none; }
 .eot-fields.visible { display: block; }
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 </style>
 </head>
 <body>
@@ -135,11 +141,11 @@
   <section class="page-hero">
     <div class="container">
       <p style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-green); margin-bottom: 1rem; font-weight: 600;">
-        Professional Cleaning Quotes
+        Request a Cleaning Quote
       </p>
-      <h1>Request a Quote</h1>
+      <h1>Get Your Free Quote</h1>
       <p class="sub" style="max-width: 65ch;">
-        Tell us about your property and cleaning requirements. We'll respond within 24 hours with a fixed price — no hidden fees, no surprises.
+        Tell us about your cleaning needs and we'll send you a fixed price quote within 24 hours. No hidden fees, no surprises.
       </p>
     </div>
   </section>
@@ -153,20 +159,19 @@
           
           <!-- Service Selection -->
           <div class="quote-section">
-            <h3 class="quote-section-title">Service Details</h3>
             <div class="quote-grid-2">
               <div>
-                <label class="form-label" for="serviceType">Service Type <span style="color: var(--accent-green);">*</span></label>
+                <label class="form-label" for="postcode">Postcode / Area *</label>
+                <input id="postcode" name="postcode" type="text" placeholder="e.g. NW10" class="form-field" required>
+              </div>
+              <div>
+                <label class="form-label" for="serviceType">Service Type *</label>
                 <select id="serviceType" name="serviceType" class="form-field" required>
                   <option value="">Select…</option>
                   <option value="End of Tenancy / Deep Clean">End of Tenancy / Deep Clean</option>
                   <option value="Standard Domestic Cleaning">Standard Domestic Cleaning</option>
                   <option value="Office Cleaning">Office Cleaning</option>
                 </select>
-              </div>
-              <div>
-                <label class="form-label" for="postcode">Postcode <span style="color: var(--accent-green);">*</span></label>
-                <input id="postcode" name="postcode" type="text" placeholder="e.g. SW6 1AA" class="form-field" required>
               </div>
             </div>
           </div>
@@ -209,7 +214,7 @@
                   </select>
                 </div>
                 <div>
-                  <label class="form-label" for="frequency">Frequency <span style="color: var(--accent-green);">*</span></label>
+                  <label class="form-label" for="frequency">Frequency *</label>
                   <select id="frequency" name="frequency" class="form-field" required>
                     <option value="">Select…</option>
                     <option value="One-off">One-off</option>
@@ -228,9 +233,9 @@
                   <label class="checkbox-label"><input type="checkbox" name="addon" value="Oven (internal)"> Oven (internal)</label>
                   <label class="checkbox-label"><input type="checkbox" name="addon" value="Internal windows"> Internal windows</label>
                 </div>
-                <div class="checkbox-group">
+                <div>
                   <label class="checkbox-label"><input type="checkbox" name="addon" value="Ironing included"> Ironing included</label>
-                  <label class="checkbox-label"><input type="checkbox" name="addon" value="Cupboards (internal)"> Cupboards (internal)</label>
+                  <p class="form-hint">If large volume, we will confirm time before final quote.</p>
                 </div>
                 <div>
                   <label class="form-label" for="parking">Access / Parking</label>
@@ -253,6 +258,7 @@
                 <option value="Inside congestion zone">Inside congestion zone</option>
                 <option value="Not sure">Not sure</option>
               </select>
+              <p class="form-hint">If inside the zone, any charge is confirmed and passed through at cost where applicable.</p>
             </div>
 
             <!-- EOT-specific fields -->
@@ -311,8 +317,8 @@
                     <label class="form-label" for="occupancy">Property Occupancy</label>
                     <select id="occupancy" name="occupancy" class="form-field">
                       <option value="">Select…</option>
-                      <option value="Vacant">Vacant (true EOT)</option>
-                      <option value="Occupied">Occupied (still living there)</option>
+                      <option value="Vacant (true EOT)">Vacant (true EOT)</option>
+                      <option value="Occupied (still living there)">Occupied (still living there)</option>
                     </select>
                   </div>
                   <div>
@@ -344,18 +350,16 @@
                   <select id="wasteRemoval" name="wasteRemoval" class="form-field" style="max-width: 300px;">
                     <option value="">Select…</option>
                     <option value="No">No (standard cleaning only)</option>
-                    <option value="Yes">Yes</option>
+                    <option value="Yes">Yes (requires confirmation)</option>
                   </select>
                 </div>
 
-                <div class="quote-grid-2">
-                  <div>
-                    <label class="form-label" for="teamSize">Team Size Preference</label>
-                    <select id="teamSize" name="teamSize" class="form-field">
-                      <option value="1 cleaner">1 cleaner</option>
-                      <option value="2 cleaners" selected>2 cleaners (recommended for EOT)</option>
-                    </select>
-                  </div>
+                <div>
+                  <label class="form-label" for="teamSize">Preferred Team Size</label>
+                  <select id="teamSize" name="teamSize" class="form-field" style="max-width: 300px;">
+                    <option value="1 cleaner">1 cleaner</option>
+                    <option value="2 cleaners" selected>2 cleaners (recommended for EOT)</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -383,15 +387,15 @@
               <div class="quote-grid-3">
                 <div>
                   <label class="form-label" for="officeToilets">Toilets</label>
-                  <input id="officeToilets" type="number" min="0" placeholder="e.g. 2" class="form-field">
+                  <input id="officeToilets" name="officeToilets" type="number" min="0" placeholder="e.g. 2" class="form-field">
                 </div>
                 <div>
                   <label class="form-label" for="officeKitchens">Kitchen / Break Areas</label>
-                  <input id="officeKitchens" type="number" min="0" placeholder="e.g. 1" class="form-field">
+                  <input id="officeKitchens" name="officeKitchens" type="number" min="0" placeholder="e.g. 1" class="form-field">
                 </div>
                 <div>
-                  <label class="form-label" for="officeFrequency">Frequency <span style="color: var(--accent-green);">*</span></label>
-                  <select id="officeFrequency" class="form-field" required>
+                  <label class="form-label" for="officeFrequency">Frequency *</label>
+                  <select id="officeFrequency" name="officeFrequency" class="form-field">
                     <option value="">Select…</option>
                     <option value="Ad hoc / irregular">Ad hoc / irregular</option>
                     <option value="Weekly">Weekly</option>
@@ -406,7 +410,7 @@
               <div class="quote-grid-2">
                 <div>
                   <label class="form-label" for="outOfHours">Out-of-Hours Required?</label>
-                  <select id="outOfHours" class="form-field">
+                  <select id="outOfHours" name="outOfHours" class="form-field">
                     <option value="">Select…</option>
                     <option value="No">No</option>
                     <option value="Yes">Yes</option>
@@ -414,7 +418,7 @@
                 </div>
                 <div>
                   <label class="form-label" for="consumables">Consumables Included?</label>
-                  <select id="consumables" class="form-field">
+                  <select id="consumables" name="consumables" class="form-field">
                     <option value="">Select…</option>
                     <option value="No">No</option>
                     <option value="Yes">Yes</option>
@@ -434,32 +438,32 @@
             </div>
           </div>
 
-          <!-- CONTACT DETAILS (Always visible after service selection) -->
+          <!-- CONTACT DETAILS -->
           <div id="contactBlock" style="display: none;">
             <hr class="divider-gold">
             <div class="quote-section">
               <h3 class="quote-section-title">Your Details</h3>
-              <p class="form-hint" style="margin-bottom: var(--space-md);">We'll use this to send your quote and confirm booking.</p>
+              <p class="form-hint" style="margin-bottom: var(--space-md);">We'll only use this to send your quote and confirm booking.</p>
               
               <div class="quote-grid-2" style="margin-bottom: var(--space-md);">
                 <div>
-                  <label class="form-label" for="contactName">Full Name <span style="color: var(--accent-green);">*</span></label>
+                  <label class="form-label" for="contactName">Full Name *</label>
                   <input id="contactName" name="contactName" type="text" placeholder="e.g. Alex Johnson" class="form-field" required>
                 </div>
                 <div>
-                  <label class="form-label" for="contactPhone">Mobile Number <span style="color: var(--accent-green);">*</span></label>
+                  <label class="form-label" for="contactPhone">Mobile Number *</label>
                   <input id="contactPhone" name="contactPhone" type="tel" placeholder="e.g. 07…" class="form-field" required>
                 </div>
               </div>
               
               <div style="margin-bottom: var(--space-md);">
-                <label class="form-label" for="contactEmail">Email Address <span style="color: var(--accent-green);">*</span></label>
+                <label class="form-label" for="contactEmail">Email Address *</label>
                 <input id="contactEmail" name="contactEmail" type="email" placeholder="e.g. name@email.com" class="form-field" style="max-width: 400px;" required>
               </div>
 
               <div>
                 <label class="form-label" for="additionalNotes">Additional Notes (optional)</label>
-                <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Anything else we should know? (access codes, pets, special requests, etc.)" class="form-field"></textarea>
+                <textarea id="additionalNotes" name="additionalNotes" class="form-field" rows="3" placeholder="Any special requirements, access instructions, or questions?"></textarea>
               </div>
             </div>
             
@@ -468,14 +472,14 @@
           </div>
 
           <div style="margin-top: var(--space-lg);">
-            <button type="submit" class="btn-primary" id="submitBtn" style="width: 100%; max-width: 300px;">Request a Quote</button>
+            <button type="submit" id="submitBtn" class="btn-primary" style="width: 100%; max-width: 300px;">Request Quote</button>
             <p class="form-hint" style="margin-top: var(--space-sm);">
-              We'll respond within 24 hours with a fixed price for your cleaning.
+              We'll review your details and send a fixed price quote within 24 hours.
             </p>
           </div>
         </form>
 
-        <div id="output" style="margin-top: var(--space-xl); display: none;"></div>
+        <div id="output" style="display: none;"></div>
 
       </div>
     </div>
@@ -485,9 +489,9 @@
   <section class="section" style="background-color: var(--bg-primary); border-top: 1px solid var(--border-muted);">
     <div class="container text-center">
       <div style="max-width: 560px; margin: 0 auto;">
-        <h2 style="margin-bottom: var(--space-sm);">Need Help?</h2>
+        <h2 style="margin-bottom: var(--space-sm);">Prefer to Speak to Someone?</h2>
         <p style="margin-bottom: var(--space-lg); margin-left: auto; margin-right: auto;">
-          If you're unsure which service to choose or have special requirements, speak to our team.
+          If you'd rather discuss your requirements over the phone or have urgent needs, we're here to help.
         </p>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
           <a href="tel:02037508878" class="btn-primary">Call: 020 3750 8878</a>
@@ -558,34 +562,35 @@ document.getElementById('mobile-menu-btn').addEventListener('click', function() 
 });
 
 // =============================
-// QUOTE FORM LOGIC (Simple Enquiry)
+// SIMPLE ENQUIRY FORM LOGIC
 // =============================
 
-const serviceTypeEl = document.getElementById('serviceType');
-const domesticBlock = document.getElementById('domesticBlock');
-const officeBlock = document.getElementById('officeBlock');
-const contactBlock = document.getElementById('contactBlock');
-const eotFields = document.getElementById('eotFields');
-const frequencyField = document.getElementById('frequency');
-const officeFrequencyField = document.getElementById('officeFrequency');
-const output = document.getElementById('output');
+const serviceTypeEl = document.getElementById("serviceType");
+const domesticBlock = document.getElementById("domesticBlock");
+const officeBlock = document.getElementById("officeBlock");
+const contactBlock = document.getElementById("contactBlock");
+const eotFields = document.getElementById("eotFields");
+const frequencyField = document.getElementById("frequency");
+const officeFrequencyField = document.getElementById("officeFrequency");
+const output = document.getElementById("output");
+const submitBtn = document.getElementById("submitBtn");
 
 // Toggle blocks by service type
-serviceTypeEl.addEventListener('change', () => {
+serviceTypeEl.addEventListener("change", () => {
   const v = serviceTypeEl.value;
-  const isEOT = v.includes('End of Tenancy');
-  const isDomestic = v.includes('Domestic') || isEOT;
-  const isOffice = v.includes('Office');
+  const isEOT = v.includes("End of Tenancy");
+  const isOffice = v.includes("Office");
+  const isDomestic = v && !isOffice;
   
-  domesticBlock.style.display = isDomestic ? 'block' : 'none';
-  officeBlock.style.display = isOffice ? 'block' : 'none';
-  contactBlock.style.display = v ? 'block' : 'none';
+  domesticBlock.style.display = isDomestic ? "block" : "none";
+  officeBlock.style.display = isOffice ? "block" : "none";
+  contactBlock.style.display = v ? "block" : "none";
   
   // Show EOT-specific fields
   if (isEOT) {
-    eotFields.classList.add('visible');
+    eotFields.classList.add("visible");
   } else {
-    eotFields.classList.remove('visible');
+    eotFields.classList.remove("visible");
   }
   
   // Toggle required on frequency fields
@@ -595,178 +600,171 @@ serviceTypeEl.addEventListener('change', () => {
 
 // Build message from form data
 function buildMessage() {
-  const parts = [];
   const serviceType = serviceTypeEl.value;
-  const isOffice = serviceType.includes('Office');
+  const isOffice = serviceType.includes("Office");
+  const isEOT = serviceType.includes("End of Tenancy");
+  
+  let msg = [];
   
   if (!isOffice) {
-    // Property details
-    const bathrooms = document.getElementById('bathrooms').value;
-    const condition = document.getElementById('condition').value;
-    const parking = document.getElementById('parking').value;
-    const congestion = document.getElementById('congestion').value;
+    // Domestic / EOT details
+    const propertyType = document.getElementById("propertyType").value;
+    const bathrooms = document.getElementById("bathrooms").value;
+    const condition = document.getElementById("condition").value;
+    const parking = document.getElementById("parking").value;
+    const congestion = document.getElementById("congestion").value;
     
-    if (bathrooms || condition || parking || congestion) {
-      parts.push('PROPERTY DETAILS:');
-      if (bathrooms) parts.push(`- Bathrooms: ${bathrooms}`);
-      if (condition) parts.push(`- Condition: ${condition}`);
-      if (parking) parts.push(`- Parking: ${parking}`);
-      if (congestion) parts.push(`- Congestion zone: ${congestion}`);
-      parts.push('');
+    if (propertyType || bathrooms || condition || parking || congestion) {
+      msg.push("PROPERTY DETAILS:");
+      if (bathrooms) msg.push(`- Bathrooms: ${bathrooms}`);
+      if (condition) msg.push(`- Condition: ${condition}`);
+      if (parking) msg.push(`- Parking: ${parking}`);
+      if (congestion) msg.push(`- Congestion zone: ${congestion}`);
+      msg.push("");
     }
     
     // Add-ons
-    const addons = Array.from(document.querySelectorAll('input[name="addon"]:checked')).map(el => el.value);
+    const addons = Array.from(document.querySelectorAll('input[name="addon"]:checked')).map(x => x.value);
     if (addons.length) {
-      parts.push('ADD-ONS SELECTED:');
-      addons.forEach(a => parts.push(`- ${a}`));
-      parts.push('');
+      msg.push("ADD-ONS SELECTED:");
+      addons.forEach(a => msg.push(`- ${a}`));
+      msg.push("");
     }
     
-    // EOT details
-    if (serviceType.includes('End of Tenancy')) {
-      const preferredDate = document.getElementById('preferredDate').value;
-      const arrivalWindow = document.getElementById('arrivalWindow').value;
-      const deadline = document.getElementById('deadline').value;
-      const floorLevel = document.getElementById('floorLevel').value;
-      const liftAvailable = document.getElementById('liftAvailable').value;
-      const occupancy = document.getElementById('occupancy').value;
-      const carpetSteam = document.getElementById('carpetSteam').value;
-      const wasteRemoval = document.getElementById('wasteRemoval').value;
-      const teamSize = document.getElementById('teamSize').value;
-      const appliances = Array.from(document.querySelectorAll('input[name="appliance"]:checked')).map(el => el.value);
+    // EOT-specific
+    if (isEOT) {
+      const preferredDate = document.getElementById("preferredDate").value;
+      const arrivalWindow = document.getElementById("arrivalWindow").value;
+      const deadline = document.getElementById("deadline").value;
+      const floorLevel = document.getElementById("floorLevel").value;
+      const liftAvailable = document.getElementById("liftAvailable").value;
+      const occupancy = document.getElementById("occupancy").value;
+      const carpetSteam = document.getElementById("carpetSteam").value;
+      const wasteRemoval = document.getElementById("wasteRemoval").value;
+      const teamSize = document.getElementById("teamSize").value;
+      const appliances = Array.from(document.querySelectorAll('input[name="appliance"]:checked')).map(x => x.value);
       
-      parts.push('END OF TENANCY DETAILS:');
-      if (preferredDate) parts.push(`- Preferred date: ${preferredDate}`);
-      if (arrivalWindow) parts.push(`- Arrival window: ${arrivalWindow}`);
-      if (deadline) parts.push(`- Deadline: ${deadline}`);
-      if (floorLevel) parts.push(`- Floor level: ${floorLevel}`);
-      if (liftAvailable) parts.push(`- Lift available: ${liftAvailable}`);
-      if (occupancy) parts.push(`- Occupancy: ${occupancy}`);
-      if (carpetSteam) parts.push(`- Carpet steam: ${carpetSteam}`);
-      if (wasteRemoval) parts.push(`- Waste removal: ${wasteRemoval}`);
-      if (teamSize) parts.push(`- Team size: ${teamSize}`);
-      if (appliances.length) parts.push(`- Appliances: ${appliances.join(', ')}`);
-      parts.push('');
+      msg.push("END OF TENANCY DETAILS:");
+      if (preferredDate) msg.push(`- Preferred date: ${preferredDate}`);
+      if (arrivalWindow) msg.push(`- Arrival window: ${arrivalWindow}`);
+      if (deadline) msg.push(`- Deadline: ${deadline}`);
+      if (floorLevel) msg.push(`- Floor level: ${floorLevel}`);
+      if (liftAvailable) msg.push(`- Lift available: ${liftAvailable}`);
+      if (occupancy) msg.push(`- Occupancy: ${occupancy}`);
+      if (carpetSteam) msg.push(`- Carpet/steam cleaning: ${carpetSteam}`);
+      if (wasteRemoval) msg.push(`- Waste removal: ${wasteRemoval}`);
+      if (teamSize) msg.push(`- Preferred team size: ${teamSize}`);
+      if (appliances.length) msg.push(`- Appliances: ${appliances.join(", ")}`);
+      msg.push("");
     }
   } else {
     // Office details
-    const officeSize = document.getElementById('officeSize').value;
-    const desksRooms = document.getElementById('desksRooms').value;
-    const officeToilets = document.getElementById('officeToilets').value;
-    const officeKitchens = document.getElementById('officeKitchens').value;
-    const outOfHours = document.getElementById('outOfHours').value;
-    const consumables = document.getElementById('consumables').value;
-    const congestionOffice = document.getElementById('congestionOffice').value;
+    const officeSize = document.getElementById("officeSize").value;
+    const desksRooms = document.getElementById("desksRooms").value;
+    const officeToilets = document.getElementById("officeToilets").value;
+    const officeKitchens = document.getElementById("officeKitchens").value;
+    const outOfHours = document.getElementById("outOfHours").value;
+    const consumables = document.getElementById("consumables").value;
+    const congestionOffice = document.getElementById("congestionOffice").value;
     
-    parts.push('OFFICE DETAILS:');
-    if (officeSize) parts.push(`- Size: ${officeSize}`);
-    if (desksRooms) parts.push(`- Desks/rooms: ${desksRooms}`);
-    if (officeToilets) parts.push(`- Toilets: ${officeToilets}`);
-    if (officeKitchens) parts.push(`- Kitchen/break areas: ${officeKitchens}`);
-    if (outOfHours) parts.push(`- Out-of-hours: ${outOfHours}`);
-    if (consumables) parts.push(`- Consumables: ${consumables}`);
-    if (congestionOffice) parts.push(`- Congestion zone: ${congestionOffice}`);
-    parts.push('');
+    msg.push("OFFICE DETAILS:");
+    if (officeSize) msg.push(`- Size: ${officeSize}`);
+    if (desksRooms) msg.push(`- Desks/rooms: ${desksRooms}`);
+    if (officeToilets) msg.push(`- Toilets: ${officeToilets}`);
+    if (officeKitchens) msg.push(`- Kitchens/break areas: ${officeKitchens}`);
+    if (outOfHours) msg.push(`- Out-of-hours required: ${outOfHours}`);
+    if (consumables) msg.push(`- Consumables included: ${consumables}`);
+    if (congestionOffice) msg.push(`- Congestion zone: ${congestionOffice}`);
+    msg.push("");
   }
   
   // Additional notes
-  const additionalNotes = document.getElementById('additionalNotes').value.trim();
+  const additionalNotes = document.getElementById("additionalNotes").value.trim();
   if (additionalNotes) {
-    parts.push('ADDITIONAL NOTES:');
-    parts.push(additionalNotes);
+    msg.push("ADDITIONAL NOTES:");
+    msg.push(additionalNotes);
   }
   
-  return parts.join('\n');
+  return msg.join("\n");
+}
+
+// Show output message
+function showOutput(type, title, message) {
+  output.style.display = "block";
+  output.className = type;
+  output.innerHTML = `<h2>${title}</h2><p>${message}</p>`;
+  output.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // Form submission
-document.getElementById('quoteForm').addEventListener('submit', async (e) => {
+document.getElementById("quoteForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   
-  const submitBtn = document.getElementById('submitBtn');
-  const honeypot = document.getElementById('honeypot').value;
-  
-  // Honeypot check
-  if (honeypot) {
-    output.innerHTML = '<h2>Thank you!</h2><p>Your request has been received.</p>';
-    output.style.display = 'block';
-    output.className = 'success';
+  // Check honeypot
+  if (document.getElementById("honeypot").value) {
+    showOutput("success", "Quote Request Received", "Thank you! We'll be in touch within 24 hours.");
     return;
   }
   
-  // Disable button while submitting
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending...';
+  const serviceType = serviceTypeEl.value;
+  const isOffice = serviceType.includes("Office");
   
   // Get frequency based on service type
-  const serviceType = serviceTypeEl.value;
-  const isOffice = serviceType.includes('Office');
   const frequency = isOffice 
-    ? document.getElementById('officeFrequency').value 
-    : document.getElementById('frequency').value;
+    ? document.getElementById("officeFrequency").value 
+    : document.getElementById("frequency").value;
+  
+  // Validate frequency
+  if (!frequency) {
+    showOutput("error", "Missing Information", "Please select a frequency.");
+    return;
+  }
   
   // Build payload for /quote endpoint
   const payload = {
-    full_name: document.getElementById('contactName').value.trim(),
-    email: document.getElementById('contactEmail').value.trim(),
-    phone: document.getElementById('contactPhone').value.trim(),
-    postcode: document.getElementById('postcode').value.trim(),
+    full_name: document.getElementById("contactName").value.trim(),
+    email: document.getElementById("contactEmail").value.trim(),
+    phone: document.getElementById("contactPhone").value.trim(),
+    postcode: document.getElementById("postcode").value.trim(),
     service_type: serviceType,
     frequency: frequency,
-    property_type: isOffice ? 'Office' : (document.getElementById('propertyType').value || ''),
-    bedrooms: isOffice ? '' : (document.getElementById('bedrooms').value || ''),
+    property_type: isOffice ? "Office" : (document.getElementById("propertyType").value || "Not specified"),
+    bedrooms: isOffice ? "N/A" : (document.getElementById("bedrooms").value || "Not specified"),
     message: buildMessage(),
-    honeypot: honeypot
+    preferred_contact: "Phone/Email"
   };
   
+  // Disable button
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+  
   try {
-    const response = await fetch('/api/quote', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const res = await fetch("/api/quote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
     });
     
-    const data = await response.json();
+    const data = await res.json();
     
-    if (response.ok && data.success) {
-      output.innerHTML = `
-        <h2>Thank You, ${payload.full_name}!</h2>
-        <p>We've received your quote request for <strong>${serviceType}</strong> in <strong>${payload.postcode}</strong>.</p>
-        <p>We'll review your requirements and send you a fixed price within 24 hours.</p>
-        <p style="margin-top: var(--space-md);">
-          <strong>Need it sooner?</strong> Call us on <a href="tel:02037508878" style="color: var(--accent-green);">020 3750 8878</a> or <a href="https://wa.me/447947716355" style="color: var(--accent-green);">WhatsApp</a>.
-        </p>
-      `;
-      output.className = 'success';
-      output.style.display = 'block';
-      output.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      
-      // Reset form
-      document.getElementById('quoteForm').reset();
-      domesticBlock.style.display = 'none';
-      officeBlock.style.display = 'none';
-      contactBlock.style.display = 'none';
-      eotFields.classList.remove('visible');
+    if (res.ok && data.success) {
+      showOutput("success", "Quote Request Received!", 
+        `Thank you, ${payload.full_name}! We've received your request and will send you a fixed price quote within 24 hours. Check your email or phone for our response.`);
+      document.getElementById("quoteForm").reset();
+      domesticBlock.style.display = "none";
+      officeBlock.style.display = "none";
+      contactBlock.style.display = "none";
+      eotFields.classList.remove("visible");
     } else {
-      throw new Error(data.error || 'Failed to send request');
+      throw new Error(data.error || "Failed to submit");
     }
-  } catch (error) {
-    console.error('Error:', error);
-    output.innerHTML = `
-      <h2>Something went wrong</h2>
-      <p>${error.message || 'Please try again or contact us directly.'}</p>
-      <p style="margin-top: var(--space-md);">
-        <a href="tel:02037508878" class="btn-primary">Call: 020 3750 8878</a>
-        <a href="https://wa.me/447947716355" class="btn-secondary" style="margin-left: 1rem;">WhatsApp</a>
-      </p>
-    `;
-    output.className = 'error';
-    output.style.display = 'block';
-    output.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } catch (err) {
+    console.error("Submit error:", err);
+    showOutput("error", "Something went wrong", 
+      `We couldn't process your request. Please try again or call us directly on <a href="tel:02037508878" style="color: var(--accent-green);">020 3750 8878</a> or <a href="https://wa.me/447947716355" style="color: var(--accent-green);">WhatsApp</a>.`);
   } finally {
     submitBtn.disabled = false;
-    submitBtn.textContent = 'Request a Quote';
+    submitBtn.textContent = "Request Quote";
   }
 });
 </script>
