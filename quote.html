@@ -6,8 +6,8 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<title>Instant Quote | Oasis International Cleaning Services</title>
-<meta name="description" content="Get an instant quote for domestic cleaning, end of tenancy cleaning, or office cleaning across London. No guesswork—clear pricing confirmed before booking.">
+<title>Request a Quote | Oasis International Cleaning Services</title>
+<meta name="description" content="Request a quote for domestic cleaning, end of tenancy cleaning, or office cleaning across London. We'll respond within 24 hours with a fixed price.">
 <link rel="canonical" href="https://www.oasisinternationalcleaningservices.com/quote.html">
 
 <!-- Fonts -->
@@ -27,7 +27,7 @@
 </script>
 
 <style>
-/* Quote Estimator Specific Styles */
+/* Quote Form Specific Styles */
 .quote-section { margin-bottom: var(--space-lg); }
 .quote-section-title {
   font-size: 1rem;
@@ -69,24 +69,16 @@
   font-size: 1.5rem;
   margin-bottom: var(--space-md);
 }
-#output h3 {
-  font-size: 1rem;
-  margin: var(--space-md) 0 var(--space-sm);
-  color: var(--text-primary);
-}
-#output ul, #output ol {
-  margin: 0;
-  padding-left: 1.25rem;
-}
-#output li {
-  margin-bottom: 0.5rem;
+#output p {
   color: var(--text-secondary);
 }
-#output strong {
-  color: var(--text-primary);
+#output.success {
+  background-color: rgba(196, 167, 125, 0.1);
+  border-color: var(--accent-green);
 }
-#output a {
-  color: var(--accent-green);
+#output.error {
+  background-color: rgba(220, 53, 69, 0.1);
+  border-color: #dc3545;
 }
 .eot-fields { display: none; }
 .eot-fields.visible { display: block; }
@@ -143,56 +135,16 @@
   <section class="page-hero">
     <div class="container">
       <p style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-green); margin-bottom: 1rem; font-weight: 600;">
-        Instant, Fixed-Price Cleaning Quotes
+        Professional Cleaning Quotes
       </p>
-      <h1>Get Your Cleaning Quote</h1>
+      <h1>Request a Quote</h1>
       <p class="sub" style="max-width: 65ch;">
-        No guessing, no call-backs. Oasis International Cleaning Services uses a professional pricing system to calculate fair, transparent and consistent cleaning prices based on the real work required.
-      </p>
-      <p class="sub" style="font-weight: 500; color: var(--text-primary);">
-        You will receive a fixed price before booking — not an estimate.
+        Tell us about your property and cleaning requirements. We'll respond within 24 hours with a fixed price — no hidden fees, no surprises.
       </p>
     </div>
   </section>
 
-  <!-- Why We Use a Quote System -->
-  <section class="section" style="padding-bottom: 0;">
-    <div class="container">
-      <div style="max-width: 700px;">
-        <h2 style="margin-bottom: var(--s3);">Why We Use a Quote System</h2>
-        <p>Every home and property is different. To maintain professional standards and fairly pay our cleaners, pricing is calculated using:</p>
-        <ul class="list-check" style="margin-bottom: var(--s3);">
-          <li>Property size</li>
-          <li>Number of rooms</li>
-          <li>Bathrooms</li>
-          <li>Level of build-up</li>
-          <li>Frequency (for domestic cleaning)</li>
-          <li>Service type (domestic, end of tenancy or office)</li>
-        </ul>
-        <p>This ensures:</p>
-        <ul class="list-check">
-          <li>You pay a fair price</li>
-          <li>Our cleaners are paid properly</li>
-          <li>Service quality is consistent</li>
-        </ul>
-
-        <h3 style="margin-top: var(--s4); margin-bottom: var(--s2);">Minimum Bookings</h3>
-        <p>To maintain professional standards:</p>
-        <ul class="list-check">
-          <li><strong>Domestic & Office Cleaning:</strong> minimum 2 hours</li>
-          <li><strong>End of Tenancy Cleaning:</strong> minimum team allocation applies</li>
-        </ul>
-
-        <h3 style="margin-top: var(--s4); margin-bottom: var(--s2);">VAT</h3>
-        <p>Oasis International Cleaning Services is <strong>not VAT registered</strong>. The price you see is the price you pay.</p>
-
-        <h3 style="margin-top: var(--s4); margin-bottom: var(--s2);">Service Areas</h3>
-        <p>We provide cleaning services in: <strong>Kensington & Chelsea, Camden, Richmond, Kingston, Wandsworth</strong>. Quotes outside these areas may not be available.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quote Estimator -->
+  <!-- Quote Form -->
   <section class="section-lg" style="background-color: var(--bg-secondary);">
     <div class="container">
       <div style="max-width: 800px;">
@@ -201,19 +153,20 @@
           
           <!-- Service Selection -->
           <div class="quote-section">
+            <h3 class="quote-section-title">Service Details</h3>
             <div class="quote-grid-2">
               <div>
-                <label class="form-label" for="postcode">Postcode / Area</label>
-                <input id="postcode" name="postcode" type="text" placeholder="e.g. NW10" class="form-field">
+                <label class="form-label" for="serviceType">Service Type <span style="color: var(--accent-green);">*</span></label>
+                <select id="serviceType" name="serviceType" class="form-field" required>
+                  <option value="">Select…</option>
+                  <option value="End of Tenancy / Deep Clean">End of Tenancy / Deep Clean</option>
+                  <option value="Standard Domestic Cleaning">Standard Domestic Cleaning</option>
+                  <option value="Office Cleaning">Office Cleaning</option>
+                </select>
               </div>
               <div>
-                <label class="form-label" for="serviceType">Service Type</label>
-                <select id="serviceType" name="serviceType" class="form-field">
-                  <option value="">Select…</option>
-                  <option value="EOT">End of Tenancy / Deep Clean</option>
-                  <option value="DOMESTIC">Standard Domestic Cleaning</option>
-                  <option value="OFFICE">Office Cleaning</option>
-                </select>
+                <label class="form-label" for="postcode">Postcode <span style="color: var(--accent-green);">*</span></label>
+                <input id="postcode" name="postcode" type="text" placeholder="e.g. SW6 1AA" class="form-field" required>
               </div>
             </div>
           </div>
@@ -251,13 +204,13 @@
                   <label class="form-label" for="condition">Condition</label>
                   <select id="condition" name="condition" class="form-field">
                     <option value="">Select…</option>
-                    <option value="Standard">Standard maintenance</option>
-                    <option value="Heavy">Heavy build-up</option>
+                    <option value="Standard maintenance">Standard maintenance</option>
+                    <option value="Heavy build-up">Heavy build-up</option>
                   </select>
                 </div>
                 <div>
-                  <label class="form-label" for="frequency">Frequency</label>
-                  <select id="frequency" name="frequency" class="form-field">
+                  <label class="form-label" for="frequency">Frequency <span style="color: var(--accent-green);">*</span></label>
+                  <select id="frequency" name="frequency" class="form-field" required>
                     <option value="">Select…</option>
                     <option value="One-off">One-off</option>
                     <option value="Weekly">Weekly</option>
@@ -271,22 +224,22 @@
               <h3 class="quote-section-title">Add-ons (optional)</h3>
               <div class="quote-grid-3">
                 <div class="checkbox-group">
-                  <label class="checkbox-label"><input type="checkbox" id="addonFridge"> Fridge (internal)</label>
-                  <label class="checkbox-label"><input type="checkbox" id="addonOven"> Oven (internal)</label>
-                  <label class="checkbox-label"><input type="checkbox" id="addonWindows"> Internal windows</label>
+                  <label class="checkbox-label"><input type="checkbox" name="addon" value="Fridge (internal)"> Fridge (internal)</label>
+                  <label class="checkbox-label"><input type="checkbox" name="addon" value="Oven (internal)"> Oven (internal)</label>
+                  <label class="checkbox-label"><input type="checkbox" name="addon" value="Internal windows"> Internal windows</label>
                 </div>
-                <div>
-                  <label class="checkbox-label"><input type="checkbox" id="addonIroning"> Ironing included</label>
-                  <p class="form-hint">If large volume, we will confirm time before final quote.</p>
+                <div class="checkbox-group">
+                  <label class="checkbox-label"><input type="checkbox" name="addon" value="Ironing included"> Ironing included</label>
+                  <label class="checkbox-label"><input type="checkbox" name="addon" value="Cupboards (internal)"> Cupboards (internal)</label>
                 </div>
                 <div>
                   <label class="form-label" for="parking">Access / Parking</label>
                   <select id="parking" name="parking" class="form-field">
                     <option value="">Select…</option>
-                    <option value="None">No parking / street only</option>
-                    <option value="Permit">Resident permit available</option>
-                    <option value="Paid">Paid parking required</option>
-                    <option value="On-site">On-site parking</option>
+                    <option value="No parking / street only">No parking / street only</option>
+                    <option value="Resident permit available">Resident permit available</option>
+                    <option value="Paid parking required">Paid parking required</option>
+                    <option value="On-site parking">On-site parking</option>
                   </select>
                 </div>
               </div>
@@ -296,11 +249,10 @@
               <label class="form-label" for="congestion">Congestion Charge Zone</label>
               <select id="congestion" name="congestion" class="form-field" style="max-width: 300px;">
                 <option value="">Select…</option>
-                <option value="No">Outside congestion zone</option>
-                <option value="Yes">Inside congestion zone</option>
-                <option value="Unsure">Not sure</option>
+                <option value="Outside congestion zone">Outside congestion zone</option>
+                <option value="Inside congestion zone">Inside congestion zone</option>
+                <option value="Not sure">Not sure</option>
               </select>
-              <p class="form-hint">If inside the zone, any charge is confirmed and passed through at cost where applicable.</p>
             </div>
 
             <!-- EOT-specific fields -->
@@ -368,7 +320,7 @@
                     <select id="carpetSteam" name="carpetSteam" class="form-field">
                       <option value="">Select…</option>
                       <option value="No">No</option>
-                      <option value="Yes">Yes (requires confirmation)</option>
+                      <option value="Yes">Yes</option>
                     </select>
                   </div>
                 </div>
@@ -377,15 +329,14 @@
                   <label class="form-label">Appliances to Include</label>
                   <div class="quote-grid-2">
                     <div class="checkbox-group">
-                      <label class="checkbox-label"><input type="checkbox" id="applianceOven"> Oven</label>
-                      <label class="checkbox-label"><input type="checkbox" id="applianceFridge"> Fridge / Freezer</label>
+                      <label class="checkbox-label"><input type="checkbox" name="appliance" value="Oven"> Oven</label>
+                      <label class="checkbox-label"><input type="checkbox" name="appliance" value="Fridge / Freezer"> Fridge / Freezer</label>
                     </div>
                     <div class="checkbox-group">
-                      <label class="checkbox-label"><input type="checkbox" id="applianceWasher"> Washing machine</label>
-                      <label class="checkbox-label"><input type="checkbox" id="applianceDishwasher"> Dishwasher</label>
+                      <label class="checkbox-label"><input type="checkbox" name="appliance" value="Washing machine"> Washing machine</label>
+                      <label class="checkbox-label"><input type="checkbox" name="appliance" value="Dishwasher"> Dishwasher</label>
                     </div>
                   </div>
-                  <p class="form-hint">If appliances are not selected, they are treated as not included.</p>
                 </div>
 
                 <div style="margin-bottom: var(--space-md);">
@@ -393,27 +344,16 @@
                   <select id="wasteRemoval" name="wasteRemoval" class="form-field" style="max-width: 300px;">
                     <option value="">Select…</option>
                     <option value="No">No (standard cleaning only)</option>
-                    <option value="Yes">Yes (requires confirmation)</option>
+                    <option value="Yes">Yes</option>
                   </select>
-                  <p class="form-hint">If yes, we will confirm scope and price before booking.</p>
                 </div>
 
                 <div class="quote-grid-2">
                   <div>
-                    <label class="form-label" for="teamSize">Team Size</label>
+                    <label class="form-label" for="teamSize">Team Size Preference</label>
                     <select id="teamSize" name="teamSize" class="form-field">
-                      <option value="1">1 cleaner</option>
-                      <option value="2" selected>2 cleaners (recommended for EOT)</option>
-                    </select>
-                    <p class="form-hint">Affects estimated on-site duration, not the hourly rate.</p>
-                  </div>
-                  <div>
-                    <label class="form-label" for="ironVolume">Ironing Volume (if included)</label>
-                    <select id="ironVolume" name="ironVolume" class="form-field">
-                      <option value="none" selected>Not included</option>
-                      <option value="light">Light (up to 1 basket)</option>
-                      <option value="medium">Medium (1–2 baskets)</option>
-                      <option value="heavy">Heavy (3+ baskets — requires confirmation)</option>
+                      <option value="1 cleaner">1 cleaner</option>
+                      <option value="2 cleaners" selected>2 cleaners (recommended for EOT)</option>
                     </select>
                   </div>
                 </div>
@@ -450,12 +390,12 @@
                   <input id="officeKitchens" type="number" min="0" placeholder="e.g. 1" class="form-field">
                 </div>
                 <div>
-                  <label class="form-label" for="officeFrequency">Frequency</label>
-                  <select id="officeFrequency" class="form-field">
+                  <label class="form-label" for="officeFrequency">Frequency <span style="color: var(--accent-green);">*</span></label>
+                  <select id="officeFrequency" class="form-field" required>
                     <option value="">Select…</option>
-                    <option value="Adhoc">Ad hoc / irregular</option>
+                    <option value="Ad hoc / irregular">Ad hoc / irregular</option>
                     <option value="Weekly">Weekly</option>
-                    <option value="2x">2× per week</option>
+                    <option value="2x per week">2× per week</option>
                     <option value="Daily">Daily</option>
                   </select>
                 </div>
@@ -487,45 +427,50 @@
               <label class="form-label" for="congestionOffice">Congestion Charge Zone</label>
               <select id="congestionOffice" name="congestionOffice" class="form-field" style="max-width: 300px;">
                 <option value="">Select…</option>
-                <option value="No">Outside congestion zone</option>
-                <option value="Yes">Inside congestion zone</option>
-                <option value="Unsure">Not sure</option>
+                <option value="Outside congestion zone">Outside congestion zone</option>
+                <option value="Inside congestion zone">Inside congestion zone</option>
+                <option value="Not sure">Not sure</option>
               </select>
             </div>
           </div>
 
-          <!-- CONTACT DETAILS -->
+          <!-- CONTACT DETAILS (Always visible after service selection) -->
           <div id="contactBlock" style="display: none;">
             <hr class="divider-gold">
             <div class="quote-section">
               <h3 class="quote-section-title">Your Details</h3>
-              <p class="form-hint" style="margin-bottom: var(--space-md);">We'll only use this to confirm your quote and booking.</p>
+              <p class="form-hint" style="margin-bottom: var(--space-md);">We'll use this to send your quote and confirm booking.</p>
               
               <div class="quote-grid-2" style="margin-bottom: var(--space-md);">
                 <div>
-                  <label class="form-label" for="contactName">Full Name</label>
-                  <input id="contactName" name="contactName" type="text" placeholder="e.g. Alex Johnson" class="form-field">
+                  <label class="form-label" for="contactName">Full Name <span style="color: var(--accent-green);">*</span></label>
+                  <input id="contactName" name="contactName" type="text" placeholder="e.g. Alex Johnson" class="form-field" required>
                 </div>
                 <div>
-                  <label class="form-label" for="contactPhone">Mobile Number</label>
-                  <input id="contactPhone" name="contactPhone" type="tel" placeholder="e.g. 07…" class="form-field">
+                  <label class="form-label" for="contactPhone">Mobile Number <span style="color: var(--accent-green);">*</span></label>
+                  <input id="contactPhone" name="contactPhone" type="tel" placeholder="e.g. 07…" class="form-field" required>
                 </div>
               </div>
               
+              <div style="margin-bottom: var(--space-md);">
+                <label class="form-label" for="contactEmail">Email Address <span style="color: var(--accent-green);">*</span></label>
+                <input id="contactEmail" name="contactEmail" type="email" placeholder="e.g. name@email.com" class="form-field" style="max-width: 400px;" required>
+              </div>
+
               <div>
-                <label class="form-label" for="contactEmail">Email Address</label>
-                <input id="contactEmail" name="contactEmail" type="email" placeholder="e.g. name@email.com" class="form-field" style="max-width: 400px;">
+                <label class="form-label" for="additionalNotes">Additional Notes (optional)</label>
+                <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Anything else we should know? (access codes, pets, special requests, etc.)" class="form-field"></textarea>
               </div>
             </div>
             
             <!-- Honeypot -->
-            <input type="text" id="botField" name="company" style="display: none;" tabindex="-1" autocomplete="off">
+            <input type="text" id="honeypot" name="honeypot" style="display: none;" tabindex="-1" autocomplete="off">
           </div>
 
           <div style="margin-top: var(--space-lg);">
-            <button type="submit" class="btn-primary" style="width: 100%; max-width: 300px;">Generate Quote</button>
+            <button type="submit" class="btn-primary" id="submitBtn" style="width: 100%; max-width: 300px;">Request a Quote</button>
             <p class="form-hint" style="margin-top: var(--space-sm);">
-              Note: If key information is missing or scope requires confirmation, we'll request it before issuing a final price.
+              We'll respond within 24 hours with a fixed price for your cleaning.
             </p>
           </div>
         </form>
@@ -542,10 +487,10 @@
       <div style="max-width: 560px; margin: 0 auto;">
         <h2 style="margin-bottom: var(--space-sm);">Need Help?</h2>
         <p style="margin-bottom: var(--space-lg); margin-left: auto; margin-right: auto;">
-          If you are unsure which service to choose or have special requirements, speak to our team.
+          If you're unsure which service to choose or have special requirements, speak to our team.
         </p>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-          <a href="tel:02037508878" class="btn-primary">Speak to a Cleaning Advisor</a>
+          <a href="tel:02037508878" class="btn-primary">Call: 020 3750 8878</a>
           <a href="https://wa.me/447947716355" class="btn-secondary">WhatsApp</a>
         </div>
       </div>
@@ -588,7 +533,7 @@
         <ul class="footer-links">
           <li><a href="tel:+442037508878">020 3750 8878</a></li>
           <li><a href="https://wa.me/447947716355">WhatsApp: 07947 716355</a></li>
-          <li><a href="mailto:info@oasisinternationalcleaningservices.com">Email</a></li>
+          <li><a href="mailto:info@oasisinternationalcleaningservices.com">Email Us</a></li>
         </ul>
       </div>
     </div>
@@ -613,488 +558,215 @@ document.getElementById('mobile-menu-btn').addEventListener('click', function() 
 });
 
 // =============================
-// QUOTE ESTIMATOR LOGIC
+// QUOTE FORM LOGIC (Simple Enquiry)
 // =============================
-const RATE_EOT = 50; // fixed EOT rate
 
-function gbp(n) { return "£" + Number(n).toFixed(2); }
-
-function renderOutput(html) {
-  const out = document.getElementById("output");
-  out.style.display = "block";
-  out.innerHTML = html;
-  out.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-// Choose ONE exact domestic/office hourly rate (no ranges)
-function pickHourlyRate({ serviceType, condition, frequency, hasPets, difficultAccess, premiumExpectations, firstTime }) {
-  if (serviceType === "OFFICE") {
-    if (condition === "Heavy" || difficultAccess || premiumExpectations) return 40;
-    if (firstTime) return 35;
-    return 32;
-  }
-  // DOMESTIC
-  if (condition === "Heavy" || difficultAccess || premiumExpectations) return 40;
-  if (hasPets) return 35;
-  if (firstTime || frequency === "One-off") return 32;
-  if (frequency === "Weekly" || frequency === "Fortnightly") return 28;
-  return 32;
-}
-
-// CAPPED Domestic/EOT estimator
-function estimateDomesticHoursCapped({
-  bedrooms, bathrooms, serviceType, condition,
-  addonFridge, addonOven, addonWindows,
-  ironingIncluded, ironVolume
-}) {
-  if (ironingIncluded && ironVolume === "heavy") return null;
-
-  let base;
-  if (serviceType === "EOT") {
-    base = 3.0 + (bedrooms * 0.7) + (bathrooms * 0.7);
-  } else {
-    base = 2.0 + (bedrooms * 0.5) + (bathrooms * 0.5);
-  }
-
-  if (condition === "Heavy") base += 1.5;
-
-  let addons = 0;
-  if (addonFridge) addons += 0.5;
-  if (addonOven) addons += 0.75;
-  if (addonWindows) addons += 0.75;
-
-  if (ironingIncluded) {
-    if (ironVolume === "light") addons += 0.5;
-    if (ironVolume === "medium") addons += 0.75;
-  }
-
-  if (serviceType === "EOT") {
-    const addonCap = (condition === "Heavy") ? 1.5 : 1.0;
-    addons = Math.min(addons, addonCap);
-  }
-
-  let total = base + addons;
-
-  if (serviceType === "EOT") {
-    let ceiling;
-    if (bedrooms <= 1) ceiling = 5.0;
-    else if (bedrooms === 2) ceiling = 6.0;
-    else if (bedrooms === 3) ceiling = 7.0;
-    else if (bedrooms === 4) ceiling = 8.0;
-    else ceiling = 9.0;
-
-    if (condition === "Heavy") ceiling += 1.0;
-    total = Math.min(total, ceiling);
-  }
-
-  total = Math.max(2, total);
-  return Math.round(total * 2) / 2;
-}
+const serviceTypeEl = document.getElementById('serviceType');
+const domesticBlock = document.getElementById('domesticBlock');
+const officeBlock = document.getElementById('officeBlock');
+const contactBlock = document.getElementById('contactBlock');
+const eotFields = document.getElementById('eotFields');
+const frequencyField = document.getElementById('frequency');
+const officeFrequencyField = document.getElementById('officeFrequency');
+const output = document.getElementById('output');
 
 // Toggle blocks by service type
-const serviceTypeEl = document.getElementById("serviceType");
-const domesticBlock = document.getElementById("domesticBlock");
-const officeBlock = document.getElementById("officeBlock");
-const contactBlock = document.getElementById("contactBlock");
-const eotFields = document.getElementById("eotFields");
-
-serviceTypeEl.addEventListener("change", () => {
+serviceTypeEl.addEventListener('change', () => {
   const v = serviceTypeEl.value;
-  domesticBlock.style.display = (v === "EOT" || v === "DOMESTIC") ? "block" : "none";
-  officeBlock.style.display = (v === "OFFICE") ? "block" : "none";
-  contactBlock.style.display = v ? "block" : "none";
+  const isEOT = v.includes('End of Tenancy');
+  const isDomestic = v.includes('Domestic') || isEOT;
+  const isOffice = v.includes('Office');
+  
+  domesticBlock.style.display = isDomestic ? 'block' : 'none';
+  officeBlock.style.display = isOffice ? 'block' : 'none';
+  contactBlock.style.display = v ? 'block' : 'none';
   
   // Show EOT-specific fields
-  if (v === "EOT") {
-    eotFields.classList.add("visible");
+  if (isEOT) {
+    eotFields.classList.add('visible');
   } else {
-    eotFields.classList.remove("visible");
+    eotFields.classList.remove('visible');
   }
+  
+  // Toggle required on frequency fields
+  frequencyField.required = isDomestic;
+  officeFrequencyField.required = isOffice;
 });
 
-// Send lead to backend
-async function sendLeadToServer(payload) {
-  try {
-    const res = await fetch("/api/quote-lead", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-    if (!res.ok) {
-      console.error("Lead capture failed:", await res.text());
-      return false;
+// Build message from form data
+function buildMessage() {
+  const parts = [];
+  const serviceType = serviceTypeEl.value;
+  const isOffice = serviceType.includes('Office');
+  
+  if (!isOffice) {
+    // Property details
+    const bathrooms = document.getElementById('bathrooms').value;
+    const condition = document.getElementById('condition').value;
+    const parking = document.getElementById('parking').value;
+    const congestion = document.getElementById('congestion').value;
+    
+    if (bathrooms || condition || parking || congestion) {
+      parts.push('PROPERTY DETAILS:');
+      if (bathrooms) parts.push(`- Bathrooms: ${bathrooms}`);
+      if (condition) parts.push(`- Condition: ${condition}`);
+      if (parking) parts.push(`- Parking: ${parking}`);
+      if (congestion) parts.push(`- Congestion zone: ${congestion}`);
+      parts.push('');
     }
-    const data = await res.json();
-    console.log("Lead saved:", data);
-    return true;
-  } catch (e) {
-    console.error("Lead capture error:", e);
-    return false;
+    
+    // Add-ons
+    const addons = Array.from(document.querySelectorAll('input[name="addon"]:checked')).map(el => el.value);
+    if (addons.length) {
+      parts.push('ADD-ONS SELECTED:');
+      addons.forEach(a => parts.push(`- ${a}`));
+      parts.push('');
+    }
+    
+    // EOT details
+    if (serviceType.includes('End of Tenancy')) {
+      const preferredDate = document.getElementById('preferredDate').value;
+      const arrivalWindow = document.getElementById('arrivalWindow').value;
+      const deadline = document.getElementById('deadline').value;
+      const floorLevel = document.getElementById('floorLevel').value;
+      const liftAvailable = document.getElementById('liftAvailable').value;
+      const occupancy = document.getElementById('occupancy').value;
+      const carpetSteam = document.getElementById('carpetSteam').value;
+      const wasteRemoval = document.getElementById('wasteRemoval').value;
+      const teamSize = document.getElementById('teamSize').value;
+      const appliances = Array.from(document.querySelectorAll('input[name="appliance"]:checked')).map(el => el.value);
+      
+      parts.push('END OF TENANCY DETAILS:');
+      if (preferredDate) parts.push(`- Preferred date: ${preferredDate}`);
+      if (arrivalWindow) parts.push(`- Arrival window: ${arrivalWindow}`);
+      if (deadline) parts.push(`- Deadline: ${deadline}`);
+      if (floorLevel) parts.push(`- Floor level: ${floorLevel}`);
+      if (liftAvailable) parts.push(`- Lift available: ${liftAvailable}`);
+      if (occupancy) parts.push(`- Occupancy: ${occupancy}`);
+      if (carpetSteam) parts.push(`- Carpet steam: ${carpetSteam}`);
+      if (wasteRemoval) parts.push(`- Waste removal: ${wasteRemoval}`);
+      if (teamSize) parts.push(`- Team size: ${teamSize}`);
+      if (appliances.length) parts.push(`- Appliances: ${appliances.join(', ')}`);
+      parts.push('');
+    }
+  } else {
+    // Office details
+    const officeSize = document.getElementById('officeSize').value;
+    const desksRooms = document.getElementById('desksRooms').value;
+    const officeToilets = document.getElementById('officeToilets').value;
+    const officeKitchens = document.getElementById('officeKitchens').value;
+    const outOfHours = document.getElementById('outOfHours').value;
+    const consumables = document.getElementById('consumables').value;
+    const congestionOffice = document.getElementById('congestionOffice').value;
+    
+    parts.push('OFFICE DETAILS:');
+    if (officeSize) parts.push(`- Size: ${officeSize}`);
+    if (desksRooms) parts.push(`- Desks/rooms: ${desksRooms}`);
+    if (officeToilets) parts.push(`- Toilets: ${officeToilets}`);
+    if (officeKitchens) parts.push(`- Kitchen/break areas: ${officeKitchens}`);
+    if (outOfHours) parts.push(`- Out-of-hours: ${outOfHours}`);
+    if (consumables) parts.push(`- Consumables: ${consumables}`);
+    if (congestionOffice) parts.push(`- Congestion zone: ${congestionOffice}`);
+    parts.push('');
   }
+  
+  // Additional notes
+  const additionalNotes = document.getElementById('additionalNotes').value.trim();
+  if (additionalNotes) {
+    parts.push('ADDITIONAL NOTES:');
+    parts.push(additionalNotes);
+  }
+  
+  return parts.join('\n');
 }
 
-document.getElementById("quoteForm").addEventListener("submit", async (e) => {
+// Form submission
+document.getElementById('quoteForm').addEventListener('submit', async (e) => {
   e.preventDefault();
-
+  
+  const submitBtn = document.getElementById('submitBtn');
+  const honeypot = document.getElementById('honeypot').value;
+  
+  // Honeypot check
+  if (honeypot) {
+    output.innerHTML = '<h2>Thank you!</h2><p>Your request has been received.</p>';
+    output.style.display = 'block';
+    output.className = 'success';
+    return;
+  }
+  
+  // Disable button while submitting
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  
+  // Get frequency based on service type
   const serviceType = serviceTypeEl.value;
-  const postcode = (document.getElementById("postcode").value || "").trim();
-
-  // Contact fields
-  const contactName = document.getElementById("contactName")?.value.trim() || "";
-  const contactPhone = document.getElementById("contactPhone")?.value.trim() || "";
-  const contactEmail = document.getElementById("contactEmail")?.value.trim() || "";
-  const botField = document.getElementById("botField")?.value || "";
-
-  if (!serviceType) {
-    renderOutput(`<p style="margin:0;"><strong>Missing:</strong> Please select a service type.</p>`);
-    return;
-  }
-
-  // DOMESTIC / EOT
-  if (serviceType === "EOT" || serviceType === "DOMESTIC") {
-    const propertyType = document.getElementById("propertyType").value;
-    const bedroomsRaw = document.getElementById("bedrooms").value;
-    const bathroomsRaw = document.getElementById("bathrooms").value;
-    const bedrooms = Number(bedroomsRaw);
-    const bathrooms = Number(bathroomsRaw);
-    const condition = document.getElementById("condition").value;
-    const frequency = document.getElementById("frequency").value;
-    const parking = document.getElementById("parking").value;
-    const congestion = document.getElementById("congestion").value;
-
-    const addonFridgeCheckbox = document.getElementById("addonFridge").checked;
-    const addonOvenCheckbox = document.getElementById("addonOven").checked;
-    const addonWindows = document.getElementById("addonWindows").checked;
-    const ironingIncluded = document.getElementById("addonIroning").checked;
-
-    const preferredDate = document.getElementById("preferredDate")?.value || "";
-    const arrivalWindow = document.getElementById("arrivalWindow")?.value || "";
-    const deadline = (document.getElementById("deadline")?.value || "").trim();
-    const floorLevel = document.getElementById("floorLevel")?.value || "";
-    const liftAvailable = document.getElementById("liftAvailable")?.value || "";
-    const occupancy = document.getElementById("occupancy")?.value || "";
-    const carpetSteam = document.getElementById("carpetSteam")?.value || "";
-    const wasteRemoval = document.getElementById("wasteRemoval")?.value || "";
-
-    const applianceOven = document.getElementById("applianceOven")?.checked || false;
-    const applianceFridge = document.getElementById("applianceFridge")?.checked || false;
-    const applianceWasher = document.getElementById("applianceWasher")?.checked || false;
-    const applianceDishwasher = document.getElementById("applianceDishwasher")?.checked || false;
-
-    const teamSize = Number(document.getElementById("teamSize")?.value || "1");
-    const ironVolume = document.getElementById("ironVolume")?.value || "none";
-
-    // No-guess missing checklist
-    const missing = [];
-    if (!postcode) missing.push("Postcode/area");
-    if (!propertyType) missing.push("Property type (flat/house)");
-    if (bedroomsRaw === "") missing.push("Bedrooms");
-    if (bathroomsRaw === "") missing.push("Bathrooms");
-    if (!condition) missing.push("Condition (standard maintenance vs heavy build-up)");
-    if (!frequency) missing.push("Frequency (one-off/weekly/fortnightly)");
-    if (!parking) missing.push("Access/parking");
-
-    if (serviceType === "EOT") {
-      if (!preferredDate) missing.push("Preferred date");
-      if (!arrivalWindow) missing.push("Arrival window");
-      if (!floorLevel) missing.push("Floor level");
-      if (!liftAvailable) missing.push("Lift available (yes/no)");
-      if (!occupancy) missing.push("Property occupancy (vacant/occupied)");
-      if (!carpetSteam) missing.push("Carpets/steam cleaning needed? (yes/no)");
-      if (!wasteRemoval) missing.push("Waste/rubbish removal expected? (yes/no)");
-      if (!congestion || congestion === "Unsure") missing.push("Congestion charge zone (inside/outside)");
-    }
-
-    if (missing.length) {
-      renderOutput(`
-        <h2>We need a few details before we can quote</h2>
-        <ul>${missing.map(m => `<li>${m}</li>`).join("")}</ul>
-        <p style="margin:10px 0 0; color:var(--text-secondary);">
-          We never guess. Once confirmed, we'll generate an exact price with full calculations.
-        </p>
-      `);
-      return;
-    }
-
-    // Scope gates
-    if (serviceType === "EOT" && carpetSteam === "Yes") {
-      renderOutput(`
-        <h2>Carpet/steam cleaning needs a quick confirmation</h2>
-        <p>You selected <strong>carpets/steam cleaning required</strong>. To avoid guessing, we need the number of carpeted rooms and carpet type before issuing a final price.</p>
-        <p style="margin-top: var(--space-md);">
-          <a href="tel:+442037508878" class="btn-primary">Call Us: 020 3750 8878</a>
-        </p>
-      `);
-      return;
-    }
-
-    if (serviceType === "EOT" && wasteRemoval === "Yes") {
-      renderOutput(`
-        <h2>Waste removal needs a quick confirmation</h2>
-        <p>You selected <strong>waste/rubbish removal expected</strong>. Please confirm approximate volume so we can price it correctly.</p>
-        <p style="margin-top: var(--space-md);">
-          <a href="tel:+442037508878" class="btn-primary">Call Us: 020 3750 8878</a>
-        </p>
-      `);
-      return;
-    }
-
-    const addonFridge = addonFridgeCheckbox || applianceFridge;
-    const addonOven = addonOvenCheckbox || applianceOven;
-
-    const difficultAccess = (parking === "None" || parking === "Paid");
-    let rate;
-    if (serviceType === "EOT") {
-      rate = RATE_EOT;
-    } else {
-      rate = pickHourlyRate({
-        serviceType: "DOMESTIC",
-        condition,
-        frequency,
-        hasPets: false,
-        difficultAccess,
-        premiumExpectations: false,
-        firstTime: (frequency === "One-off")
-      });
-    }
-
-    const hours = estimateDomesticHoursCapped({
-      bedrooms, bathrooms, serviceType, condition,
-      addonFridge, addonOven, addonWindows,
-      ironingIncluded, ironVolume
+  const isOffice = serviceType.includes('Office');
+  const frequency = isOffice 
+    ? document.getElementById('officeFrequency').value 
+    : document.getElementById('frequency').value;
+  
+  // Build payload for /quote endpoint
+  const payload = {
+    full_name: document.getElementById('contactName').value.trim(),
+    email: document.getElementById('contactEmail').value.trim(),
+    phone: document.getElementById('contactPhone').value.trim(),
+    postcode: document.getElementById('postcode').value.trim(),
+    service_type: serviceType,
+    frequency: frequency,
+    property_type: isOffice ? 'Office' : (document.getElementById('propertyType').value || ''),
+    bedrooms: isOffice ? '' : (document.getElementById('bedrooms').value || ''),
+    message: buildMessage(),
+    honeypot: honeypot
+  };
+  
+  try {
+    const response = await fetch('/api/quote', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     });
-
-    if (hours === null) {
-      renderOutput(`
-        <h2>We need one quick confirmation</h2>
-        <p>You selected <strong>heavy ironing (3+ baskets)</strong>. To avoid guessing, please confirm approximate quantity.</p>
+    
+    const data = await response.json();
+    
+    if (response.ok && data.success) {
+      output.innerHTML = `
+        <h2>Thank You, ${payload.full_name}!</h2>
+        <p>We've received your quote request for <strong>${serviceType}</strong> in <strong>${payload.postcode}</strong>.</p>
+        <p>We'll review your requirements and send you a fixed price within 24 hours.</p>
         <p style="margin-top: var(--space-md);">
-          <a href="tel:+442037508878" class="btn-primary">Call Us: 020 3750 8878</a>
+          <strong>Need it sooner?</strong> Call us on <a href="tel:02037508878" style="color: var(--accent-green);">020 3750 8878</a> or <a href="https://wa.me/447947716355" style="color: var(--accent-green);">WhatsApp</a>.
         </p>
-      `);
-      return;
-    }
-
-    const clientTotal = hours * rate;
-    const onsiteDuration = hours / Math.max(1, teamSize);
-    const serviceLabel = (serviceType === "EOT") ? "End of Tenancy / Deep Clean" : "Standard Domestic Cleaning";
-
-    // Contact validation
-    const contactMissing = [];
-    if (!contactName) contactMissing.push("Full name");
-    if (!contactPhone && !contactEmail) contactMissing.push("Mobile number or email");
-
-    if (contactMissing.length) {
-      renderOutput(`
-        <h2>We just need your contact details</h2>
-        <ul>${contactMissing.map(m => `<li>${m}</li>`).join("")}</ul>
-        <p style="margin:10px 0 0; color:var(--text-secondary);">
-          This allows us to confirm availability and secure your booking.
-        </p>
-        <h3>Your Quote Preview</h3>
-        <p><strong>${serviceLabel}</strong> | ${hours} hours | <strong>${gbp(clientTotal)}</strong></p>
-      `);
-      return;
-    }
-
-    // Appliances list
-    const appliancesIncluded = [
-      applianceOven && "Oven",
-      applianceFridge && "Fridge/Freezer",
-      applianceWasher && "Washing machine",
-      applianceDishwasher && "Dishwasher"
-    ].filter(Boolean);
-
-    const addOnsDisplay = [
-      addonFridge && "Fridge (internal)",
-      addonOven && "Oven (internal)",
-      addonWindows && "Internal windows",
-      ironingIncluded && (ironVolume !== "none" ? `Ironing (${ironVolume})` : "Ironing")
-    ].filter(Boolean);
-
-    // Build payload and send to server
-    const payload = {
-      serviceType,
-      postcode,
-      contact: {
-        name: contactName,
-        phone: contactPhone,
-        email: contactEmail
-      },
-      botField,
-      property: {
-        type: propertyType,
-        bedrooms,
-        bathrooms,
-        condition,
-        frequency
-      },
-      quote: {
-        hours,
-        teamSize,
-        onsiteDuration,
-        rate,
-        clientTotal
-      },
-      addOns: addOnsDisplay,
-      eotDetails: serviceType === "EOT" ? {
-        preferredDate,
-        arrivalWindow,
-        deadline,
-        floorLevel,
-        liftAvailable,
-        occupancy,
-        carpetSteam,
-        wasteRemoval,
-        appliances: appliancesIncluded
-      } : null
-    };
-
-    // Send to backend (non-blocking)
-    sendLeadToServer(payload);
-
-    renderOutput(`
-      <h2>Your Quote</h2>
-      <p style="margin-bottom: var(--space-md);">
-        <strong>${serviceLabel}</strong> in <strong>${postcode}</strong>, ${propertyType.toLowerCase()},
-        ${bedrooms} bed / ${bathrooms} bath, ${frequency.toLowerCase()},
-        condition: ${condition === "Heavy" ? "heavy build-up" : "standard maintenance"}.
-      </p>
-
-      <h3>Quote Summary</h3>
-      <ul>
-        <li>Total job-hours: <strong>${hours}</strong></li>
-        <li>Team size: <strong>${teamSize}</strong> cleaner(s)</li>
-        <li>Estimated on-site duration: <strong>${onsiteDuration.toFixed(1)} hours</strong></li>
-        <li>Rate: <strong>${gbp(rate)}/hour</strong></li>
-        <li style="font-size: 1.125rem; margin-top: 0.5rem;"><strong>Total: ${gbp(clientTotal)}</strong></li>
-      </ul>
-
-      ${serviceType === "EOT" ? `
-      <h3>Booking Details</h3>
-      <ul>
-        <li>Date: ${preferredDate} (${arrivalWindow})</li>
-        <li>Floor: ${floorLevel} | Lift: ${liftAvailable}</li>
-        <li>Add-ons: ${addOnsDisplay.length ? addOnsDisplay.join(", ") : "None"}</li>
-        <li>Appliances: ${appliancesIncluded.length ? appliancesIncluded.join(", ") : "None selected"}</li>
-      </ul>
-      ` : `
-      <h3>Details</h3>
-      <ul>
-        <li>Add-ons: ${addOnsDisplay.length ? addOnsDisplay.join(", ") : "None"}</li>
-        <li>Parking/access: ${parking}</li>
-      </ul>
-      `}
-
-      <h3>Next Step</h3>
-      <p>We've received your details (<strong>${contactName}</strong>). We'll be in touch within 24 hours to confirm your booking.</p>
-      <p style="margin-top: var(--space-md);">
-        <a href="tel:+442037508878" class="btn-primary">Call Us: 020 3750 8878</a>
-        <a href="https://wa.me/447947716355" class="btn-secondary" style="margin-left: 1rem;">WhatsApp</a>
-      </p>
-
-      <p style="margin-top: var(--space-md); font-size: 0.875rem; color: var(--text-secondary);">
-        Important: If build-up is heavier than described or access restrictions apply, time may be adjusted prior to confirmation.
-      </p>
-    `);
-    return;
-  }
-
-  // OFFICE
-  if (serviceType === "OFFICE") {
-    const officeSize = (document.getElementById("officeSize").value || "").trim();
-    const desksRooms = (document.getElementById("desksRooms").value || "").trim();
-    const officeToilets = document.getElementById("officeToilets").value;
-    const officeKitchens = document.getElementById("officeKitchens").value;
-    const officeFrequency = document.getElementById("officeFrequency").value;
-    const outOfHours = document.getElementById("outOfHours").value;
-    const consumables = document.getElementById("consumables").value;
-    const congestionOffice = document.getElementById("congestionOffice").value;
-
-    const missing = [];
-    if (!postcode) missing.push("Postcode/area");
-    if (!officeSize && !desksRooms) missing.push("Approx size (m²/sq ft) OR desks + rooms");
-    if (officeToilets === "" || officeToilets === null) missing.push("Toilets count");
-    if (officeKitchens === "" || officeKitchens === null) missing.push("Kitchen/break areas count");
-    if (!officeFrequency) missing.push("Frequency");
-    if (!outOfHours) missing.push("Out-of-hours requirement (yes/no)");
-    if (!congestionOffice || congestionOffice === "Unsure") missing.push("Congestion charge zone (inside/outside)");
-
-    if (missing.length) {
-      renderOutput(`
-        <h2>We need a few details before we can quote</h2>
-        <ul>${missing.map(m => `<li>${m}</li>`).join("")}</ul>
-        <p style="margin:10px 0 0; color:var(--text-secondary);">
-          If sizing is unknown, we recommend a site visit or video walkthrough so we can provide an exact price.
-        </p>
-      `);
-      return;
-    }
-
-    // Contact validation
-    const contactMissing = [];
-    if (!contactName) contactMissing.push("Full name");
-    if (!contactPhone && !contactEmail) contactMissing.push("Mobile number or email");
-
-    if (contactMissing.length) {
-      renderOutput(`
-        <h2>We just need your contact details</h2>
-        <ul>${contactMissing.map(m => `<li>${m}</li>`).join("")}</ul>
-        <p style="margin:10px 0 0; color:var(--text-secondary);">
-          This allows us to arrange a site survey and provide an accurate quote.
-        </p>
-      `);
-      return;
-    }
-
-    // Build payload
-    const payload = {
-      serviceType,
-      postcode,
-      contact: {
-        name: contactName,
-        phone: contactPhone,
-        email: contactEmail
-      },
-      botField,
-      office: {
-        size: officeSize,
-        desksRooms,
-        toilets: officeToilets,
-        kitchens: officeKitchens,
-        frequency: officeFrequency,
-        outOfHours,
-        consumables,
-        congestionZone: congestionOffice
-      }
-    };
-
-    sendLeadToServer(payload);
-
-    renderOutput(`
-      <h2>Next Step: Site Survey</h2>
-      <p>Office cleaning hours must be confirmed to avoid guessing. We'll provide an exact hourly rate or fixed monthly price after a brief walkthrough.</p>
-
-      <h3>Details Captured</h3>
-      <ul>
-        <li>Location: ${postcode}</li>
-        <li>Size: ${officeSize || "—"}</li>
-        <li>Desks/rooms: ${desksRooms || "—"}</li>
-        <li>Toilets: ${officeToilets}</li>
-        <li>Kitchens/break areas: ${officeKitchens}</li>
-        <li>Frequency: ${officeFrequency}</li>
-        <li>Out-of-hours: ${outOfHours}</li>
-        <li>Consumables: ${consumables || "Not specified"}</li>
-      </ul>
-
-      <p style="margin-top: var(--space-md);">We've received your details (<strong>${contactName}</strong>). We'll be in touch within 24 hours to arrange a site survey.</p>
+      `;
+      output.className = 'success';
+      output.style.display = 'block';
+      output.scrollIntoView({ behavior: 'smooth', block: 'start' });
       
+      // Reset form
+      document.getElementById('quoteForm').reset();
+      domesticBlock.style.display = 'none';
+      officeBlock.style.display = 'none';
+      contactBlock.style.display = 'none';
+      eotFields.classList.remove('visible');
+    } else {
+      throw new Error(data.error || 'Failed to send request');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    output.innerHTML = `
+      <h2>Something went wrong</h2>
+      <p>${error.message || 'Please try again or contact us directly.'}</p>
       <p style="margin-top: var(--space-md);">
-        <a href="tel:+442037508878" class="btn-primary">Call Us: 020 3750 8878</a>
+        <a href="tel:02037508878" class="btn-primary">Call: 020 3750 8878</a>
         <a href="https://wa.me/447947716355" class="btn-secondary" style="margin-left: 1rem;">WhatsApp</a>
       </p>
-    `);
-    return;
+    `;
+    output.className = 'error';
+    output.style.display = 'block';
+    output.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Request a Quote';
   }
 });
 </script>
