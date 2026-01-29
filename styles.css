@@ -1,30 +1,30 @@
 /* ============================================
    OASIS INTERNATIONAL CLEANING SERVICES
-   Premium Dark Theme
+   Clean Professional Theme
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  /* Backgrounds */
-  --bg-primary: #1A1A1A;
-  --bg-secondary: #0D0D0D;
+  /* Backgrounds - White only */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FFFFFF;
 
-  /* Text */
-  --text-primary: #FFFFFF;
-  --text-secondary: #B8B8B8;
+  /* Text - Single charcoal value */
+  --text-primary: #1F2937;
+  --text-secondary: #1F2937;
 
   /* Accent (warm stone) */
-  --accent-green: #C4A77D;
-  --accent-green-soft: rgba(196, 167, 125, 0.12);
-  --accent-green-hover: #D4B48A;
-  --accent-gold: #C4A77D;
-  --accent-gold-soft: rgba(196, 167, 125, 0.10);
+  --accent-green: #1F2937;
+  --accent-green-soft: rgba(31, 41, 55, 0.08);
+  --accent-green-hover: #111827;
+  --accent-gold: #1F2937;
+  --accent-gold-soft: rgba(31, 41, 55, 0.06);
 
-  /* Borders & Shadows */
-  --border: rgba(255, 255, 255, 0.12);
-  --border-muted: rgba(255, 255, 255, 0.08);
-  --shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+  /* Borders - No shadows */
+  --border: rgba(31, 41, 55, 0.15);
+  --border-muted: rgba(31, 41, 55, 0.10);
+  --shadow: none;
 
   /* Layout */
   --container: 1200px;
@@ -33,9 +33,9 @@
   --max-width-text: 640px;
   --pad-x: 24px;
 
-  /* Typography */
-  --font: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  --font-primary: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  /* Typography - Inter with proper fallback stack */
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-primary: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -46,9 +46,9 @@
   --body: 1rem;
   --lh: 1.7;
 
-  /* Radius */
-  --r-lg: 22px;
-  --r-md: 16px;
+  /* Radius - Square corners everywhere */
+  --r-lg: 0;
+  --r-md: 0;
 
   /* Spacing */
   --s1: 8px;
@@ -88,8 +88,8 @@ body {
   padding: 0;
   font-family: var(--font);
   font-weight: var(--font-weight-normal);
-  background: var(--bg-primary);
-  color: var(--text-secondary);
+  background: #FFFFFF;
+  color: var(--text-primary);
   font-size: var(--body);
   line-height: 1.65;
   letter-spacing: 0.1px;
@@ -195,9 +195,9 @@ li {
   width: auto;
   height: auto;
   padding: 12px 18px;
-  background: var(--accent-green);
-  color: #0B0B0B;
-  border-radius: 999px;
+  background: var(--text-primary);
+  color: #FFFFFF;
+  border-radius: 0;
   font-weight: 600;
   z-index: 9999;
   clip: auto;
@@ -209,8 +209,7 @@ li {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(26, 26, 26, 0.92);
-  backdrop-filter: blur(12px);
+  background: #FFFFFF;
   border-bottom: 1px solid var(--border);
 }
 
@@ -313,10 +312,9 @@ li {
   top: 48px;
   left: 0;
   min-width: 240px;
-  background: #121212;
+  background: #FFFFFF;
   border: 1px solid var(--border);
-  border-radius: 16px;
-  box-shadow: var(--shadow);
+  border-radius: 0;
   padding: 10px;
   display: none;
   z-index: 200;
@@ -325,8 +323,8 @@ li {
 .dropdown-menu a {
   display: block;
   padding: 12px 14px;
-  border-radius: 12px;
-  color: var(--text-secondary);
+  border-radius: 0;
+  color: var(--text-primary);
 }
 
 .dropdown-menu a:hover {
@@ -372,7 +370,7 @@ li {
   top: 100%;
   left: 0;
   right: 0;
-  background: var(--bg-secondary);
+  background: #FFFFFF;
   border-bottom: 1px solid var(--border);
   padding: var(--space-md);
   z-index: 99;
@@ -385,7 +383,7 @@ li {
 .mobile-menu a {
   display: block;
   padding: var(--space-sm) 0;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 1rem;
   font-weight: var(--font-weight-medium);
   border-bottom: 1px solid var(--border-muted);
@@ -420,48 +418,47 @@ li {
   justify-content: center;
   gap: 0.5rem;
   padding: 14px 26px;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 0;
+  border: 1px solid var(--text-primary);
   font-family: var(--font);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.08s ease, background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .btn:active,
 .btn-primary:active,
 .btn-secondary:active {
-  transform: translateY(1px);
+  transform: none;
 }
 
 .btn-primary {
-  background: var(--accent-green);
-  color: #0B0B0B;
-  border-color: var(--accent-green);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  background: var(--text-primary);
+  color: #FFFFFF;
+  border-color: var(--text-primary);
 }
 
 .btn-primary:hover {
   background: var(--accent-green-hover);
   border-color: var(--accent-green-hover);
-  color: #0B0B0B;
+  color: #FFFFFF;
   opacity: 1;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
 }
 
 .btn-secondary,
 .btn-ghost {
   background: transparent;
   color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.20);
+  border-color: var(--text-primary);
 }
 
 .btn-secondary:hover,
 .btn-ghost:hover {
-  border-color: rgba(196, 167, 125, 0.55);
-  background: rgba(196, 167, 125, 0.08);
+  background: var(--text-primary);
+  color: #FFFFFF;
+  border-color: var(--text-primary);
   opacity: 1;
 }
 
@@ -494,7 +491,7 @@ li {
 }
 
 .section--dark {
-  background: var(--bg-secondary);
+  background: #FFFFFF;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -513,9 +510,7 @@ li {
 /* ---- Hero ---- */
 .hero {
   padding: var(--s8) 0 var(--s6);
-  background:
-    linear-gradient(180deg, rgba(13, 13, 13, 0.60), rgba(26, 26, 26, 1)),
-    url("assets/hero.jpg") center/cover no-repeat;
+  background: #FFFFFF;
   border-bottom: 1px solid var(--border);
 }
 
@@ -546,11 +541,10 @@ li {
 }
 
 .hero .hero-card {
-  background: rgba(13, 13, 13, 0.70);
+  background: #FFFFFF;
   border: 1px solid var(--border);
-  border-radius: var(--r-lg);
+  border-radius: 0;
   padding: var(--s4);
-  box-shadow: var(--shadow);
 }
 
 .hero .hero-card p {
@@ -573,13 +567,11 @@ li {
 .page-hero {
   padding: 120px 0 80px;
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(13, 13, 13, 0.62), rgba(26, 26, 26, 1));
+  background: #FFFFFF;
 }
 
 .page-hero.has-image {
-  background:
-    linear-gradient(180deg, rgba(13, 13, 13, 0.62), rgba(26, 26, 26, 1)),
-    var(--page-hero-image) center/cover no-repeat;
+  background: #FFFFFF;
 }
 
 .page-hero h1 {
@@ -602,9 +594,9 @@ li {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 0;
   padding: 22px;
 }
 
@@ -646,8 +638,8 @@ li {
   content: "";
   width: 7px;
   height: 7px;
-  border-radius: 999px;
-  background: var(--accent-green);
+  border-radius: 0;
+  background: var(--text-primary);
   position: absolute;
   left: 0;
   top: 0.6em;
@@ -663,10 +655,10 @@ li {
 
 .clean-list li {
   padding: 14px 16px;
-  border-radius: 14px;
+  border-radius: 0;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.02);
-  color: var(--text-secondary);
+  background: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .list-check {
@@ -698,9 +690,9 @@ li {
 .pricing {
   margin-top: var(--s3);
   padding: var(--s3);
-  border-radius: var(--r-lg);
-  border: 1px solid rgba(196, 167, 125, 0.35);
-  background: rgba(196, 167, 125, 0.10);
+  border-radius: 0;
+  border: 1px solid var(--border);
+  background: #FFFFFF;
 }
 
 .pricing strong {
@@ -730,19 +722,19 @@ li {
   font-family: var(--font);
   font-size: 1rem;
   color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.04);
+  background: #FFFFFF;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 0;
   transition: border-color var(--transition-fast);
 }
 
 .form-field:focus {
   outline: none;
-  border-color: var(--accent-green);
+  border-color: var(--text-primary);
 }
 
 .form-field::placeholder {
-  color: rgba(184, 184, 184, 0.6);
+  color: rgba(31, 41, 55, 0.5);
 }
 
 .form-label {
@@ -755,7 +747,7 @@ li {
 
 select.form-field {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23B8B8B8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231F2937' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
   padding-right: 48px;
@@ -764,16 +756,16 @@ select.form-field {
 
 /* Fix for native select dropdown options */
 select.form-field option {
-  background-color: #2A2A2A;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: var(--text-primary);
   padding: 12px 16px;
 }
 
 select.form-field option:hover,
 select.form-field option:focus,
 select.form-field option:checked {
-  background-color: #C4A77D;
-  color: #0B0B0B;
+  background-color: var(--text-primary);
+  color: #FFFFFF;
 }
 
 /* Styled select dropdowns in quote form */
@@ -790,9 +782,9 @@ select.form-field option:checked {
   font-family: var(--font);
   font-size: 1rem;
   color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.04);
+  background: #FFFFFF;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 0;
   appearance: none;
   cursor: pointer;
   transition: border-color var(--transition-fast);
@@ -801,16 +793,16 @@ select.form-field option:checked {
 .quote-select select:focus,
 .styled-select select:focus {
   outline: none;
-  border-color: var(--accent-green);
+  border-color: var(--text-primary);
 }
 
 /* ---- Footer ---- */
 .site-footer,
 .footer {
   border-top: 1px solid var(--border);
-  background: #0B0B0B;
+  background: #FFFFFF;
   padding: var(--s6) 0 var(--space-lg);
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-primary);
 }
 
 .footer-inner {
@@ -858,7 +850,7 @@ select.form-field option:checked {
 }
 
 .footer h4 {
-  color: #FFFFFF;
+  color: var(--text-primary);
   font-size: 0.875rem;
   font-weight: var(--font-weight-semibold);
   text-transform: uppercase;
@@ -867,13 +859,13 @@ select.form-field option:checked {
 }
 
 .footer a {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-primary);
   font-size: 0.9375rem;
   transition: color var(--transition-fast);
 }
 
 .footer a:hover {
-  color: #FFFFFF;
+  color: var(--accent-green-hover);
   opacity: 1;
 }
 
@@ -914,10 +906,10 @@ select.form-field option:checked {
 
 .footer-bottom {
   padding-top: var(--space-lg);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border);
   text-align: center;
   font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-primary);
 }
 
 .footer-bottom p {
@@ -928,7 +920,7 @@ select.form-field option:checked {
 
 .copy {
   margin-top: var(--s4);
-  color: rgba(184, 184, 184, 0.75);
+  color: var(--text-primary);
   font-size: 0.9rem;
 }
 
@@ -969,9 +961,9 @@ select.form-field option:checked {
 
 /* Contact card styling */
 .contact-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: #FFFFFF;
   border: 1px solid var(--border);
-  border-radius: var(--r-lg);
+  border-radius: 0;
   padding: var(--s4);
 }
 
