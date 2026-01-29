@@ -586,6 +586,29 @@ li {
   margin-top: var(--s2);
 }
 
+/* ---- Hero Images ---- */
+.hero-banner {
+  max-height: 520px;
+  overflow: hidden;
+  margin-bottom: var(--s4);
+}
+
+.hero-banner img,
+.hero img,
+.page-hero img {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  border-radius: 0;
+  display: block;
+}
+
+.hero-banner img {
+  height: 520px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
 /* ---- Cards & Grids ---- */
 .grid-3 {
   display: grid;
