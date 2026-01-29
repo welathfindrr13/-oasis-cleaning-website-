@@ -1,0 +1,69 @@
+PRE-CHANGE SEARCH COUNTS
+Date: 2026-01-29
+Branch: theme-standardisation-no-restructure
+
+================================================================================
+SEARCH: "rotating" (case-insensitive)
+================================================================================
+Command: grep -ri "rotating" --include="*.html" --include="*.js" --include="*.css"
+Count: 3 occurrences
+
+Files:
+- domestic-cleaning-london.html:87 - "We operate with rotating professional teams..."
+- domestic-cleaning-london.html:104 - "Rotating teams for operational reliability"
+- index.html:123 - "...trained, rotating teams."
+
+================================================================================
+SEARCH: "Agency" (case-sensitive, looking for "Cleaning Agency")
+================================================================================
+Command: grep -r "Agency" --include="*.html" --include="*.md"
+Count: 2 occurrences (both in documentation only)
+
+Files:
+- CONSOLIDATION_REPORT.md:68 - "Oasis International Cleaning Agency" (alt text reference)
+- CONSOLIDATION_REPORT.md:74 - "Oasis International Cleaning Agency" (company name reference)
+
+NOTE: No occurrences in actual HTML pages. Documentation references old naming only.
+
+================================================================================
+SEARCH: "bark" (case-insensitive)
+================================================================================
+Command: grep -ri "bark" --include="*.html"
+Count: 14 occurrences in 7 HTML files
+
+Files:
+- quote.html:552 - Bark widget link
+- quote.html:554 - Bark widget script
+- contact.html:217 - Bark widget link
+- contact.html:219 - Bark widget script
+- end-of-tenancy-cleaning-london.html:238 - Bark widget link
+- end-of-tenancy-cleaning-london.html:240 - Bark widget script
+- office-cleaning-london.html:242 - Bark widget link
+- office-cleaning-london.html:244 - Bark widget script
+- domestic-cleaning-london.html:253 - Bark widget link
+- domestic-cleaning-london.html:255 - Bark widget script
+- services.html:333 - Bark widget link
+- services.html:335 - Bark widget script
+- index.html:269 - Bark widget link
+- index.html:271 - Bark widget script
+
+================================================================================
+SEARCH: Emoji characters
+================================================================================
+Command: grep -r "[emoji chars]" --include="*.html" --include="*.md"
+Count: 188+ occurrences
+
+Primary emoji locations in HTML:
+- contact.html: Phone (line 91), WhatsApp (line 97), Email (line 103)
+- index.html: Phone (line 107), WhatsApp (line 108), Email (line 109)
+
+Markdown documentation files (backend/README.md, DEPLOYMENT_GUIDE.md, CONSOLIDATION_REPORT.md, VALIDATION_REPORT.md):
+- Extensive use of checkmark and other emojis in documentation
+
+================================================================================
+SUMMARY
+================================================================================
+- rotating: 3 (MUST BE ZERO after changes)
+- Agency (in HTML): 0 (already clean in HTML; doc refs only)
+- bark: 14 (MUST BE ZERO after changes)
+- emojis in HTML: ~6 visible instances (MUST BE ZERO after changes)

@@ -1,0 +1,77 @@
+POST-CHANGE VISUAL CHECK
+Date: 2026-01-29
+Branch: theme-standardisation-no-restructure
+
+================================================================================
+CSS CHANGES APPLIED
+================================================================================
+
+1. BACKGROUND: White only (#FFFFFF)
+   - --bg-primary: #FFFFFF
+   - --bg-secondary: #FFFFFF
+   - body background: #FFFFFF
+   - All section backgrounds: #FFFFFF
+   - Header: #FFFFFF
+   - Footer: #FFFFFF
+   - Cards: #FFFFFF
+   - RESULT: PASS
+
+2. TEXT: Single charcoal value
+   - --text-primary: #1F2937
+   - --text-secondary: #1F2937
+   - Consistent across all elements
+   - RESULT: PASS
+
+3. TYPOGRAPHY: Inter font
+   - Font stack: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif
+   - Body weight: 400
+   - Headings/buttons: 500-600
+   - RESULT: PASS
+
+4. SQUARE CORNERS: border-radius: 0 everywhere
+   - --r-lg: 0
+   - --r-md: 0
+   - Buttons: border-radius: 0
+   - Cards: border-radius: 0
+   - Form inputs: border-radius: 0
+   - Dropdowns: border-radius: 0
+   - Skip link: border-radius: 0
+   - RESULT: PASS
+
+5. BUTTONS: One consistent style
+   - Square corners
+   - Charcoal background for primary
+   - Transparent with border for secondary/ghost
+   - Hover: subtle darkening
+   - No shadows
+   - RESULT: PASS
+
+6. FORMS: Square inputs, consistent borders
+   - border-radius: 0
+   - border: 1px solid var(--border)
+   - White background
+   - No icons in form fields
+   - RESULT: PASS
+
+7. NO COLOURED SECTIONS
+   - Removed gradient backgrounds
+   - Removed rgba overlays
+   - All backgrounds white
+   - RESULT: PASS
+
+8. NO SHADOWS
+   - --shadow: none
+   - Removed box-shadow from buttons
+   - Removed box-shadow from cards
+   - RESULT: PASS
+
+================================================================================
+MANUAL VERIFICATION RECOMMENDED
+================================================================================
+Load site in browser and verify:
+- [ ] All pages have white background
+- [ ] All text is charcoal color
+- [ ] All buttons are square
+- [ ] All form inputs are square
+- [ ] No gradient sections visible
+- [ ] Inter font loads correctly

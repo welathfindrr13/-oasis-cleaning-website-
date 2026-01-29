@@ -1,0 +1,70 @@
+POST-CHANGE SEO CHECK
+Date: 2026-01-29
+Branch: theme-standardisation-no-restructure
+
+================================================================================
+META TITLES & DESCRIPTIONS
+================================================================================
+
+| Page | Title | Description | Canonical | Status |
+|------|-------|-------------|-----------|--------|
+| index.html | Managed Cleaning in London (NW1-NW5, W11) | Oasis International Cleaning Services | Yes | PASS |
+| services.html | Managed Cleaning Services London | Oasis International Cleaning Services | Yes | PASS |
+| domestic-cleaning-london.html | Managed Domestic Cleaning London (NW1-NW5, W11) | Oasis | Yes | PASS |
+| end-of-tenancy-cleaning-london.html | End of Tenancy Cleaning London | Managed Cleaning by Oasis | Yes | PASS |
+| office-cleaning-london.html | Office & Commercial Cleaning London | Managed by Oasis | Yes | PASS |
+| quote.html | Request a Cleaning Consultation | Oasis International Cleaning Services | Yes | PASS |
+| contact.html | Contact Oasis International Cleaning Services | London | Yes | PASS |
+| privacy-policy.html | Privacy Policy | Oasis International Cleaning Services | Yes | PASS |
+| terms.html | Terms & Conditions | Oasis International Cleaning Services | Yes | PASS |
+
+================================================================================
+SITEMAP.XML
+================================================================================
+Status: EXISTS (pre-existing)
+Location: /sitemap.xml
+RESULT: PASS
+
+================================================================================
+ROBOTS.TXT
+================================================================================
+Status: EXISTS (pre-existing)
+Location: /robots.txt
+RESULT: PASS
+
+================================================================================
+LOCALBUSINESS SCHEMA
+================================================================================
+Added to all 9 pages with:
+- @type: LocalBusiness
+- name: Oasis International Cleaning Services
+- url: https://www.oasisinternationalcleaningservices.com
+- email: info@oasisinternationalcleaningservices.com
+- telephone: +44-20-3750-8878
+- address: 15A Unimix House, Abbey Road, London, NW10 7TR
+- areaServed: London, NW1, NW2, NW3, NW4, NW5, W11, Kensington and Chelsea
+
+Pages with schema:
+- index.html: PASS
+- services.html: PASS
+- domestic-cleaning-london.html: PASS
+- end-of-tenancy-cleaning-london.html: PASS
+- office-cleaning-london.html: PASS
+- quote.html: PASS
+- contact.html: PASS
+- privacy-policy.html: PASS
+- terms.html: PASS
+
+No sameAs property included (no verified social profiles to add, Bark removed)
+
+================================================================================
+SCHEMA VALIDATION
+================================================================================
+JSON structure: Valid
+Required fields: Present
+No Bark references: PASS
+
+================================================================================
+OVERALL SEO CHECK
+================================================================================
+RESULT: PASS - All SEO requirements met

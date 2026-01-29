@@ -1,0 +1,47 @@
+POST-CHANGE SEARCH COUNTS
+Date: 2026-01-29
+Branch: theme-standardisation-no-restructure
+
+================================================================================
+SEARCH: "rotating" (case-insensitive)
+================================================================================
+HTML/CSS/JS files: 0 occurrences
+Only found in: _audit/pre-search-counts.txt (documentation of pre-state)
+
+RESULT: PASS - Zero in production files
+
+================================================================================
+SEARCH: "Cleaning Agency"
+================================================================================
+HTML files: 0 occurrences
+Only found in:
+- _audit/pre-search-counts.txt (documentation)
+- CONSOLIDATION_REPORT.md (historical documentation)
+
+RESULT: PASS - Zero in production HTML files
+
+================================================================================
+SEARCH: "bark" (case-insensitive)
+================================================================================
+HTML files: 0 occurrences
+Only found in: _audit/pre-search-counts.txt (documentation of pre-state)
+
+RESULT: PASS - Zero in production files
+
+================================================================================
+SEARCH: Emoji characters in HTML
+================================================================================
+HTML files: 0 occurrences
+
+RESULT: PASS - Zero emojis in HTML files
+
+================================================================================
+SUMMARY
+================================================================================
+All HARD FAIL conditions passed:
+- rotating: ZERO in HTML/CSS/JS
+- Agency (as "Cleaning Agency"): ZERO in HTML
+- bark/bark.com: ZERO in HTML
+- emojis: ZERO in HTML
+
+Remaining references in documentation files are historical records only.
