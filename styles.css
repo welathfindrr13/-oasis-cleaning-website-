@@ -214,7 +214,7 @@ li {
 }
 
 .header-inner {
-  height: 76px;
+  height: 100px;
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--pad-x);
