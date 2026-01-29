@@ -18,12 +18,12 @@
 <link rel="stylesheet" href="styles.css">
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17779427647"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17810326632"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-17779427647');
+  gtag('config', 'AW-17810326632');
 </script>
 </head>
 <body>
@@ -260,6 +260,10 @@ document.getElementById('contactForm').addEventListener('submit', async function
     });
     
     if (res.ok) {
+      // Fire Google Ads conversion on true success
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', { 'send_to': 'AW-17810326632/Zmt9CL6zgu8bEOiI0KxC' });
+      }
       formStatus.style.display = 'block';
       formStatus.innerHTML = '<p style="color: var(--accent-green);">Message sent successfully. We\'ll be in touch soon.</p>';
       document.getElementById('contactForm').reset();

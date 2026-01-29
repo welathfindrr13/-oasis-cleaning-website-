@@ -1,5 +1,21 @@
 // Oasis International Cleaning Services - Main JavaScript
 
+// Google Ads Conversion Helper (guarded)
+function fireAdsConversion() {
+  if (typeof gtag === 'function') {
+    gtag('event', 'conversion', { 'send_to': 'AW-17810326632/Zmt9CL6zgu8bEOiI0KxC' });
+  }
+}
+
+// Click-intent tracking for tel: and WhatsApp links (delegated, non-blocking)
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a[href^="tel:"], a[href*="wa.me/"]');
+  if (link) {
+    fireAdsConversion();
+  }
+  // Do NOT preventDefault - allow normal navigation
+});
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');

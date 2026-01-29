@@ -18,12 +18,12 @@
 <link rel="stylesheet" href="styles.css">
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17779427647"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17810326632"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-17779427647');
+  gtag('config', 'AW-17810326632');
 </script>
 
 <style>
@@ -748,6 +748,10 @@ document.getElementById("quoteForm").addEventListener("submit", async (e) => {
     const data = await res.json();
     
     if (res.ok && data.success) {
+      // Fire Google Ads conversion on true success
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', { 'send_to': 'AW-17810326632/Zmt9CL6zgu8bEOiI0KxC' });
+      }
       showOutput("success", "Quote Request Received!", 
         `Thank you, ${payload.full_name}! We've received your request and will send you a fixed price quote within 24 hours. Check your email or phone for our response.`);
       document.getElementById("quoteForm").reset();
@@ -756,12 +760,16 @@ document.getElementById("quoteForm").addEventListener("submit", async (e) => {
       contactBlock.style.display = "none";
       eotFields.classList.remove("visible");
     } else {
-      throw new Error(data.error || "Failed to submit");
+      // Show the specific error from backend
+      const errorMsg = data.error || "Failed to submit your request";
+      showOutput("error", "Please check your details", 
+        `${errorMsg}. If the problem persists, call us on <a href="tel:02037508878" style="color: var(--accent-green);">020 3750 8878</a> or <a href="https://wa.me/447947716355" style="color: var(--accent-green);">WhatsApp</a>.`);
+      return;
     }
   } catch (err) {
     console.error("Submit error:", err);
-    showOutput("error", "Something went wrong", 
-      `We couldn't process your request. Please try again or call us directly on <a href="tel:02037508878" style="color: var(--accent-green);">020 3750 8878</a> or <a href="https://wa.me/447947716355" style="color: var(--accent-green);">WhatsApp</a>.`);
+    showOutput("error", "Connection error", 
+      `We couldn't reach our server. Please try again or call us directly on <a href="tel:02037508878" style="color: var(--accent-green);">020 3750 8878</a> or <a href="https://wa.me/447947716355" style="color: var(--accent-green);">WhatsApp</a>.`);
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = "Request Quote";
